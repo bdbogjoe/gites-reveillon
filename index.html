@@ -199,10 +199,11 @@
   .legende{list-style:none; margin:0; padding:0; display:flex; flex-wrap:wrap; gap:.5rem 1.4rem;
     font-size:var(--step--1); color:var(--ink-2)}
   .legende li{display:flex; align-items:center; gap:.45rem}
-  .pastille{width:.7rem; height:.7rem; border-radius:50%; flex:0 0 auto}
+  .pastille{width:.7rem; height:.7rem; min-width:.7rem; border-radius:50%;
+    flex:0 0 auto; padding:0; display:block}
   .pastille.mont{background:var(--accent)}
   .pastille.autre{background:var(--ink-2); width:.58rem; height:.58rem}
-  .pastille.etalon{background:none; border:2px solid var(--stop)}
+  .pastille.ref{background:none; border:2px solid var(--stop); box-sizing:border-box}
   .leaflet-popup-content{margin:.7rem .85rem; font-family:"Courant",system-ui,sans-serif}
   .pop-nom{font-family:"Dossier",Georgia,serif; font-weight:700; font-size:1.02rem; display:block}
   .pop-lieu{font-family:"Fiche",ui-monospace,monospace; font-size:.72rem; color:#4C5C55; display:block; margin:.15rem 0 .35rem}
@@ -747,7 +748,7 @@
           <ul class="legende">
             <li><span class="pastille mont"></span>Montagne, station de ski à moins de 20 min</li>
             <li><span class="pastille autre"></span>Collines, piémont ou campagne</li>
-            <li><span class="pastille etalon"></span>Étalon, complet cette année</li>
+            <li><span class="pastille ref"></span>Étalon, complet cette année</li>
           </ul>
           <p>Molette désactivée pour ne pas gêner la lecture : utilisez les boutons + et − ou le glisser. Fond de carte OpenStreetMap.</p>
         </figcaption>
@@ -878,8 +879,8 @@ Merci d'avance,
 
   var TLS = [43.6045, 1.4442];
   [50000, 100000, 150000].forEach(function (r) {
-    L.circle(TLS, { radius: r, fill: false, color: '#6D7C75', weight: 1,
-                    opacity: 0.5, dashArray: '6 7', interactive: false }).addTo(map);
+    L.circle(TLS, { radius: r, fill: false, color: '#16211D', weight: 1.4,
+                    opacity: 0.55, dashArray: '5 7', interactive: false }).addTo(map);
   });
   L.circleMarker(TLS, { radius: 5, color: '#16211D', fillColor: '#16211D',
                         fillOpacity: 1, weight: 1, interactive: false }).addTo(map)
