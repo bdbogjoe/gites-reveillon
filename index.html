@@ -217,6 +217,8 @@
     border:1px solid var(--line)!important; border-radius:3px!important;
     box-shadow:var(--shadow)!important; font-family:"Fiche",ui-monospace,monospace}
   .leaflet-control-layers-expanded{padding:.5rem .7rem .55rem .55rem; color:var(--ink)}
+  .leaflet-control-layers-toggle{display:none!important; width:0!important; height:0!important}
+  .leaflet-control-layers form{margin:0}
   .leaflet-control-layers label{font-size:.74rem; letter-spacing:.03em; display:flex;
     align-items:center; gap:.35rem; cursor:pointer}
   .leaflet-control-layers-selector{margin:0; cursor:pointer}
@@ -765,7 +767,7 @@
             <li><span class="pastille autre"></span>Collines, piémont ou campagne</li>
             <li><span class="pastille ref"></span>Étalon, complet cette année</li>
           </ul>
-          <p>Trois fonds au choix en haut à droite : <strong>Routes</strong> pour la hiérarchie routière, <strong>Relief</strong> pour les courbes de niveau et les altitudes, <strong>Sombre</strong> assorti au thème. Molette désactivée jusqu'au premier clic pour ne pas gêner la lecture.</p>
+          <p>Trois fonds au choix en haut à droite : <strong>Routes</strong> pour la hiérarchie routière, <strong>Relief</strong> pour les courbes de niveau et les altitudes, <strong>Sombre</strong> si la page vous éblouit. Molette désactivée jusqu'au premier clic pour ne pas gêner la lecture.</p>
         </figcaption>
       </figure>
     </section>
@@ -893,15 +895,9 @@ Merci d'avance,
       { maxZoom: 17, subdomains: 'abcd', attribution: OSM + ' &copy; <a href="https://carto.com/attributions">CARTO</a>' })
   };
 
-  function sombre() {
-    var t = document.documentElement.getAttribute('data-theme');
-    if (t === 'dark') return true;
-    if (t === 'light') return false;
-    return !!(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
-  }
 
   var map = L.map(el, { scrollWheelZoom: false, zoomSnap: 0.5,
-                        layers: [sombre() ? fonds['Sombre'] : fonds['Routes']] });
+                        layers: [fonds['Routes']] });
   // liste dépliée : évite l'icône de bascule, qui exigerait les images de Leaflet
   L.control.layers(fonds, null, { collapsed: false, position: 'topright' }).addTo(map);
 
