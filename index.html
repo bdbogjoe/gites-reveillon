@@ -205,15 +205,30 @@
   .pastille.autre{background:var(--ink-2); width:.58rem; height:.58rem}
   .pastille.ref{background:none; border:2px solid var(--stop); box-sizing:border-box}
   .leaflet-popup-content{margin:.7rem .85rem; font-family:"Courant",system-ui,sans-serif}
+  .leaflet-popup-content-wrapper,.leaflet-tooltip{background:var(--surface); color:var(--ink);
+    border:1px solid var(--line); box-shadow:var(--shadow); border-radius:3px}
+  .leaflet-popup-tip{background:var(--surface); border:1px solid var(--line)}
+  .leaflet-tooltip{font-family:"Fiche",ui-monospace,monospace; font-size:.72rem; letter-spacing:.04em}
+  .leaflet-tooltip-top:before{border-top-color:var(--line)}
+  .leaflet-container .leaflet-control-zoom a{background:var(--surface); color:var(--ink);
+    border-bottom-color:var(--line)}
+  .leaflet-container .leaflet-control-zoom a:hover{background:var(--surface-2)}
+  .leaflet-control-layers{background:var(--surface)!important; color:var(--ink);
+    border:1px solid var(--line)!important; border-radius:3px!important;
+    box-shadow:var(--shadow)!important; font-family:"Fiche",ui-monospace,monospace}
+  .leaflet-control-layers-expanded{padding:.5rem .7rem .55rem .55rem; color:var(--ink)}
+  .leaflet-control-layers label{font-size:.74rem; letter-spacing:.03em; display:flex;
+    align-items:center; gap:.35rem; cursor:pointer}
+  .leaflet-control-layers-selector{margin:0; cursor:pointer}
+  .leaflet-control-attribution{background:var(--surface)!important; color:var(--ink-3)!important}
+  .leaflet-control-attribution a{color:var(--ink-2)!important}
+  .pop-lieu{color:var(--ink-2)}
+  .leaflet-container a.pop-lien{color:var(--accent)}
   .pop-nom{font-family:"Dossier",Georgia,serif; font-weight:700; font-size:1.02rem; display:block}
-  .pop-lieu{font-family:"Fiche",ui-monospace,monospace; font-size:.72rem; color:#4C5C55; display:block; margin:.15rem 0 .35rem}
+  .pop-lieu{font-family:"Fiche",ui-monospace,monospace; font-size:.72rem; display:block; margin:.15rem 0 .35rem}
   .pop-prix{font-family:"Fiche",ui-monospace,monospace; font-weight:600; display:block; margin-bottom:.4rem}
-  .leaflet-container a.pop-lien{color:#1B5A4B; font-weight:700}
-  /* Les tuiles sont claires : on les assombrit en thème sombre. */
-  @media (prefers-color-scheme:dark){
-    :root:not([data-theme="light"]) .leaflet-tile-pane{filter:invert(1) hue-rotate(180deg) brightness(.88) contrast(.92)}
+  .leaflet-container a.pop-lien{font-weight:700}
   }
-  :root[data-theme="dark"] .leaflet-tile-pane{filter:invert(1) hue-rotate(180deg) brightness(.88) contrast(.92)}
 
   /* ---------- lists ---------- */
   .stack{list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:.7rem}
@@ -750,7 +765,7 @@
             <li><span class="pastille autre"></span>Collines, piémont ou campagne</li>
             <li><span class="pastille ref"></span>Étalon, complet cette année</li>
           </ul>
-          <p>Molette désactivée pour ne pas gêner la lecture : utilisez les boutons + et − ou le glisser. Fond de carte OpenStreetMap.</p>
+          <p>Trois fonds au choix en haut à droite : <strong>Routes</strong> pour la hiérarchie routière, <strong>Relief</strong> pour les courbes de niveau et les altitudes, <strong>Sombre</strong> assorti au thème. Molette désactivée jusqu'au premier clic pour ne pas gêner la lecture.</p>
         </figcaption>
       </figure>
     </section>
@@ -867,38 +882,59 @@ Merci d'avance,
   var el = document.getElementById('map');
   if (!el || typeof L === 'undefined') return;
   var G = [{"n": "Grand Chalet des Scouts", "c": "Camurac (11) — 1 300 m", "lat": 42.775, "lon": 1.935, "k": "mont", "p": "1 100 – 1 600 €", "a": "scouts"}, {"n": "Gîtes du Soula", "c": "Mérens-les-Vals (09) — Haute-Ariège", "lat": 42.657, "lon": 1.837, "k": "mont", "p": "980 – 2 604 €", "a": "soula"}, {"n": "Gîte le Lutin", "c": "Bagnères-de-Luchon (31)", "lat": 42.79, "lon": 0.593, "k": "mont", "p": "≈ 2 400 €", "a": "lutin"}, {"n": "Gîte de l'Escolan", "c": "Ustou (09) — Couserans", "lat": 42.787, "lon": 1.238, "k": "mont", "p": "≈ 2 300 € + chauffage", "a": "escolan"}, {"n": "La Bouriotte", "c": "Labastide-Rouairoux (81) — Montagne Noire", "lat": 43.485, "lon": 2.626, "k": "autre", "p": "1 080 – 2 600 €", "a": "bouriotte"}, {"n": "Gîtes La Capelle", "c": "Roquefort-des-Corbières (11)", "lat": 42.999, "lon": 2.937, "k": "autre", "p": "≈ 2 040 €", "a": "capelle"}, {"n": "Gîtes de Granquié", "c": "Montredon-Labessonnié (81) — Monts de Lacaune", "lat": 43.717, "lon": 2.418, "k": "autre", "p": "≈ 2 200 €", "a": "granquie"}, {"n": "Mas Montluzia", "c": "Cascastel-des-Corbières (11)", "lat": 42.958, "lon": 2.761, "k": "autre", "p": "2 470 €", "a": "montluzia"}, {"n": "Gîte de séjour La Paguère", "c": "Mauvezin (31) — Savès", "lat": 43.42, "lon": 0.82, "k": "autre", "p": "2 070 – 3 200 €", "a": "paguere"}, {"n": "Grand Gîte Le Moulinet", "c": "Léran (09) — piémont", "lat": 43.01, "lon": 1.9, "k": "autre", "p": "3 000 €", "a": "moulinet"}, {"n": "Gîte du Renard Désargenté", "c": "Lairière (11) — Corbières", "lat": 43.02, "lon": 2.445, "k": "autre", "p": "à demander", "a": "renard"}, {"n": "Les Gîtes du Torgan", "c": "Massac (11) — complet, étalon", "lat": 42.93, "lon": 2.55, "k": "etalon", "p": "171 €/pers.", "a": "etalon"}];
-  var COUL = {
-    mont:   { color: '#0F3D33', fillColor: '#1B5A4B', r: 9 },
-    autre:  { color: '#2F3E38', fillColor: '#4C5C55', r: 7 },
-    etalon: { color: '#8E3529', fillColor: '#F1DDD9', r: 8 }
+
+  var OSM = '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>';
+  var fonds = {
+    'Routes': L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',
+      { maxZoom: 17, attribution: OSM }),
+    'Relief': L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png',
+      { maxZoom: 16, subdomains: 'abc', attribution: OSM + ', SRTM | <a href="https://opentopomap.org">OpenTopoMap</a> (CC-BY-SA)' }),
+    'Sombre': L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png',
+      { maxZoom: 17, subdomains: 'abcd', attribution: OSM + ' &copy; <a href="https://carto.com/attributions">CARTO</a>' })
   };
-  var map = L.map(el, { scrollWheelZoom: false, zoomSnap: 0.5 });
-  L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    maxZoom: 17, attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-  }).addTo(map);
+
+  function sombre() {
+    var t = document.documentElement.getAttribute('data-theme');
+    if (t === 'dark') return true;
+    if (t === 'light') return false;
+    return !!(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
+  }
+
+  var map = L.map(el, { scrollWheelZoom: false, zoomSnap: 0.5,
+                        layers: [sombre() ? fonds['Sombre'] : fonds['Routes']] });
+  // liste dépliée : évite l'icône de bascule, qui exigerait les images de Leaflet
+  L.control.layers(fonds, null, { collapsed: false, position: 'topright' }).addTo(map);
+
+  // Un liseré blanc rend les points lisibles sur un fond clair comme sur un fond sombre.
+  var STYLE = {
+    mont:   { fillColor: '#1B7A63', color: '#ffffff', radius: 9, weight: 2.5 },
+    autre:  { fillColor: '#5A6B63', color: '#ffffff', radius: 7, weight: 2.5 },
+    etalon: { fillColor: '#ffffff', color: '#B23A2B', radius: 8, weight: 3 }
+  };
 
   var TLS = [43.6045, 1.4442];
   [50000, 100000, 150000].forEach(function (r) {
-    L.circle(TLS, { radius: r, fill: false, color: '#16211D', weight: 1.4,
-                    opacity: 0.55, dashArray: '5 7', interactive: false }).addTo(map);
+    L.circle(TLS, { radius: r, fill: false, color: '#7E8B85', weight: 1.6,
+                    opacity: 0.9, dashArray: '5 8', interactive: false }).addTo(map);
   });
-  L.circleMarker(TLS, { radius: 5, color: '#16211D', fillColor: '#16211D',
-                        fillOpacity: 1, weight: 1, interactive: false }).addTo(map)
-   .bindTooltip('Toulouse', { permanent: true, direction: 'top', className: 'tt-ville' });
+  L.circleMarker(TLS, { radius: 6, fillColor: '#16211D', color: '#ffffff', fillOpacity: 1,
+                        weight: 2, interactive: false }).addTo(map)
+   .bindTooltip('Toulouse', { permanent: true, direction: 'top', offset: [0, -8] });
 
   var pts = [];
   G.forEach(function (g) {
-    var s = COUL[g.k];
-    var m = L.circleMarker([g.lat, g.lon], {
-      radius: s.r, color: s.color, fillColor: s.fillColor, fillOpacity: 1, weight: 2
+    var s = STYLE[g.k];
+    var mk = L.circleMarker([g.lat, g.lon], {
+      radius: s.radius, fillColor: s.fillColor, color: s.color,
+      weight: s.weight, fillOpacity: 1
     }).addTo(map);
-    m.bindPopup(
+    mk.bindPopup(
       '<span class="pop-nom">' + g.n + '</span>' +
       '<span class="pop-lieu">' + g.c + '</span>' +
       '<span class="pop-prix">' + g.p + '</span>' +
       '<a class="pop-lien" href="#' + g.a + '">Voir la fiche &rarr;</a>'
     );
-    m.bindTooltip(g.n, { direction: 'top', offset: [0, -6] });
+    mk.bindTooltip(g.n, { direction: 'top', offset: [0, -7] });
     pts.push([g.lat, g.lon]);
   });
   map.fitBounds(L.latLngBounds(pts), { padding: [36, 36] });
