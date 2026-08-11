@@ -128,6 +128,21 @@
     color:var(--warn); background:var(--warn-soft); padding:.5rem .65rem; border-radius:2px}
   .flag b{font-weight:700}
 
+  /* ---------- étalon ---------- */
+  .etalon{background:var(--accent-soft); border:1px solid var(--accent); border-radius:3px;
+    padding:1.25rem 1.4rem 1.35rem; display:flex; flex-direction:column; gap:.8rem}
+  .etalon h3{font-size:var(--step-2)}
+  .etalon .desc{color:var(--accent-ink)}
+  .calc{width:100%; min-width:0; border-collapse:collapse; font-size:var(--step--1); margin-top:.15rem}
+  .calc td{padding:.42rem 0; border-bottom:1px dashed var(--accent); vertical-align:baseline}
+  .calc td:last-child{text-align:right; font-family:"Fiche",ui-monospace,monospace;
+    font-variant-numeric:tabular-nums; white-space:nowrap; padding-left:1rem; font-weight:600}
+  .calc tr.sum td{font-weight:700; color:var(--ink); border-bottom:2px solid var(--accent)}
+  .calc tr.aside td{color:var(--ink-2); border-bottom:none}
+  .calc caption{padding:0 0 .5rem; border-bottom:none; color:var(--accent-ink);
+    font-family:"Fiche",ui-monospace,monospace; font-size:.7rem;
+    text-transform:uppercase; letter-spacing:.11em}
+
   /* ---------- table ---------- */
   .scroller{overflow-x:auto; border:1px solid var(--line-soft); border-radius:3px; background:var(--surface)}
   table{border-collapse:collapse; width:100%; min-width:56rem; font-size:var(--step--1)}
@@ -138,6 +153,8 @@
     letter-spacing:.09em; color:var(--ink-3); background:var(--sunk); white-space:nowrap;
     border-bottom:1px solid var(--line); position:sticky; top:0}
   tbody tr:last-child td{border-bottom:none}
+  tbody tr.ref td{background:var(--accent-soft); border-bottom-color:var(--accent)}
+  tbody tr.ref .chip{margin-left:.4rem}
   td.n{font-family:"Fiche",ui-monospace,monospace; font-variant-numeric:tabular-nums; white-space:nowrap}
   td.name{font-weight:700; min-width:11rem}
   .yes{color:var(--ok); font-weight:700}
@@ -183,7 +200,7 @@
   <header class="masthead">
     <p class="eyebrow">Recherche d'hébergement · groupe de 15 · réveillon 2026-2027</p>
     <h1>Sept gîtes de groupe pour le réveillon, à moins de deux heures de Toulouse</h1>
-    <p class="lede">Sélection faite sur le modèle des Gîtes du Torgan : gestion libre, salle commune, grande cuisine. Le filtre décisif n'est pas le prix — c'est l'ouverture en hiver.</p>
+    <p class="lede">Le Torgan comme étalon, et sept alternatives bâties sur le même modèle : gestion libre, salle commune, grande cuisine. Le filtre décisif n'est pas le prix — c'est l'ouverture en hiver.</p>
     <dl class="brief">
       <div><dt>Dates</dt><dd>sam. 26 déc. → sam. 2 janv.<small>2<sup>e</sup> choix : dim. 27 → dim. 3</small></dd></div>
       <div><dt>Effectif</dt><dd>15 personnes<small>105 nuitées</small></dd></div>
@@ -195,10 +212,45 @@
 
   <main>
 
+    <section id="etalon">
+      <div class="sec-head">
+        <h2>L'étalon</h2>
+        <p>Le seul gîte de la page dont le groupe connaît déjà le rapport qualité/prix réel, pour y avoir passé deux séjours. Il sert de point de comparaison : les estimations qui suivent ne veulent dire quelque chose que rapportées à celle-ci.</p>
+      </div>
+      <div class="etalon">
+        <div class="titleline">
+          <h3>Les Gîtes du Torgan</h3>
+          <span class="place">Massac (11) · ≈ 1 h 50 · déjà vécu, deux fois</span>
+        </div>
+        <p class="desc">L'ancienne coopérative viticole du village, réaménagée en 8 gîtes indépendants mais mitoyens, de 2 à 11 personnes — d'où la capacité modulable de 15 à 45. La formule groupe de 15 annoncée par la maison est <strong>La Coumo + Cuve 7</strong>. Fin décembre tombe en basse saison au tarif affiché (octobre à mai).</p>
+        <ul class="chips">
+          <li class="chip ok">Ouvert toute l'année</li>
+          <li class="chip ok">Formule 15 personnes officielle</li>
+          <li class="chip">8 gîtes indépendants</li>
+          <li class="chip stop">Salle commune en supplément</li>
+        </ul>
+        <table class="calc">
+          <caption>Reconstitution du tarif — semaine complète, basse saison</caption>
+          <tbody>
+            <tr><td>La Coumo — 8 à 11 personnes</td><td>1 220 €</td></tr>
+            <tr><td>Cuve 7 — 2 à 6 personnes</td><td>610 €</td></tr>
+            <tr><td>Salle commune — facturée séparément</td><td>500 €</td></tr>
+            <tr class="sum"><td>Hébergement + salle commune</td><td>2 330 €</td></tr>
+            <tr><td>Draps et linge de toilette — 15 €/pers., en option</td><td>225 €</td></tr>
+            <tr><td>Ménage de sortie des 3 unités, en option</td><td>295 €</td></tr>
+            <tr class="sum"><td>Tout compris</td><td>2 850 €</td></tr>
+            <tr class="aside"><td>Caution remboursable, en sus, plus taxe de séjour</td><td>700 €</td></tr>
+          </tbody>
+        </table>
+        <p class="flag"><b>Deux choses à vérifier même ici :</b> le site ne dit pas si le chauffage est inclus — question centrale pour une bâtisse en pierre des Corbières fin décembre. Et aucune majoration de fin d'année n'est mentionnée, mais rien ne garantit que la semaine du réveillon soit vendue au tarif basse saison : à faire confirmer. À noter aussi qu'une combinaison <em>Les Balmes + Cuve 9</em> logerait 15 personnes pour 1 530 € au lieu de 1 830 €, soit ≈ 2 030 € avec la salle — un levier de négociation.</p>
+        <p class="meta"><span class="tel">06 65 36 07 41</span> <span class="tel">09 65 16 90 24</span> <a href="mailto:gitesdutorgan@gmail.com">gitesdutorgan@gmail.com</a> <a href="https://www.lesgitesdutorgan.com/" target="_blank" rel="noopener noreferrer">lesgitesdutorgan.com</a> <span>réservation groupe par téléphone uniquement</span></p>
+      </div>
+    </section>
+
     <section id="selection">
       <div class="sec-head">
-        <h2>La sélection <span class="count">7 gîtes</span></h2>
-        <p>Classés par adéquation au cahier des charges. Tous sont en gestion libre, disposent d'une salle commune et d'une cuisine dimensionnée pour un groupe, et sont <strong>ouverts fin décembre</strong>. Les montants sont mes estimations pour 15 personnes × 7 nuits à partir des tarifs publiés — à faire confirmer.</p>
+        <h2>Les alternatives <span class="count">7 gîtes</span></h2>
+        <p>Classées par adéquation au cahier des charges. Tous sont en gestion libre, disposent d'une salle commune et d'une cuisine dimensionnée pour un groupe, et sont <strong>ouverts fin décembre</strong>. Les montants sont mes estimations pour 15 personnes × 7 nuits à partir des tarifs publiés — à faire confirmer.</p>
       </div>
 
       <ol class="fiches">
@@ -224,7 +276,7 @@
               <li class="chip warn">Dortoir à vérifier</li>
             </ul>
             <p class="flag"><b>À clarifier :</b> l'annonce affiche aussi « semaine à partir de 1 608 € » sur une base de 25 personnes — demander lequel des deux tarifs s'applique à 15. Et le couchage : 5 chambres + 1 dortoir de 9, ce qui n'est pas tout à fait « vrais lits en chambres séparées ».</p>
-            <p class="meta"><span class="tel">05 63 75 13 92</span> <span class="tel">06 89 61 46 07</span> <a href="https://www.gites-granquie.com">gites-granquie.com</a></p>
+            <p class="meta"><span class="tel">05 63 75 13 92</span> <span class="tel">06 89 61 46 07</span> <a href="https://www.gites-granquie.com" target="_blank" rel="noopener noreferrer">gites-granquie.com</a></p>
           </div>
         </li>
 
@@ -248,7 +300,7 @@
               <li class="chip">9 chambres</li>
               <li class="chip">Salle 90 m²</li>
             </ul>
-            <p class="meta"><span class="tel">06 76 88 26 29</span> <span class="tel">07 70 24 46 45</span> <a href="https://www.labouriotte.com">labouriotte.com</a></p>
+            <p class="meta"><span class="tel">06 76 88 26 29</span> <span class="tel">07 70 24 46 45</span> <a href="https://www.labouriotte.com" target="_blank" rel="noopener noreferrer">labouriotte.com</a></p>
           </div>
         </li>
 
@@ -273,7 +325,7 @@
               <li class="chip warn">Chauffage + 15 €/j</li>
             </ul>
             <p class="flag"><b>Attention saison :</b> Noël est en haute saison à Luchon, donc tabler sur le haut de la fourchette (2 295 €) plus ≈ 105 € de chauffage sur la semaine.</p>
-            <p class="meta"><span class="tel">05 61 89 70 86</span> <span class="tel">06 70 74 58 26</span> <a href="https://www.gite-luchon-pyrenees.fr">gite-luchon-pyrenees.fr</a></p>
+            <p class="meta"><span class="tel">05 61 89 70 86</span> <span class="tel">06 70 74 58 26</span> <a href="https://www.gite-luchon-pyrenees.fr" target="_blank" rel="noopener noreferrer">gite-luchon-pyrenees.fr</a></p>
           </div>
         </li>
 
@@ -299,7 +351,7 @@
               <li class="chip warn">Dortoir de 9</li>
             </ul>
             <p class="flag"><b>Le risque à chiffrer :</b> chauffage, gaz et électricité facturés à la consommation réelle, en montagne, en décembre — demander une estimation écrite pour une semaine d'hiver à 15. Et 5 chambres seulement, dont un dortoir de 9 places.</p>
-            <p class="meta"><span class="tel">05 61 96 58 72</span> <a href="https://www.lescolan.com">lescolan.com</a></p>
+            <p class="meta"><span class="tel">05 61 96 58 72</span> <a href="https://www.lescolan.com" target="_blank" rel="noopener noreferrer">lescolan.com</a></p>
           </div>
         </li>
 
@@ -323,7 +375,7 @@
               <li class="chip">20 places</li>
               <li class="chip warn">Draps et ménage en sus</li>
             </ul>
-            <p class="meta"><span class="tel">05 61 94 16 09</span> <span class="tel">06 70 02 28 62</span> <a href="https://www.lapaguere.com">lapaguere.com</a></p>
+            <p class="meta"><span class="tel">05 61 94 16 09</span> <span class="tel">06 70 02 28 62</span> <a href="https://www.lapaguere.com" target="_blank" rel="noopener noreferrer">lapaguere.com</a></p>
           </div>
         </li>
 
@@ -347,7 +399,7 @@
               <li class="chip">21 places</li>
               <li class="chip warn">Plafond du budget</li>
             </ul>
-            <p class="meta"><span class="tel">05 61 03 88 21</span> <a href="https://grandgitetoulouse.fr">grandgitetoulouse.fr</a> <span>Corinne Grison</span></p>
+            <p class="meta"><span class="tel">05 61 03 88 21</span> <a href="https://grandgitetoulouse.fr" target="_blank" rel="noopener noreferrer">grandgitetoulouse.fr</a> <span>Corinne Grison</span></p>
           </div>
         </li>
 
@@ -372,7 +424,7 @@
               <li class="chip warn">Site web hors ligne</li>
             </ul>
             <p class="flag"><b>Appeler directement :</b> le site renard-desargente.fr ne répond plus et l'annonce GrandsGites a été retirée. Le contact obtenu via Gitedegroupe.fr est Isabelle Thibaut. Comme les propriétaires sont récents, c'est aussi le gîte le plus susceptible d'avoir encore de la place au réveillon.</p>
-            <p class="meta"><span class="tel">06 10 42 51 33</span> <span>Isabelle Thibaut</span> <a href="https://www.gitedegroupe.fr/gite-groupe-Be-5103.html">voir l'annonce</a></p>
+            <p class="meta"><span class="tel">06 10 42 51 33</span> <span>Isabelle Thibaut</span> <a href="https://www.gitedegroupe.fr/gite-groupe-Be-5103.html" target="_blank" rel="noopener noreferrer">voir l'annonce</a></p>
           </div>
         </li>
 
@@ -386,7 +438,7 @@
       </div>
       <div class="scroller">
         <table>
-          <caption>Sélection — gîtes ouverts fin décembre, classés par estimation croissante</caption>
+          <caption>Gîtes ouverts fin décembre, classés par estimation croissante. Première ligne : l'étalon déjà connu du groupe.</caption>
           <thead>
             <tr>
               <th scope="col">Gîte</th><th scope="col">Commune</th><th scope="col">≈ Trajet</th>
@@ -395,6 +447,11 @@
             </tr>
           </thead>
           <tbody>
+            <tr class="ref">
+              <td class="name">Les Gîtes du Torgan <span class="chip ok">réf.</span></td><td>Massac (11)</td><td class="n">1 h 50</td>
+              <td class="n">15 à 45</td><td class="n">2 gîtes</td><td>salle commune, en supplément</td>
+              <td>à confirmer</td><td class="n">≈ 2 330 €</td><td class="n">06 65 36 07 41</td>
+            </tr>
             <tr>
               <td class="name">Granquié</td><td>Montredon-Labessonnié (81)</td><td class="n">1 h 25</td>
               <td class="n">25</td><td class="n">5 + dortoir</td><td>110 m² + 2 séjours</td>
@@ -449,7 +506,7 @@
             <li class="chip ok">Ouvert toute l'année</li>
             <li class="chip">Salle 75 m²</li>
           </ul>
-          <p class="meta"><span class="tel">07 68 39 18 49</span> <a href="https://freychede.fr">freychede.fr</a> <span>Alain Feliu</span></p>
+          <p class="meta"><span class="tel">07 68 39 18 49</span> <a href="https://freychede.fr" target="_blank" rel="noopener noreferrer">freychede.fr</a> <span>Alain Feliu</span></p>
         </li>
         <li class="row">
           <h3>Les Écuries de la Sabatarié — Cambounés (81), ≈ 1 h 30</h3>
@@ -459,7 +516,7 @@
             <li class="chip ok">Chauffage inclus</li>
           </ul>
           <p class="flag"><b>Blocage :</b> l'établissement annonce une ouverture de février à décembre. La semaine du 26 déc. au 2 janv. mord donc sur la fermeture — à négocier explicitement, ou à écarter.</p>
-          <p class="meta"><span class="tel">05 63 74 51 77</span> <a href="https://www.ecuriesdelasabatarie.fr">ecuriesdelasabatarie.fr</a></p>
+          <p class="meta"><span class="tel">05 63 74 51 77</span> <a href="https://www.ecuriesdelasabatarie.fr" target="_blank" rel="noopener noreferrer">ecuriesdelasabatarie.fr</a></p>
         </li>
       </ul>
     </section>
@@ -550,7 +607,7 @@ Merci d'avance,
     </section>
 
     <footer>
-      <p>Recherche menée le 11 août 2026 sur GrandsGites, Gitedegroupe, Gîtes de France Ariège et les sites des propriétaires. <strong>Aucune disponibilité n'a été vérifiée</strong> : ces gîtes n'ont pas de réservation en ligne, la confirmation passe par un appel.</p>
+      <p>Recherche menée le 11 août 2026 sur GrandsGites, Gitedegroupe, Gîtes de France Ariège, lesgitesdutorgan.com et les sites des propriétaires. <strong>Aucune disponibilité n'a été vérifiée</strong> : ces gîtes n'ont pas de réservation en ligne, la confirmation passe par un appel.</p>
       <p>Tarifs relevés à la date ci-dessus, hors majoration éventuelle de fin d'année. Les temps de trajet depuis Toulouse sont des estimations routières, non mesurées.</p>
     </footer>
 
