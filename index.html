@@ -210,9 +210,9 @@
   .legende li{display:flex; align-items:center; gap:.45rem}
   .pastille{width:.7rem; height:.7rem; min-width:.7rem; border-radius:50%;
     flex:0 0 auto; padding:0; display:block}
-  .pastille.inconnu{background:var(--surface); border:2px solid var(--ink-2); box-sizing:border-box}
-  .pastille.pris{background:var(--surface); border:2px solid var(--stop); box-sizing:border-box}
-  .pastille.libre{background:var(--surface); border:2px solid var(--accent); box-sizing:border-box}
+  .pastille.inconnu{background:#ffffff; border:2px solid #3E4F48; box-sizing:border-box}
+  .pastille.pris{background:var(--stop)}
+  .pastille.libre{background:var(--accent)}
   .pastille.anneau{background:none; border:2px solid var(--warn); box-sizing:border-box; width:.85rem; height:.85rem}
   .leaflet-popup-content{margin:.7rem .85rem; font-family:"Courant",system-ui,sans-serif}
   .leaflet-popup-content-wrapper,.leaflet-tooltip{background:var(--surface); color:var(--ink);
@@ -774,7 +774,7 @@
     <section id="carte">
       <div class="sec-head">
         <h2>Où c'est</h2>
-        <p>Le marqueur dit la disponibilité : <strong>cercle rouge</strong> pour ce qui est pris, <strong>cercle blanc</strong> pour ce qui reste à vérifier, <strong>cercle vert</strong> quand c'est confirmé libre. Un <strong>anneau ocre</strong> signale l'altitude. À ce stade, dix gîtes sur quinze n'ont pas encore été appelés. Les cercles marquent 50, 100 et 150 km à vol d'oiseau depuis Toulouse — la route est toujours plus longue, surtout vers les vallées pyrénéennes. <strong>Cliquez un point pour ouvrir la fiche correspondante.</strong></p>
+        <p><strong>Le centre du marqueur donne la disponibilité</strong> : rouge pour ce qui est pris, blanc pour ce qui reste à vérifier, vert quand c'est confirmé libre. Un <strong>anneau ocre</strong> signale l'altitude. À ce stade, dix gîtes sur quinze n'ont pas encore été appelés. Les cercles marquent 50, 100 et 150 km à vol d'oiseau depuis Toulouse — la route est toujours plus longue, surtout vers les vallées pyrénéennes. <strong>Cliquez un point pour ouvrir la fiche correspondante.</strong></p>
       </div>
       <figure class="carte-box">
         <div class="fonds" role="group" aria-label="Fond de carte">
@@ -951,9 +951,9 @@ Merci d'avance,
 
   // Un liseré blanc rend les points lisibles sur un fond clair comme sur un fond sombre.
   var STYLE = {
-    pris:    { fillColor: '#ffffff', color: '#B23A2B', radius: 8, weight: 3 },
-    inconnu: { fillColor: '#ffffff', color: '#3E4F48', radius: 7, weight: 2.5 },
-    libre:   { fillColor: '#ffffff', color: '#1B7A63', radius: 8, weight: 3 }
+    pris:    { fillColor: '#B23A2B', color: '#ffffff', radius: 8, weight: 2.5 },
+    inconnu: { fillColor: '#ffffff', color: '#3E4F48', radius: 8, weight: 2.5 },
+    libre:   { fillColor: '#1B7A63', color: '#ffffff', radius: 9, weight: 2.5 }
   };
 
   var TLS = [43.6045, 1.4442];
