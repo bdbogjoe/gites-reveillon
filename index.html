@@ -120,6 +120,7 @@
   .chip.ok{color:var(--ok); background:var(--ok-soft); border-color:transparent; font-weight:600}
   .chip.warn{color:var(--warn); background:var(--warn-soft); border-color:transparent; font-weight:600}
   .chip.stop{color:var(--stop); background:var(--stop-soft); border-color:transparent; font-weight:600}
+  .chip.contacte{color:#ffffff; background:#1E6F9F; border-color:transparent; font-weight:600}
 
   .meta{display:flex; flex-wrap:wrap; gap:.35rem 1.1rem; padding-top:.45rem;
     border-top:1px solid var(--line-soft); font-size:var(--step--1); color:var(--ink-2)}
@@ -213,6 +214,7 @@
   .pastille.inconnu{background:#ffffff; border:2px solid #3E4F48; box-sizing:border-box}
   .pastille.pris{background:var(--stop)}
   .pastille.libre{background:var(--accent)}
+  .pastille.contacte{background:#1E6F9F}
   .pastille.anneau{background:none; border:2px solid var(--warn); box-sizing:border-box; width:.85rem; height:.85rem}
   .leaflet-popup-content{margin:.7rem .85rem; font-family:"Courant",system-ui,sans-serif}
   .leaflet-popup-content-wrapper,.leaflet-tooltip{background:var(--surface); color:var(--ink);
@@ -334,10 +336,35 @@
     <section id="selection">
       <div class="sec-head">
         <h2>Les alternatives <span class="count">12 gîtes</span></h2>
-        <p><strong>L'altitude d'abord</strong>, conformément à la préférence du groupe : les trois premiers sont en Pyrénées ou sur un plateau d'altitude. Viennent ensuite les collines et le piémont, par estimation croissante. Les montants valent pour 15 personnes sur 7 nuits, d'après les tarifs publiés — à faire confirmer. <strong>Aucune disponibilité n'est établie</strong> : sur cinq gîtes contactés, cinq étaient pris.</p>
+        <p><strong>L'altitude d'abord</strong>, conformément à la préférence du groupe : les trois premiers sont en Pyrénées ou sur un plateau d'altitude. Viennent ensuite les collines et le piémont, par estimation croissante. Les montants valent pour 15 personnes sur 7 nuits, d'après les tarifs publiés — à faire confirmer. <strong>Un seul gîte a répondu favorablement</strong> — la Sabatarié, placée en tête — et il reste à confirmer ; sur les six autres contactés, cinq étaient pris.</p>
       </div>
 
       <ol class="fiches">
+
+        <li id="sabatarie" class="fiche pick">
+          <div class="rail">
+            <p class="eyebrow">Tarif</p>
+            <p class="price">sur devis</p>
+            <p class="price-note">gestion libre, chauffage compris</p>
+            <p class="perhead">demi-pension dès 53 €/pers./jour</p>
+          </div>
+          <div class="body">
+            <div class="titleline">
+              <h3>Les Écuries de la Sabatarié</h3>
+              <span class="place">Cambounés (81) · Sidobre, vallée de la Durencuse · ≈ 1 h 30</span>
+            </div>
+            <p class="desc">Leur propre site décrit exactement le cadre que vous cherchez : <strong>un petit hameau de bâtisses en pierre du XIX<sup>e</sup> aux toits d'ardoises, au cœur d'une nature sauvage et peu investie par l'homme</strong>, une ferme qui surplombe la vallée de la Durencuse, sur le GR 36. 32 places en 4 unités — grand gîte de 11, petit gîte de 5, yourte, dépendance de 7 à 9 — avec 8 chambres, une <strong>salle à manger de 50 m²</strong>, une salle d'activité de 35 m² et une cuisine semi-professionnelle. Chauffage compris, cheminées et poêles à bois. Magali et Julie reçoivent explicitement les cousinades et les anniversaires.</p>
+            <ul class="chips">
+              <li class="chip ok">Isolé, hameau en pierre</li>
+              <li class="chip ok">Chauffage inclus</li>
+              <li class="chip ok">8 chambres</li>
+              <li class="chip ok">Nord-est, 1 h 30</li>
+              <li class="chip contacte">Contacté — a priori libre</li>
+            </ul>
+            <p class="flag"><b>Contact pris le 12 août : a priori disponible</b>, la propriétaire doit rappeler. C'est le premier gîte de cette recherche qui ne dit pas non — et il tombe bien, puisque c'est aussi celui dont le cadre correspond le mieux au critère d'isolement. Ce qu'il reste à obtenir : le <b>tarif en gestion libre pour 15 personnes sur la semaine</b>, non publié, la répartition exacte des 8 chambres entre les quatre unités, et si la yourte compte dans les 32 places — elle serait peu habitable fin décembre. <b>J'avais écarté ce gîte à tort :</b> l'annuaire GrandsGites l'annonçait fermé en janvier, alors que leur propre site écrit « vous êtes les bienvenus toute l'année ». C'est ce démenti qui a conduit à ne plus écarter aucun gîte sur une période d'ouverture annoncée.</p>
+            <p class="meta"><span class="tel">05 63 74 51 77</span> <span class="tel">06 48 70 93 23</span> <span>Magali et Julie</span> <a href="https://www.ecuriesdelasabatarie.fr" target="_blank" rel="noopener noreferrer">ecuriesdelasabatarie.fr</a> <a href="http://www.yourtenbois.fr/" target="_blank" rel="noopener noreferrer">yourtenbois.fr</a> <a href="https://www.google.com/maps/search/?api=1&query=La%20Sabatari%C3%A9%2C%2081260%20Camboun%C3%A9s" target="_blank" rel="noopener noreferrer">carte</a></p>
+          </div>
+        </li>
 
         <li id="scouts" class="fiche pick">
           <div class="rail">
@@ -414,31 +441,6 @@
             </ul>
             <p class="flag"><b>Le tarif demande clarification :</b> l'annonce mêle un prix par lit et un prix par nuit sans dire lequel s'applique à un groupe de 15 dans une maison de 50 places. Mon estimation part de 25 €/personne/nuit, mais elle peut se révéler franchement fausse dans un sens comme dans l'autre. Demander aussi s'il est possible de ne louer qu'une partie du château : chauffer et occuper 500 m² à 15 n'a pas de sens.</p>
             <p class="meta"><span class="tel">05 63 37 29 67</span> <span class="tel">06 62 35 58 10</span> <span>Stella Bousquet</span> <a href="https://www.chateautarn.fr" target="_blank" rel="noopener noreferrer">chateautarn.fr</a> <a href="https://www.google.com/maps/search/?api=1&query=C%C3%B4te%20de%20Calmels%2C%2081230%20Lacaune" target="_blank" rel="noopener noreferrer">carte</a></p>
-          </div>
-        </li>
-
-        <li id="sabatarie" class="fiche pick">
-          <div class="rail">
-            <p class="eyebrow">Tarif</p>
-            <p class="price">sur devis</p>
-            <p class="price-note">gestion libre, chauffage compris</p>
-            <p class="perhead">demi-pension dès 53 €/pers./jour</p>
-          </div>
-          <div class="body">
-            <div class="titleline">
-              <h3>Les Écuries de la Sabatarié</h3>
-              <span class="place">Cambounés (81) · Sidobre, vallée de la Durencuse · ≈ 1 h 30</span>
-            </div>
-            <p class="desc">Leur propre site décrit exactement le cadre que vous cherchez : <strong>un petit hameau de bâtisses en pierre du XIX<sup>e</sup> aux toits d'ardoises, au cœur d'une nature sauvage et peu investie par l'homme</strong>, une ferme qui surplombe la vallée de la Durencuse, sur le GR 36. 32 places en 4 unités — grand gîte de 11, petit gîte de 5, yourte, dépendance de 7 à 9 — avec 8 chambres, une <strong>salle à manger de 50 m²</strong>, une salle d'activité de 35 m² et une cuisine semi-professionnelle. Chauffage compris, cheminées et poêles à bois. Magali et Julie reçoivent explicitement les cousinades et les anniversaires.</p>
-            <ul class="chips">
-              <li class="chip ok">Isolé, hameau en pierre</li>
-              <li class="chip ok">Chauffage inclus</li>
-              <li class="chip ok">8 chambres</li>
-              <li class="chip ok">Nord-est, 1 h 30</li>
-              <li class="chip warn">Ouverture à confirmer</li>
-            </ul>
-            <p class="flag"><b>Je l'avais écarté à tort.</b> L'annuaire GrandsGites annonce une ouverture « de février à décembre », ce qui semblait exclure la semaine du réveillon. Or <b>leur propre site écrit : « vous êtes les bienvenus toute l'année »</b>. La restriction de l'annuaire concerne peut-être la seule yourte, difficilement habitable en janvier. Deux questions à poser : <b>ouvrez-vous entre Noël et le Nouvel An</b>, et le tarif en gestion libre pour 15 personnes sur la semaine, puisqu'il n'est pas publié. À noter qu'un séjour du <b>26 décembre au 1<sup>er</sup> janvier</b> — six nuits, réveillon compris — tiendrait entièrement dans le mois de décembre, ce qui lève l'objection même si janvier était fermé.</p>
-            <p class="meta"><span class="tel">05 63 74 51 77</span> <span class="tel">06 48 70 93 23</span> <span>Magali et Julie</span> <a href="https://www.ecuriesdelasabatarie.fr" target="_blank" rel="noopener noreferrer">ecuriesdelasabatarie.fr</a> <a href="http://www.yourtenbois.fr/" target="_blank" rel="noopener noreferrer">yourtenbois.fr</a> <a href="https://www.google.com/maps/search/?api=1&query=La%20Sabatari%C3%A9%2C%2081260%20Camboun%C3%A9s" target="_blank" rel="noopener noreferrer">carte</a></p>
           </div>
         </li>
 
@@ -566,30 +568,6 @@
           </div>
         </li>
 
-        <li id="moulinet" class="fiche">
-          <div class="rail">
-            <p class="eyebrow">Tarif publié</p>
-            <p class="price">3 000 €</p>
-            <p class="price-note">7 nuits, chauffage inclus</p>
-            <p class="perhead">200 €/pers.</p>
-          </div>
-          <div class="body">
-            <div class="titleline">
-              <h3>Grand Gîte Le Moulinet</h3>
-              <span class="place">Léran (09) · ≈ 1 h</span>
-            </div>
-            <p class="desc">Pile sur le plafond du budget, mais c'est le plus confortable de la liste et tout est inclus. Salon de 65 m² <strong>avec cheminée</strong>, grande table de réception, salle de billard, cuisine professionnelle, 8 chambres. À 10 min de Mirepoix, près du lac de Montbel.</p>
-            <ul class="chips">
-              <li class="chip ok">Ouvert toute l'année</li>
-              <li class="chip ok">Chauffage inclus</li>
-              <li class="chip ok">8 chambres</li>
-              <li class="chip">21 places</li>
-              <li class="chip warn">Plafond du budget</li>
-            </ul>
-            <p class="meta"><span class="tel">05 61 03 88 21</span> <a href="https://grandgitetoulouse.fr" target="_blank" rel="noopener noreferrer">grandgitetoulouse.fr</a> <span>Corinne Grison</span> <a href="https://www.google.com/maps/search/?api=1&query=Le%20Moulinet%2C%2009600%20L%C3%A9ran" target="_blank" rel="noopener noreferrer">carte</a></p>
-          </div>
-        </li>
-
         <li id="condomines" class="fiche pick">
           <div class="rail">
             <p class="eyebrow">Estimation</p>
@@ -611,6 +589,30 @@
             </ul>
             <p class="flag"><b>Je l'avais écarté sur la foi de l'annuaire</b>, qui l'annonce ouvert « d'avril à mi-novembre ». Après le cas de la Sabatarié, où le propriétaire écrit l'inverse de l'annuaire, ce motif ne suffit plus : <b>c'est à eux de le dire</b>. Et si janvier posait problème, un séjour du 26 décembre au 1<sup>er</sup> janvier resterait dans décembre. Demander aussi une estimation du gaz de chauffage, facturé au réel — l'étalon du Torgan le chiffre à ≈ 560 € pour une semaine de décembre.</p>
             <p class="meta"><span class="tel">04 68 33 67 02</span> <span class="tel">06 08 33 60 32</span> <span>Martine Allais</span> <a href="https://www.google.com/maps/search/?api=1&query=Les%20Condomines%2C%2011330%20Lanet" target="_blank" rel="noopener noreferrer">carte</a></p>
+          </div>
+        </li>
+
+        <li id="moulinet" class="fiche">
+          <div class="rail">
+            <p class="eyebrow">Tarif publié</p>
+            <p class="price">3 000 €</p>
+            <p class="price-note">7 nuits, chauffage inclus</p>
+            <p class="perhead">200 €/pers.</p>
+          </div>
+          <div class="body">
+            <div class="titleline">
+              <h3>Grand Gîte Le Moulinet</h3>
+              <span class="place">Léran (09) · ≈ 1 h</span>
+            </div>
+            <p class="desc">Pile sur le plafond du budget, mais c'est le plus confortable de la liste et tout est inclus. Salon de 65 m² <strong>avec cheminée</strong>, grande table de réception, salle de billard, cuisine professionnelle, 8 chambres. À 10 min de Mirepoix, près du lac de Montbel.</p>
+            <ul class="chips">
+              <li class="chip ok">Ouvert toute l'année</li>
+              <li class="chip ok">Chauffage inclus</li>
+              <li class="chip ok">8 chambres</li>
+              <li class="chip">21 places</li>
+              <li class="chip warn">Plafond du budget</li>
+            </ul>
+            <p class="meta"><span class="tel">05 61 03 88 21</span> <a href="https://grandgitetoulouse.fr" target="_blank" rel="noopener noreferrer">grandgitetoulouse.fr</a> <span>Corinne Grison</span> <a href="https://www.google.com/maps/search/?api=1&query=Le%20Moulinet%2C%2009600%20L%C3%A9ran" target="_blank" rel="noopener noreferrer">carte</a></p>
           </div>
         </li>
 
@@ -846,7 +848,7 @@
     <section id="carte">
       <div class="sec-head">
         <h2>Où c'est</h2>
-        <p><strong>Le centre du marqueur donne la disponibilité</strong> : rouge pour ce qui est pris, blanc pour ce qui reste à vérifier, vert quand c'est confirmé libre. Un <strong>anneau ocre</strong> signale l'altitude. À ce stade, dix gîtes sur quinze n'ont pas encore été appelés. Les cercles marquent 50, 100 et 150 km à vol d'oiseau depuis Toulouse — la route est toujours plus longue, surtout vers les vallées pyrénéennes. <strong>Cliquez un point pour ouvrir la fiche correspondante.</strong></p>
+        <p><strong>Le centre du marqueur donne l'avancement</strong> : blanc tant que personne n'a appelé, <strong>bleu</strong> quand le contact est pris et la réponse attendue, vert si c'est confirmé libre, rouge si c'est pris. Un <strong>anneau ocre</strong> signale l'altitude. À ce stade : un bleu, cinq rouges, onze blancs. Les cercles marquent 50, 100 et 150 km à vol d'oiseau depuis Toulouse — la route est toujours plus longue, surtout vers les vallées pyrénéennes. <strong>Cliquez un point pour ouvrir la fiche correspondante.</strong></p>
       </div>
       <figure class="carte-box">
         <div class="fonds" role="group" aria-label="Fond de carte">
@@ -861,6 +863,7 @@
           <ul class="legende">
             <li><span class="pastille inconnu"></span>Disponibilité inconnue, à appeler</li>
             <li><span class="pastille pris"></span>Pris cette année, gardé en mémoire</li>
+            <li><span class="pastille contacte"></span>Contacté, réponse attendue</li>
             <li><span class="pastille libre"></span>Disponibilité confirmée</li>
             <li><span class="pastille anneau"></span>Anneau : en montagne ou en altitude</li>
           </ul>
@@ -987,7 +990,7 @@ Merci d'avance,
 (function () {
   var el = document.getElementById('map');
   if (!el || typeof L === 'undefined') return;
-  var G = [{"n": "Les Condomines", "c": "Lanet (11) — Hautes-Corbières", "lat": 42.98, "lon": 2.47, "d": "inconnu", "m": false, "p": "1 700 – 2 800 €", "a": "condomines"}, {"n": "Les Écuries de la Sabatarié", "c": "Cambounés (81) — hameau isolé", "lat": 43.575, "lon": 2.535, "d": "inconnu", "m": true, "p": "Sur devis, chauffage compris", "a": "sabatarie"}, {"n": "Grand Chalet des Scouts", "c": "Camurac (11) — 1 300 m", "lat": 42.775, "lon": 1.935, "d": "inconnu", "m": true, "p": "1 100 – 1 600 €", "a": "scouts"}, {"n": "Gîte de l'Escolan", "c": "Ustou (09) — Couserans", "lat": 42.787, "lon": 1.238, "d": "inconnu", "m": true, "p": "≈ 2 300 € + chauffage", "a": "escolan"}, {"n": "Château de Calmels", "c": "Lacaune (81) — 800 m", "lat": 43.7, "lon": 2.7, "d": "inconnu", "m": true, "p": "≈ 2 625 €", "a": "calmels"}, {"n": "Gîte des Pipelettes", "c": "Martrin (12) — isolé, sans voisins", "lat": 43.9, "lon": 2.72, "d": "inconnu", "m": false, "p": "1 120 – 1 420 €", "a": "pipelettes"}, {"n": "Gîtes de Granquié", "c": "Montredon-Labessonnié (81)", "lat": 43.717, "lon": 2.418, "d": "inconnu", "m": false, "p": "≈ 2 200 €", "a": "granquie"}, {"n": "Gîtes La Capelle", "c": "Roquefort-des-Corbières (11)", "lat": 42.999, "lon": 2.937, "d": "inconnu", "m": false, "p": "≈ 2 040 €", "a": "capelle"}, {"n": "Mas Montluzia", "c": "Cascastel-des-Corbières (11)", "lat": 42.958, "lon": 2.761, "d": "inconnu", "m": false, "p": "2 470 €", "a": "montluzia"}, {"n": "Gîte de séjour La Paguère", "c": "Mauvezin (31) — Savès", "lat": 43.42, "lon": 0.82, "d": "inconnu", "m": false, "p": "2 070 – 3 200 €", "a": "paguere"}, {"n": "Grand Gîte Le Moulinet", "c": "Léran (09) — piémont", "lat": 43.01, "lon": 1.9, "d": "inconnu", "m": false, "p": "3 000 €", "a": "moulinet"}, {"n": "Gîte du Renard Désargenté", "c": "Lairière (11) — Corbières", "lat": 43.02, "lon": 2.445, "d": "inconnu", "m": false, "p": "à demander", "a": "renard"}, {"n": "Les Gîtes du Torgan", "c": "Massac (11) — étalon de prix", "lat": 42.93, "lon": 2.55, "d": "pris", "m": false, "p": "Complet — 171 €/pers.", "a": "pristorgan"}, {"n": "Moulin du Barthas", "c": "Montredon-Labessonnié (81)", "lat": 43.7, "lon": 2.44, "d": "pris", "m": false, "p": "Occupé 27-31 déc. — 1 237 €", "a": "prisbarthas"}, {"n": "Gîtes du Soula", "c": "Mérens-les-Vals (09) — Haute-Ariège", "lat": 42.657, "lon": 1.837, "d": "pris", "m": true, "p": "Indisponible — 980 à 2 604 €", "a": "prissoula"}, {"n": "La Bouriotte", "c": "Labastide-Rouairoux (81) — Montagne Noire", "lat": 43.485, "lon": 2.626, "d": "pris", "m": true, "p": "Indisponible — 1 080 à 2 600 €", "a": "prisbouriotte"}, {"n": "Gîte le Lutin", "c": "Bagnères-de-Luchon (31) — Pyrénées", "lat": 42.79, "lon": 0.593, "d": "pris", "m": true, "p": "Indisponible — ≈ 2 400 €", "a": "prislutin"}];
+  var G = [{"n": "Les Condomines", "c": "Lanet (11) — Hautes-Corbières", "lat": 42.98, "lon": 2.47, "d": "inconnu", "m": false, "p": "1 700 – 2 800 €", "a": "condomines"}, {"n": "Les Écuries de la Sabatarié", "c": "Cambounés (81) — hameau isolé", "lat": 43.575, "lon": 2.535, "d": "contacte", "m": true, "p": "A priori libre — réponse attendue", "a": "sabatarie"}, {"n": "Grand Chalet des Scouts", "c": "Camurac (11) — 1 300 m", "lat": 42.775, "lon": 1.935, "d": "inconnu", "m": true, "p": "1 100 – 1 600 €", "a": "scouts"}, {"n": "Gîte de l'Escolan", "c": "Ustou (09) — Couserans", "lat": 42.787, "lon": 1.238, "d": "inconnu", "m": true, "p": "≈ 2 300 € + chauffage", "a": "escolan"}, {"n": "Château de Calmels", "c": "Lacaune (81) — 800 m", "lat": 43.7, "lon": 2.7, "d": "inconnu", "m": true, "p": "≈ 2 625 €", "a": "calmels"}, {"n": "Gîte des Pipelettes", "c": "Martrin (12) — isolé, sans voisins", "lat": 43.9, "lon": 2.72, "d": "inconnu", "m": false, "p": "1 120 – 1 420 €", "a": "pipelettes"}, {"n": "Gîtes de Granquié", "c": "Montredon-Labessonnié (81)", "lat": 43.717, "lon": 2.418, "d": "inconnu", "m": false, "p": "≈ 2 200 €", "a": "granquie"}, {"n": "Gîtes La Capelle", "c": "Roquefort-des-Corbières (11)", "lat": 42.999, "lon": 2.937, "d": "inconnu", "m": false, "p": "≈ 2 040 €", "a": "capelle"}, {"n": "Mas Montluzia", "c": "Cascastel-des-Corbières (11)", "lat": 42.958, "lon": 2.761, "d": "inconnu", "m": false, "p": "2 470 €", "a": "montluzia"}, {"n": "Gîte de séjour La Paguère", "c": "Mauvezin (31) — Savès", "lat": 43.42, "lon": 0.82, "d": "inconnu", "m": false, "p": "2 070 – 3 200 €", "a": "paguere"}, {"n": "Grand Gîte Le Moulinet", "c": "Léran (09) — piémont", "lat": 43.01, "lon": 1.9, "d": "inconnu", "m": false, "p": "3 000 €", "a": "moulinet"}, {"n": "Gîte du Renard Désargenté", "c": "Lairière (11) — Corbières", "lat": 43.02, "lon": 2.445, "d": "inconnu", "m": false, "p": "à demander", "a": "renard"}, {"n": "Les Gîtes du Torgan", "c": "Massac (11) — étalon de prix", "lat": 42.93, "lon": 2.55, "d": "pris", "m": false, "p": "Complet — 171 €/pers.", "a": "pristorgan"}, {"n": "Moulin du Barthas", "c": "Montredon-Labessonnié (81)", "lat": 43.7, "lon": 2.44, "d": "pris", "m": false, "p": "Occupé 27-31 déc. — 1 237 €", "a": "prisbarthas"}, {"n": "Gîtes du Soula", "c": "Mérens-les-Vals (09) — Haute-Ariège", "lat": 42.657, "lon": 1.837, "d": "pris", "m": true, "p": "Indisponible — 980 à 2 604 €", "a": "prissoula"}, {"n": "La Bouriotte", "c": "Labastide-Rouairoux (81) — Montagne Noire", "lat": 43.485, "lon": 2.626, "d": "pris", "m": true, "p": "Indisponible — 1 080 à 2 600 €", "a": "prisbouriotte"}, {"n": "Gîte le Lutin", "c": "Bagnères-de-Luchon (31) — Pyrénées", "lat": 42.79, "lon": 0.593, "d": "pris", "m": true, "p": "Indisponible — ≈ 2 400 €", "a": "prislutin"}];
 
   var OSM = '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>';
   var fonds = {
@@ -1020,7 +1023,8 @@ Merci d'avance,
   var STYLE = {
     pris:    { fillColor: '#B23A2B', color: '#ffffff', radius: 8, weight: 2.5 },
     inconnu: { fillColor: '#ffffff', color: '#3E4F48', radius: 8, weight: 2.5 },
-    libre:   { fillColor: '#1B7A63', color: '#ffffff', radius: 9, weight: 2.5 }
+    libre:   { fillColor: '#1B7A63', color: '#ffffff', radius: 9, weight: 2.5 },
+    contacte:{ fillColor: '#1E6F9F', color: '#ffffff', radius: 9, weight: 2.5 }
   };
 
   var TLS = [43.6045, 1.4442];
@@ -1040,7 +1044,8 @@ Merci d'avance,
                                        weight: 2, opacity: 0.95, interactive: false }).addTo(map);
     }
     var mk = L.circleMarker([g.lat, g.lon], {
-      radius: s.radius, fillColor: s.fillColor, color: s.color, weight: s.weight, fillOpacity: 1
+      radius: s.radius, fillColor: s.fillColor, color: s.color, weight: s.weight,
+      fillOpacity: 1, dashArray: s.dashArray
     }).addTo(map);
     mk.bindPopup(
       '<span class="pop-nom">' + g.n + '</span>' +
