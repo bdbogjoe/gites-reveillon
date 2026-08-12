@@ -211,7 +211,7 @@
   .legende li{display:flex; align-items:center; gap:.45rem}
   .pastille{width:.7rem; height:.7rem; min-width:.7rem; border-radius:50%;
     flex:0 0 auto; padding:0; display:block}
-  .pastille.inconnu{background:#ffffff; border:2px solid #8A8A8A; box-sizing:border-box}
+  .pastille.inconnu{background:#ffffff; border:1px solid #9E9E9E; box-sizing:border-box}
   .pastille.pris{background:var(--stop)}
   .pastille.libre{background:var(--accent)}
   .pastille.contacte{background:#1E6F9F}
@@ -848,7 +848,7 @@
     <section id="carte">
       <div class="sec-head">
         <h2>Où c'est</h2>
-        <p><strong>Le centre du marqueur donne l'avancement</strong> : blanc tant que personne n'a appelé, <strong>bleu</strong> quand le contact est pris et la réponse attendue, vert si c'est confirmé libre, rouge si c'est pris. Un <strong>anneau ocre</strong> signale l'altitude. À ce stade : un bleu, cinq rouges, onze blancs. Les cercles marquent 50, 100 et 150 km à vol d'oiseau depuis Toulouse — la route est toujours plus longue, surtout vers les vallées pyrénéennes. <strong>Cliquez un point pour ouvrir la fiche correspondante.</strong></p>
+        <p><strong>La couleur du point donne l'avancement</strong> : blanc tant que personne n'a appelé, <strong>bleu</strong> quand le contact est pris et la réponse attendue, vert si c'est confirmé libre, rouge si c'est pris. Un <strong>anneau ocre</strong> signale l'altitude. À ce stade : un bleu, cinq rouges, onze blancs. Les cercles marquent 50, 100 et 150 km à vol d'oiseau depuis Toulouse — la route est toujours plus longue, surtout vers les vallées pyrénéennes. <strong>Cliquez un point pour ouvrir la fiche correspondante.</strong></p>
       </div>
       <figure class="carte-box">
         <div class="fonds" role="group" aria-label="Fond de carte">
@@ -1021,10 +1021,10 @@ Merci d'avance,
 
   // Un liseré blanc rend les points lisibles sur un fond clair comme sur un fond sombre.
   var STYLE = {
-    pris:    { fillColor: '#B23A2B', color: '#ffffff', radius: 8, weight: 2.5 },
-    inconnu: { fillColor: '#ffffff', color: '#8A8A8A', radius: 8, weight: 2 },
-    libre:   { fillColor: '#1B7A63', color: '#ffffff', radius: 9, weight: 2.5 },
-    contacte:{ fillColor: '#1E6F9F', color: '#ffffff', radius: 9, weight: 2.5 }
+    inconnu: { fillColor: '#ffffff', color: '#9E9E9E', radius: 8, weight: 1.5 },
+    contacte:{ fillColor: '#1E6F9F', color: '#ffffff', radius: 8, weight: 1.5 },
+    libre:   { fillColor: '#1B7A63', color: '#ffffff', radius: 8, weight: 1.5 },
+    pris:    { fillColor: '#B23A2B', color: '#ffffff', radius: 8, weight: 1.5 }
   };
 
   var TLS = [43.6045, 1.4442];
