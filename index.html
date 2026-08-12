@@ -1021,11 +1021,12 @@ Merci d'avance,
 
   // Un liseré blanc rend les points lisibles sur un fond clair comme sur un fond sombre.
   var STYLE = {
-    inconnu: { fillColor: '#ffffff', color: '#9E9E9E', radius: 8, weight: 1.5 },
-    contacte:{ fillColor: '#1E6F9F', color: '#ffffff', radius: 8, weight: 1.5 },
-    libre:   { fillColor: '#1B7A63', color: '#ffffff', radius: 8, weight: 1.5 },
-    pris:    { fillColor: '#B23A2B', color: '#ffffff', radius: 8, weight: 1.5 }
+    inconnu: { fillColor: '#ffffff', stroke: true, color: '#9E9E9E', weight: 1.5 },
+    contacte:{ fillColor: '#1E6F9F', stroke: false },
+    libre:   { fillColor: '#1B7A63', stroke: false },
+    pris:    { fillColor: '#B23A2B', stroke: false }
   };
+  var RAYON = 8;
 
   var TLS = [43.6045, 1.4442];
   [50000, 100000, 150000].forEach(function (r) {
@@ -1040,12 +1041,12 @@ Merci d'avance,
   G.forEach(function (g) {
     var s = STYLE[g.d] || STYLE.inconnu;
     if (g.m) {
-      L.circleMarker([g.lat, g.lon], { radius: s.radius + 5, fill: false, color: '#8A6218',
+      L.circleMarker([g.lat, g.lon], { radius: RAYON + 5, fill: false, color: '#8A6218',
                                        weight: 2, opacity: 0.95, interactive: false }).addTo(map);
     }
     var mk = L.circleMarker([g.lat, g.lon], {
-      radius: s.radius, fillColor: s.fillColor, color: s.color, weight: s.weight,
-      fillOpacity: 1, dashArray: s.dashArray
+      radius: RAYON, fillColor: s.fillColor, fillOpacity: 1,
+      stroke: s.stroke, color: s.color, weight: s.weight || 0
     }).addTo(map);
     mk.bindPopup(
       '<span class="pop-nom">' + g.n + '</span>' +
