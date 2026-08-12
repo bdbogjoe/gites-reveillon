@@ -420,27 +420,28 @@
           </div>
         </li>
 
-        <li id="garrigue" class="fiche pick">
+        <li id="garrigue" class="fiche">
           <div class="rail">
             <p class="eyebrow">Séjour</p>
-            <p class="price">2 907 €</p>
-            <p class="price-note">séjour complet, via Gîtes de France</p>
-            <p class="perhead">194 €/pers.</p>
+            <p class="price">≈ 3 117 €</p>
+            <p class="price-note">2 907 € + 210 € de chauffage</p>
+            <p class="perhead">208 €/pers.</p>
           </div>
           <div class="body">
             <div class="titleline">
               <h3>Gîte de la Garrigue</h3>
               <span class="place">Montferrand (11) · Lauragais · ≈ 50 min</span>
             </div>
-            <p class="desc">6 chambres pour 15 personnes dans la campagne lauragaise, au seuil de Naurouze. Proche de Toulouse, mais à l'est plutôt qu'au nord-est, et en plaine — en retrait sur deux de vos préférences.</p>
+            <p class="desc">270 m² dans la campagne lauragaise, à quelques kilomètres du canal du Midi. La fiche complète décrit un <strong>grand hall traversant</strong> qui relie la cuisine à un <strong>espace salle à manger</strong> — donc oui, il y a de quoi réunir le groupe à table, mais sans surface annoncée ni description de la cuisine au-delà du lave-vaisselle et du micro-ondes. Draps inclus à partir de 7 nuits.</p>
             <ul class="chips">
               <li class="chip libre">Libre selon Gîtes de France</li>
-              <li class="chip ok">50 min de Toulouse</li>
-              <li class="chip warn">Plaine, pas de relief</li>
-              <li class="chip warn">Salle commune à vérifier</li>
+              <li class="chip warn">Salle à manger, surface inconnue</li>
+              <li class="chip stop">Dortoir de 5 lits</li>
+              <li class="chip stop">Chauffage : 30 €/nuit en plus</li>
+              <li class="chip warn">Dépasse le plafond de 117 €</li>
             </ul>
-            <p class="flag"><b>Le plus cher des quatre disponibles</b>, à 194 € par tête, pour le cadre le moins conforme à vos préférences. À garder en repli.</p>
-            <p class="meta"><a href="https://www.gites-de-france-sud.fr/location-de-vacances/aude/gite-de-la-garrigue-11g3077-montferrand?date_a=2026-12-26&amp;date_d=2027-01-02&amp;duree=7&amp;capacite=15" target="_blank" rel="noopener noreferrer">voir la fiche et réserver</a> <a href="https://www.google.com/maps/search/?api=1&query=G%C3%AEte%20de%20la%20Garrigue%2C%2011320%20Montferrand" target="_blank" rel="noopener noreferrer">carte</a></p>
+            <p class="flag"><b>Deux mauvaises surprises dans la fiche détaillée.</b> D'abord le couchage : cinq chambres en lits de 140 et de 100, puis un <b>dortoir de 30 m² avec cinq lits de 90</b> au second étage — soit un tiers du groupe en dortoir, ce qui heurte le critère. Ensuite le prix : <b>le chauffage est facturé 30 € la nuit en supplément</b>, soit 210 € sur la semaine, ce qui porte le séjour à ≈ 3 117 € et fait <b>passer le plafond de 117 €</b>. Je le laisse parmi les candidats parce que sa disponibilité est établie et que le dépassement est marginal, mais à 208 € par tête il devient le plus cher des disponibles, pour le cadre le moins conforme — plaine, sans relief, à l'est plutôt qu'au nord-est.</p>
+            <p class="meta"><span class="tel">04 68 11 40 70</span> <span>Isabelle et Paul</span> <a href="https://www.gites-de-france-sud.fr/location-de-vacances/aude/gite-de-la-garrigue-11g3077-montferrand" target="_blank" rel="noopener noreferrer">voir la fiche et réserver</a> <a href="https://www.google.com/maps/search/?api=1&query=G%C3%AEte%20de%20la%20Garrigue%2C%2011320%20Montferrand" target="_blank" rel="noopener noreferrer">carte</a></p>
           </div>
         </li>
 
@@ -788,12 +789,12 @@
             <tr>
               <td class="name" data-label="Gîte"><a href="#garrigue">Gîte de la Garrigue</a> <span class="chip libre">libre selon le site</span><span class="loc">Montferrand (11) · Lauragais</span></td>
               <td class="n" data-label="≈ Trajet">50 min</td>
-              <td class="n" data-label="Capacité">15 pl.<br>6 ch.</td>
-              <td data-label="Salle commune"><span class="no">à vérifier</span></td>
-              <td data-label="Chauffage">à vérifier</td>
+              <td class="n" data-label="Capacité">15 pl.<br>5 ch. + dortoir de 5</td>
+              <td data-label="Salle commune">salle à manger, surface inconnue</td>
+              <td data-label="Chauffage"><span class="no">+ 30 €/nuit</span></td>
               <td data-label="Gros supermarché">Castelnaudary ≈ 20 km</td>
               <td data-label="Gare (un plus)">Castelnaudary ≈ 20 km</td>
-              <td class="n" data-label="Estim. 15 p. × 7 n.">2 907 €</td>
+              <td class="n" data-label="Estim. 15 p. × 7 n.">≈ 3 117 €</td>
             </tr>
             <tr>
               <td class="name" data-label="Gîte"><a href="#pipelettes">Gîte des Pipelettes</a><span class="loc">Martrin (12) · Aveyron</span></td>
@@ -1105,7 +1106,7 @@ Merci d'avance,
 (function () {
   var el = document.getElementById('map');
   if (!el || typeof L === 'undefined') return;
-  var G = [{"n": "Au bout du Monde", "c": "Sonnac-sur-l'Hers (11) — 7 chambres", "lat": 42.94, "lon": 2.03, "d": "libre", "m": false, "p": "2 499 € — libre selon Gîtes de France", "a": "boutdumonde"}, {"n": "Centre La Freychède", "c": "Montferrier (09) — contacté, sans retour", "lat": 42.92, "lon": 1.79, "d": "contacte", "m": false, "p": "Sur devis — minimum 20 pers.", "a": "freychede"}, {"n": "Domaine de Vizols", "c": "Garrigues (81) — maison de 360 m², terrain clos", "lat": 43.72, "lon": 1.76, "d": "confirme", "m": false, "p": "2 800 € confirmé — dortoir de 7, devis en cours", "a": "vizols"}, {"n": "Enclos de la Rive", "c": "Pampelonne (81) — Gîtes de France", "lat": 44.09, "lon": 2.29, "d": "libre", "m": false, "p": "2 612 € — disponible aux dates", "a": "rive"}, {"n": "Gîte de la Garrigue", "c": "Montferrand (11) — Gîtes de France", "lat": 43.32, "lon": 1.83, "d": "libre", "m": false, "p": "2 907 € — disponible aux dates", "a": "garrigue"}, {"n": "Les Condomines", "c": "Lanet (11) — Hautes-Corbières", "lat": 42.98, "lon": 2.47, "d": "inconnu", "m": false, "p": "1 700 – 2 800 €", "a": "condomines"}, {"n": "Les Écuries de la Sabatarié", "c": "Cambounés (81) — hameau isolé", "lat": 43.575, "lon": 2.535, "d": "contacte", "m": true, "p": "A priori libre — réponse attendue", "a": "sabatarie"}, {"n": "Grand Chalet des Scouts", "c": "Camurac (11) — 1 300 m", "lat": 42.775, "lon": 1.935, "d": "inconnu", "m": true, "p": "1 100 – 1 600 €", "a": "scouts"}, {"n": "Gîte de l'Escolan", "c": "Ustou (09) — Couserans", "lat": 42.787, "lon": 1.238, "d": "inconnu", "m": true, "p": "≈ 2 300 € + chauffage", "a": "escolan"}, {"n": "Château de Calmels", "c": "Lacaune (81) — 800 m", "lat": 43.7, "lon": 2.7, "d": "inconnu", "m": true, "p": "≈ 2 625 €", "a": "calmels"}, {"n": "Gîte des Pipelettes", "c": "Martrin (12) — isolé, sans voisins", "lat": 43.9, "lon": 2.72, "d": "inconnu", "m": false, "p": "1 120 – 1 420 €", "a": "pipelettes"}, {"n": "Gîtes de Granquié", "c": "Montredon-Labessonnié (81)", "lat": 43.717, "lon": 2.418, "d": "inconnu", "m": false, "p": "≈ 2 200 €", "a": "granquie"}, {"n": "Mas Montluzia", "c": "Cascastel-des-Corbières (11)", "lat": 42.958, "lon": 2.761, "d": "inconnu", "m": false, "p": "2 470 €", "a": "montluzia"}, {"n": "Gîte de séjour La Paguère", "c": "Mauvezin (31) — Savès", "lat": 43.42, "lon": 0.82, "d": "inconnu", "m": false, "p": "2 070 – 3 200 €", "a": "paguere"}, {"n": "Grand Gîte Le Moulinet", "c": "Léran (09) — piémont", "lat": 43.01, "lon": 1.9, "d": "inconnu", "m": false, "p": "3 000 €", "a": "moulinet"}, {"n": "Gîte du Renard Désargenté", "c": "Lairière (11) — Corbières", "lat": 43.02, "lon": 2.445, "d": "pris", "m": false, "p": "Indisponible — 12 chambres, salle 110 m²", "a": "prisrenard"}, {"n": "Les Gîtes du Torgan", "c": "Massac (11) — étalon de prix", "lat": 42.93, "lon": 2.55, "d": "pris", "m": false, "p": "Complet — 171 €/pers.", "a": "pristorgan"}, {"n": "Moulin du Barthas", "c": "Montredon-Labessonnié (81) — planning occupé, à confirmer", "lat": 43.7, "lon": 2.44, "d": "inconnu", "m": false, "p": "1 237 € — planning à confirmer", "a": "barthas"}, {"n": "Gîtes du Soula", "c": "Mérens-les-Vals (09) — Haute-Ariège", "lat": 42.657, "lon": 1.837, "d": "pris", "m": true, "p": "Indisponible — 980 à 2 604 €", "a": "prissoula"}, {"n": "La Bouriotte", "c": "Labastide-Rouairoux (81) — Montagne Noire", "lat": 43.485, "lon": 2.626, "d": "pris", "m": true, "p": "Indisponible — 1 080 à 2 600 €", "a": "prisbouriotte"}, {"n": "Gîte le Lutin", "c": "Bagnères-de-Luchon (31) — Pyrénées", "lat": 42.79, "lon": 0.593, "d": "pris", "m": true, "p": "Indisponible — ≈ 2 400 €", "a": "prislutin"}];
+  var G = [{"n": "Au bout du Monde", "c": "Sonnac-sur-l'Hers (11) — 7 chambres", "lat": 42.94, "lon": 2.03, "d": "libre", "m": false, "p": "2 499 € — libre selon Gîtes de France", "a": "boutdumonde"}, {"n": "Centre La Freychède", "c": "Montferrier (09) — contacté, sans retour", "lat": 42.92, "lon": 1.79, "d": "contacte", "m": false, "p": "Sur devis — minimum 20 pers.", "a": "freychede"}, {"n": "Domaine de Vizols", "c": "Garrigues (81) — maison de 360 m², terrain clos", "lat": 43.72, "lon": 1.76, "d": "confirme", "m": false, "p": "2 800 € confirmé — dortoir de 7, devis en cours", "a": "vizols"}, {"n": "Enclos de la Rive", "c": "Pampelonne (81) — Gîtes de France", "lat": 44.09, "lon": 2.29, "d": "libre", "m": false, "p": "2 612 € — disponible aux dates", "a": "rive"}, {"n": "Gîte de la Garrigue", "c": "Montferrand (11) — Gîtes de France", "lat": 43.32, "lon": 1.83, "d": "libre", "m": false, "p": "≈ 3 117 € chauffage compris — dortoir de 5", "a": "garrigue"}, {"n": "Les Condomines", "c": "Lanet (11) — Hautes-Corbières", "lat": 42.98, "lon": 2.47, "d": "inconnu", "m": false, "p": "1 700 – 2 800 €", "a": "condomines"}, {"n": "Les Écuries de la Sabatarié", "c": "Cambounés (81) — hameau isolé", "lat": 43.575, "lon": 2.535, "d": "contacte", "m": true, "p": "A priori libre — réponse attendue", "a": "sabatarie"}, {"n": "Grand Chalet des Scouts", "c": "Camurac (11) — 1 300 m", "lat": 42.775, "lon": 1.935, "d": "inconnu", "m": true, "p": "1 100 – 1 600 €", "a": "scouts"}, {"n": "Gîte de l'Escolan", "c": "Ustou (09) — Couserans", "lat": 42.787, "lon": 1.238, "d": "inconnu", "m": true, "p": "≈ 2 300 € + chauffage", "a": "escolan"}, {"n": "Château de Calmels", "c": "Lacaune (81) — 800 m", "lat": 43.7, "lon": 2.7, "d": "inconnu", "m": true, "p": "≈ 2 625 €", "a": "calmels"}, {"n": "Gîte des Pipelettes", "c": "Martrin (12) — isolé, sans voisins", "lat": 43.9, "lon": 2.72, "d": "inconnu", "m": false, "p": "1 120 – 1 420 €", "a": "pipelettes"}, {"n": "Gîtes de Granquié", "c": "Montredon-Labessonnié (81)", "lat": 43.717, "lon": 2.418, "d": "inconnu", "m": false, "p": "≈ 2 200 €", "a": "granquie"}, {"n": "Mas Montluzia", "c": "Cascastel-des-Corbières (11)", "lat": 42.958, "lon": 2.761, "d": "inconnu", "m": false, "p": "2 470 €", "a": "montluzia"}, {"n": "Gîte de séjour La Paguère", "c": "Mauvezin (31) — Savès", "lat": 43.42, "lon": 0.82, "d": "inconnu", "m": false, "p": "2 070 – 3 200 €", "a": "paguere"}, {"n": "Grand Gîte Le Moulinet", "c": "Léran (09) — piémont", "lat": 43.01, "lon": 1.9, "d": "inconnu", "m": false, "p": "3 000 €", "a": "moulinet"}, {"n": "Gîte du Renard Désargenté", "c": "Lairière (11) — Corbières", "lat": 43.02, "lon": 2.445, "d": "pris", "m": false, "p": "Indisponible — 12 chambres, salle 110 m²", "a": "prisrenard"}, {"n": "Les Gîtes du Torgan", "c": "Massac (11) — étalon de prix", "lat": 42.93, "lon": 2.55, "d": "pris", "m": false, "p": "Complet — 171 €/pers.", "a": "pristorgan"}, {"n": "Moulin du Barthas", "c": "Montredon-Labessonnié (81) — planning occupé, à confirmer", "lat": 43.7, "lon": 2.44, "d": "inconnu", "m": false, "p": "1 237 € — planning à confirmer", "a": "barthas"}, {"n": "Gîtes du Soula", "c": "Mérens-les-Vals (09) — Haute-Ariège", "lat": 42.657, "lon": 1.837, "d": "pris", "m": true, "p": "Indisponible — 980 à 2 604 €", "a": "prissoula"}, {"n": "La Bouriotte", "c": "Labastide-Rouairoux (81) — Montagne Noire", "lat": 43.485, "lon": 2.626, "d": "pris", "m": true, "p": "Indisponible — 1 080 à 2 600 €", "a": "prisbouriotte"}, {"n": "Gîte le Lutin", "c": "Bagnères-de-Luchon (31) — Pyrénées", "lat": 42.79, "lon": 0.593, "d": "pris", "m": true, "p": "Indisponible — ≈ 2 400 €", "a": "prislutin"}];
 
   var OSM = '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>';
   var fonds = {
