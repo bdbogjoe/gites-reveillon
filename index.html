@@ -121,7 +121,7 @@
   .chip.warn{color:var(--warn); background:var(--warn-soft); border-color:transparent; font-weight:600}
   .chip.stop{color:var(--stop); background:var(--stop-soft); border-color:transparent; font-weight:600}
   .chip.contacte{color:#ffffff; background:#1E6F9F; border-color:transparent; font-weight:600}
-  .chip.libre{color:#ffffff; background:var(--accent); border-color:transparent; font-weight:600}
+  .chip.libre{color:#0F3D33; background:#7CC9B1; border-color:transparent; font-weight:600}
 
   .meta{display:flex; flex-wrap:wrap; gap:.35rem 1.1rem; padding-top:.45rem;
     border-top:1px solid var(--line-soft); font-size:var(--step--1); color:var(--ink-2)}
@@ -214,7 +214,8 @@
     flex:0 0 auto; padding:0; display:block}
   .pastille.inconnu{background:#ffffff; border:1px solid #9E9E9E; box-sizing:border-box}
   .pastille.pris{background:var(--stop)}
-  .pastille.libre{background:var(--accent)}
+  .pastille.libre{background:#7CC9B1}
+  .pastille.confirme{background:var(--accent)}
   .pastille.contacte{background:#1E6F9F}
   .pastille.anneau{background:none; border:2px solid var(--warn); box-sizing:border-box; width:.85rem; height:.85rem}
   .leaflet-popup-content{margin:.7rem .85rem; font-family:"Courant",system-ui,sans-serif}
@@ -625,21 +626,21 @@
     <section id="gdf">
       <div class="sec-head">
         <h2>Disponibles aux dates exactes <span class="count">5 gîtes</span></h2>
-        <p>Trouvés sur <strong>Gîtes de France Sud</strong>, dont le moteur accepte les dates et l'effectif : ces cinq-là sont <strong>proposés à la réservation du 26 décembre au 2 janvier pour 15 personnes</strong>, prix du séjour affiché. C'est la première fois de cette recherche qu'une disponibilité est établie sans téléphoner. Les trois premiers tiennent le budget.</p>
+        <p>Trouvés sur <strong>Gîtes de France Sud</strong>, dont le moteur accepte les dates et l'effectif : ces cinq-là sont <strong>proposés à la réservation du 26 décembre au 2 janvier pour 15 personnes</strong>, prix du séjour affiché. C'est la première fois de cette recherche qu'une disponibilité apparaît sans téléphoner — mais elle vaut ce que vaut un moteur de réservation, et seul votre appel la confirmera. D'où le vert clair sur la carte. Les trois premiers tiennent le budget.</p>
         <p><a href="https://www.gites-de-france-sud.fr/locations-de-vacances/recherche?date_a=2026-12-26&amp;date_d=2027-01-02&amp;duree=7&amp;capacite=15" target="_blank" rel="noopener noreferrer">Voir la recherche en direct</a> — le lien porte vos dates et votre effectif, la liste reste donc à jour. <strong>20 résultats au total</strong>, dont 6 que je n'ai pas pu afficher : la seconde page de résultats ne s'est pas chargée.</p>
       </div>
       <ul class="stack">
         <li id="vizols" class="row"><h3>Domaine de Vizols — Garrigues (81) · ≈ 45 min · <strong>2 600 €</strong></h3>
           <p>6 chambres pour 15 personnes, dans le Tarn entre Toulouse et Lavaur — le plus proche de Toulouse de toute la page, et au nord-est. Mention « tout compris » sur l'annonce, ce qui laisse espérer chauffage et draps inclus.</p>
-          <ul class="chips"><li class="chip libre">Disponible aux dates</li><li class="chip ok">2 600 € tout compris</li><li class="chip warn">Salle commune à vérifier</li></ul>
+          <ul class="chips"><li class="chip libre">Libre selon Gîtes de France</li><li class="chip ok">2 600 € tout compris</li><li class="chip warn">Salle commune à vérifier</li></ul>
           <p class="meta"><a href="https://www.gites-de-france-sud.fr/location-de-vacances/tarn/domaine-de-vizols-g1644-garrigues" target="_blank" rel="noopener noreferrer">voir la fiche et réserver</a></p></li>
         <li id="rive" class="row"><h3>Enclos de la Rive — Pampelonne (81) · ≈ 1 h 30 · <strong>2 612 €</strong></h3>
           <p>6 chambres pour 15 personnes dans le Ségala tarnais, décrit comme un « havre de paix pour les amoureux de nature » — à confronter au critère d'isolement, qui semble bien orienté. Au nord-est également.</p>
-          <ul class="chips"><li class="chip libre">Disponible aux dates</li><li class="chip ok">Nord-est, nature</li><li class="chip warn">Salle commune à vérifier</li></ul>
+          <ul class="chips"><li class="chip libre">Libre selon Gîtes de France</li><li class="chip ok">Nord-est, nature</li><li class="chip warn">Salle commune à vérifier</li></ul>
           <p class="meta"><a href="https://www.gites-de-france-sud.fr/locations-de-vacances/recherche?date_a=2026-12-26&amp;date_d=2027-01-02&amp;duree=7&amp;capacite=15" target="_blank" rel="noopener noreferrer">retrouver dans la recherche</a></p></li>
         <li id="garrigue" class="row"><h3>Gîte de la Garrigue — Montferrand (11) · ≈ 50 min · <strong>2 907 €</strong></h3>
           <p>6 chambres pour 15 personnes dans la campagne lauragaise, au seuil de Naurouze. Proche de Toulouse, mais à l'est plutôt qu'au nord-est, et en plaine.</p>
-          <ul class="chips"><li class="chip libre">Disponible aux dates</li><li class="chip">Lauragais, plaine</li><li class="chip warn">Salle commune à vérifier</li></ul>
+          <ul class="chips"><li class="chip libre">Libre selon Gîtes de France</li><li class="chip">Lauragais, plaine</li><li class="chip warn">Salle commune à vérifier</li></ul>
           <p class="meta"><a href="https://www.gites-de-france-sud.fr/locations-de-vacances/recherche?date_a=2026-12-26&amp;date_d=2027-01-02&amp;duree=7&amp;capacite=15" target="_blank" rel="noopener noreferrer">retrouver dans la recherche</a></p></li>
         <li class="row dim"><h3>Gîte La Bourdette — Belflou (11) · 3 192 €</h3><p>Au bord du lac de la Ganguise, dans le Lauragais. Nombre de chambres non indiqué sur l'annonce. Dépasse le plafond de 192 €.</p></li>
         <li class="row dim"><h3>Domaine des Massols — Marsa (11) · 3 276 €</h3><p>À <strong>700 m d'altitude en zone Natura 2000</strong>, à 4 km du Sentier Cathare : le cadre le plus séduisant des cinq. Mais <strong>4 chambres seulement pour 15 personnes</strong>, ce qui heurte de plein fouet le critère des vrais lits, et 276 € au-dessus du plafond.</p></li>
@@ -680,7 +681,7 @@
               <td class="n" data-label="Estim. 15 p. × 7 n.">1 100 – 1 600 €</td>
             </tr>
             <tr>
-              <td class="name" data-label="Gîte"><a href="#vizols">Domaine de Vizols</a> <span class="chip libre">libre</span><span class="loc">Garrigues (81) · Tarn</span></td>
+              <td class="name" data-label="Gîte"><a href="#vizols">Domaine de Vizols</a> <span class="chip libre">libre selon le site</span><span class="loc">Garrigues (81) · Tarn</span></td>
               <td class="n" data-label="≈ Trajet">45 min</td>
               <td class="n" data-label="Capacité">15 pl.<br>6 ch.</td>
               <td data-label="Salle commune"><span class="no">à vérifier</span></td>
@@ -690,7 +691,7 @@
               <td class="n" data-label="Estim. 15 p. × 7 n.">2 600 €</td>
             </tr>
             <tr>
-              <td class="name" data-label="Gîte"><a href="#rive">Enclos de la Rive</a> <span class="chip libre">libre</span><span class="loc">Pampelonne (81) · Ségala</span></td>
+              <td class="name" data-label="Gîte"><a href="#rive">Enclos de la Rive</a> <span class="chip libre">libre selon le site</span><span class="loc">Pampelonne (81) · Ségala</span></td>
               <td class="n" data-label="≈ Trajet">1 h 30</td>
               <td class="n" data-label="Capacité">15 pl.<br>6 ch.</td>
               <td data-label="Salle commune"><span class="no">à vérifier</span></td>
@@ -700,7 +701,7 @@
               <td class="n" data-label="Estim. 15 p. × 7 n.">2 612 €</td>
             </tr>
             <tr>
-              <td class="name" data-label="Gîte"><a href="#garrigue">Gîte de la Garrigue</a> <span class="chip libre">libre</span><span class="loc">Montferrand (11) · Lauragais</span></td>
+              <td class="name" data-label="Gîte"><a href="#garrigue">Gîte de la Garrigue</a> <span class="chip libre">libre selon le site</span><span class="loc">Montferrand (11) · Lauragais</span></td>
               <td class="n" data-label="≈ Trajet">50 min</td>
               <td class="n" data-label="Capacité">15 pl.<br>6 ch.</td>
               <td data-label="Salle commune"><span class="no">à vérifier</span></td>
@@ -872,7 +873,7 @@
     <section id="carte">
       <div class="sec-head">
         <h2>Où c'est</h2>
-        <p><strong>La couleur du point donne l'avancement</strong> : blanc tant que personne n'a appelé, <strong>bleu</strong> quand le contact est pris et la réponse attendue, vert si c'est confirmé libre, rouge si c'est pris. Un <strong>anneau ocre</strong> signale l'altitude. À ce stade : trois verts, deux bleus, cinq rouges, dix blancs. Les cercles marquent 50, 100 et 150 km à vol d'oiseau depuis Toulouse — la route est toujours plus longue, surtout vers les vallées pyrénéennes. <strong>Cliquez un point pour ouvrir la fiche correspondante.</strong></p>
+        <p><strong>La couleur du point donne l'avancement</strong> : blanc tant que personne n'a appelé, <strong>bleu</strong> quand le contact est pris et la réponse attendue, <strong>vert clair</strong> quand un site le donne libre sans que vous l'ayez confirmé, vert franc lorsque vous l'avez obtenu de vive voix, rouge si c'est pris. Un <strong>anneau ocre</strong> signale l'altitude. À ce stade : trois verts clairs, deux bleus, cinq rouges, dix blancs — et aucun vert franc. Les cercles marquent 50, 100 et 150 km à vol d'oiseau depuis Toulouse — la route est toujours plus longue, surtout vers les vallées pyrénéennes. <strong>Cliquez un point pour ouvrir la fiche correspondante.</strong></p>
       </div>
       <figure class="carte-box">
         <div class="fonds" role="group" aria-label="Fond de carte">
@@ -888,7 +889,8 @@
             <li><span class="pastille inconnu"></span>Disponibilité inconnue, à appeler</li>
             <li><span class="pastille pris"></span>Pris cette année, gardé en mémoire</li>
             <li><span class="pastille contacte"></span>Contacté, réponse attendue</li>
-            <li><span class="pastille libre"></span>Disponibilité confirmée</li>
+            <li><span class="pastille libre"></span>Libre selon le site, non confirmé</li>
+            <li><span class="pastille confirme"></span>Confirmé par le groupe</li>
             <li><span class="pastille anneau"></span>Anneau : en montagne ou en altitude</li>
           </ul>
           <p>Trois fonds au choix au-dessus de la carte : <strong>Routes</strong> pour la hiérarchie routière, <strong>Relief</strong> pour les courbes de niveau et les altitudes, <strong>Sombre</strong> si la page vous éblouit. Molette désactivée jusqu'au premier clic pour ne pas gêner la lecture.</p>
@@ -1048,7 +1050,8 @@ Merci d'avance,
   var STYLE = {
     inconnu: { fillColor: '#ffffff', stroke: true, color: '#9E9E9E', weight: 1.5 },
     contacte:{ fillColor: '#1E6F9F', stroke: false },
-    libre:   { fillColor: '#1B7A63', stroke: false },
+    libre:   { fillColor: '#7CC9B1', stroke: false },
+    confirme:{ fillColor: '#1B7A63', stroke: false },
     pris:    { fillColor: '#B23A2B', stroke: false }
   };
   var RAYON = 8;
