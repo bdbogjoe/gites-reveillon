@@ -316,6 +316,9 @@
   .rep-tab .dort{color:var(--stop)}
   .rep-tab tfoot td{border-bottom:0; border-top:1px solid var(--line); color:var(--ink);
     padding-top:.4rem}
+  .prio{margin:.9rem 0 0; padding:0 0 0 1.4rem; display:flex; flex-direction:column; gap:.5rem;
+    font-size:var(--step--1); color:var(--ink-2)}
+  .prio li::marker{color:var(--ink-3); font-family:var(--sans); font-size:.8em}
   .stack{list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:.7rem}
   .row{background:var(--surface); border:1px solid var(--line-soft); border-radius:3px;
     padding:.85rem 1.05rem; display:flex; flex-direction:column; gap:.4rem;
@@ -1198,18 +1201,18 @@
       <div class="sec-head">
         <h2>Toutes les pistes du corridor <span class="count">81 gîtes</span></h2>
         <p>Vous vouliez une liste complète : la voici. <strong>81 gîtes de 15 places et plus</strong>, dépouillés sur <strong>GîtesXXL</strong> et <strong>Gîtedegroupe.fr</strong> pour les huit départements du corridor, dédoublonnés, chacun avec sa fiche et <strong>son point sur la carte</strong>. Les communes ont été géolocalisées une par une sur l'API officielle de l'adresse, et non estimées. <strong>Les gîtes hors budget et les écartés n'y figurent pas</strong>, ni ici ni sur la carte : le Gîte de Caville et La Flânerie en ont été retirés en cours de route, l'annuaire les listant sans prix alors que la page les avait déjà chiffrés à 3 500 et 3 900 €.</p>
-        <p>Les départements sont classés <strong>du plus au nord vers le plus au sud</strong>, c'est-à-dire dans l'ordre où ils règlent le problème de vos amis de Caen. Les pastilles signalent ce qui compte : <strong>logements séparés</strong>, <strong>beaucoup de chambres</strong> pour l'effectif, <strong>altitude</strong>. <strong>Aucun n'a été appelé</strong> — ni GîtesXXL ni Gîtedegroupe ne publient de tarif ni de disponibilité, et aucun annuaire du nord ne filtre par dates. Chaque fiche est un appel à passer. <strong>Chaque fiche porte le lien de son annonce</strong> quand elle existe : Gîtedegroupe publie une page par gîte, et les 39 concernées y renvoient directement. GîtesXXL, lui, <strong>n'a pas de page par gîte</strong> — ses cartes ne sont pas cliquables — donc pour les autres le lien reste celui de la liste du département, et la fiche le dit.</p>
+        <p>Les départements sont classés <strong>du plus au nord vers le plus au sud</strong>, c'est-à-dire dans l'ordre où ils règlent le problème de vos amis de Caen. <strong>La première pastille porte votre critère non négociable</strong> : une salle commune avec grande cuisine. Elle dit « documentée » <strong>seulement quand la source le dit noir sur blanc</strong> — surface, nombre de couverts, cuisine collective — et « non documentée » partout ailleurs, ce qui ne veut pas dire absente mais <strong>non vérifiée</strong>. Les autres signalent <strong>logements séparés</strong>, <strong>beaucoup de chambres</strong> pour l'effectif, <strong>altitude</strong>. <strong>Aucun n'a été appelé</strong> — ni GîtesXXL ni Gîtedegroupe ne publient de tarif ni de disponibilité, et aucun annuaire du nord ne filtre par dates. Chaque fiche est un appel à passer. <strong>Chaque fiche porte le lien de son annonce</strong> quand elle existe : Gîtedegroupe publie une page par gîte, et les 39 concernées y renvoient directement. GîtesXXL, lui, <strong>n'a pas de page par gîte</strong> — ses cartes ne sont pas cliquables — donc pour les autres le lien reste celui de la liste du département, et la fiche le dit.</p>
       </div>
       <div class="dep-bloc">
         <h3><a href="https://www.gitesxxl.fr/grand-gite-groupe-Tarn-et-Garonne-82" target="_blank" rel="noopener noreferrer">Tarn-et-Garonne (82)</a> — 18 gîtes</h3>
-        <p>Gîtes de France n'y référence aucun gîte de groupe ; les deux annuaires en donnent dix-huit. Sur la ligne Paris-Toulouse, donc le meilleur compromis pour vos amis de Caen.</p>
+        <p>La catégorie « gîte de groupe » de <a href="https://www.gites-de-france-tarn-et-garonne.com/fr/recherche/gite-de-groupe-tarn-et-garonne" target="_blank" rel="noopener noreferrer">Gîtes de France 82</a> renvoie <em>aucun résultat</em> — mais l'organisme y commercialise bien de grandes locations, comme le Fer à cheval : c'est son étiquette « groupe » qui est vide, pas le département. Les deux annuaires, eux, en donnent dix-huit. Sur la ligne Paris-Toulouse, donc le meilleur compromis pour vos amis de Caen.</p>
         <ul class="stack">
         <li id="gautrucmontaigudequercy" class="row">
           <div class="ruban inconnu"><span>À appeler</span></div>
           <h3>Au Truc <span class="cap">15 pl.</span></h3>
           <p class="loc">Montaigu-de-Quercy (82)</p>
           <p><strong>Pas de site propre</strong> — leur annonce est la source la plus complète, et elle est détaillée : <strong>15 lits en 7 chambres</strong>, deux séjours intérieurs, une cuisine intérieure <em>et</em> une cuisine extérieure, un espace de co-working, et une <strong>grange aménagée</strong> pour le yoga, la danse ou les réunions — donc une seconde pièce commune. Ancienne ferme restaurée dans <strong>6 hectares de bois et de prairies</strong>, baignade naturelle de 20 × 10 m. Gestion libre, <strong>ménage inclus</strong>, minimum trois nuits. <strong>Le point faible est net : deux salles de bain pour quinze.</strong></p>
-          <ul class="chips"><li class="chip ok">7 chambres, 15 lits</li><li class="chip ok">Deux séjours + grange aménagée</li><li class="chip ok">6 ha de bois et prairies</li><li class="chip ok">Ménage inclus</li><li class="chip stop">2 salles de bain seulement</li></ul>
+          <ul class="chips"><li class="chip ok">Salle commune documentée</li><li class="chip ok">7 chambres, 15 lits</li><li class="chip ok">Deux séjours + grange aménagée</li><li class="chip ok">6 ha de bois et prairies</li><li class="chip ok">Ménage inclus</li><li class="chip stop">2 salles de bain seulement</li></ul>
           <p class="src">Annonce : <a href="https://www.gitedegroupe.fr/gite-groupe-Ly-1156.html" target="_blank" rel="noopener noreferrer">Gîtedegroupe</a> · <a href="https://www.google.com/maps/search/?api=1&amp;query=Au%20Truc,%20Montaigu-de-Quercy,%20Tarn-et-Garonne" target="_blank" rel="noopener noreferrer">carte</a></p>
         </li>
         <li id="gdomainedelamagisterela" class="row">
@@ -1217,23 +1220,23 @@
           <h3>Domaine de Lamagistère <span class="cap">15 pl.</span></h3>
           <p class="loc">Lamagistère (82)</p>
           <p>Ancien presbytère du XVIIe de 450 m² entièrement rénové, grand parc clos — mais au cœur du village, à 25 min d'Agen.</p>
-          <ul class="chips"></ul>
+          <ul class="chips"><li class="chip warn">Salle commune non documentée</li></ul>
           <p class="src">Annonce : <a href="https://www.gitedegroupe.fr/gite-groupe-VI-1a70.html" target="_blank" rel="noopener noreferrer">Gîtedegroupe</a> · <a href="https://www.google.com/maps/search/?api=1&amp;query=Domaine%20de%20Lamagistère,%20Lamagistère,%20Tarn-et-Garonne" target="_blank" rel="noopener noreferrer">carte</a></p>
         </li>
         <li id="ggiteduferachevallapenc" class="row">
           <div class="ruban inconnu"><span>À appeler</span></div>
           <h3>Gîte du Fer à cheval <span class="cap">15 pl.</span></h3>
           <p class="loc">Lapenche (82)</p>
-          <p>8 chambres pour 15 personnes : le meilleur ratio du Tarn-et-Garonne.</p>
-          <ul class="chips"><li class="chip ok">Beaucoup de chambres</li></ul>
-          <p class="src">Relevé sur <a href="https://www.gitesxxl.fr/grand-gite-groupe-Tarn-et-Garonne-82" target="_blank" rel="noopener noreferrer">GîtesXXL</a>, qui ne publie pas de page par gîte · <a href="https://www.google.com/maps/search/?api=1&amp;query=Gîte%20du%20Fer%20à%20cheval,%20Lapenche,%20Tarn-et-Garonne" target="_blank" rel="noopener noreferrer">carte</a></p>
+          <p><strong>Pas de site propre</strong> : il est commercialisé par <a href="https://www.gites-de-france-tarn-et-garonne.com/" target="_blank" rel="noopener noreferrer">Gîtes de France Tarn-et-Garonne</a>. Maison spacieuse à <strong>475 route du Fer à Cheval, 82240 Lapenche</strong>, <strong>8 chambres</strong> et piscine, « à quelques minutes du village ». Le meilleur ratio chambres-effectif du département : huit chambres pour quinze personnes. Reste à connaître la pièce commune, le chauffage et le tarif d'hiver — un appel au <strong>05 65 75 55 66</strong>.</p>
+          <ul class="chips"><li class="chip ok">8 chambres pour 15</li><li class="chip ok">Hors du village</li><li class="chip warn">Salle commune à vérifier</li><li class="chip warn">Cinq homonymes ailleurs en France</li></ul>
+          <p class="src"><span class="tel">05 65 75 55 66</span> · <a href="https://www.gites-de-france-tarn-et-garonne.com/fr/recherche/gite-de-groupe-tarn-et-garonne" target="_blank" rel="noopener noreferrer">Gîtes de France 82</a> · <a href="https://www.google.com/maps/search/?api=1&amp;query=475%20route%20du%20Fer%20a%20Cheval%2C%2082240%20Lapenche" target="_blank" rel="noopener noreferrer">carte</a></p>
         </li>
         <li id="gmanoirdesbarrayrousneg" class="row">
           <div class="ruban inconnu"><span>À appeler</span></div>
           <h3>Manoir des Barrayrous <span class="cap">15 pl.</span></h3>
           <p class="loc">Nègrepelisse (82)</p>
           <p>5 chambres, à quinze minutes de Montauban.</p>
-          <ul class="chips"></ul>
+          <ul class="chips"><li class="chip warn">Salle commune non documentée</li></ul>
           <p class="src">Relevé sur <a href="https://www.gitesxxl.fr/grand-gite-groupe-Tarn-et-Garonne-82" target="_blank" rel="noopener noreferrer">GîtesXXL</a>, qui ne publie pas de page par gîte · <a href="https://www.google.com/maps/search/?api=1&amp;query=Manoir%20des%20Barrayrous,%20Nègrepelisse,%20Tarn-et-Garonne" target="_blank" rel="noopener noreferrer">carte</a></p>
         </li>
         <li id="glecayresaintantoninnob" class="row">
@@ -1241,7 +1244,7 @@
           <h3>Le Cayre <span class="cap">15 pl.</span></h3>
           <p class="loc">Saint-Antonin-Noble-Val (82)</p>
           <p>4 chambres et un dortoir, dans les gorges de l'Aveyron. Classé Gîtes de France.</p>
-          <ul class="chips"></ul>
+          <ul class="chips"><li class="chip warn">Salle commune non documentée</li></ul>
           <p class="src">Relevé sur <a href="https://www.gitesxxl.fr/grand-gite-groupe-Tarn-et-Garonne-82" target="_blank" rel="noopener noreferrer">GîtesXXL</a>, qui ne publie pas de page par gîte · <a href="https://www.google.com/maps/search/?api=1&amp;query=Le%20Cayre,%20Saint-Antonin-Noble-Val,%20Tarn-et-Garonne" target="_blank" rel="noopener noreferrer">carte</a></p>
         </li>
         <li id="ggitedelapeyreescazeaux" class="row">
@@ -1249,7 +1252,7 @@
           <h3>Gîte de la Peyre <span class="cap">17 pl.</span></h3>
           <p class="loc">Escazeaux (82)</p>
           <p><strong>Site officiel : <a href="https://www.giteslapeyre.com/" target="_blank" rel="noopener noreferrer">giteslapeyre.com</a></strong>, qui confirme le meilleur et corrige le reste. Le meilleur : <strong>deux cuisines entièrement équipées et deux vastes séjours à cheminées</strong>, une terrasse de 100 m² avec jacuzzi et vue panoramique, dans une bâtisse de pierre, brique et bois restaurée, « à distance des voies de circulation et du voisinage immédiat ». Le reste : la capacité réelle est de <strong>13 couchages</strong>, portée à 18 <strong>avec des lits d'appoint</strong> — l'annuaire annonçait 17 sans le dire. Vos quinze passent donc, mais deux d'entre vous sur un appoint. Beaumont-de-Lomagne à 3 km.</p>
-          <ul class="chips"><li class="chip ok">Deux séjours à cheminées</li><li class="chip ok">Deux cuisines équipées</li><li class="chip ok">Sans voisinage immédiat</li><li class="chip warn">13 couchages, 15 avec appoints</li></ul>
+          <ul class="chips"><li class="chip ok">Salle commune documentée</li><li class="chip ok">Deux séjours à cheminées</li><li class="chip ok">Deux cuisines équipées</li><li class="chip ok">Sans voisinage immédiat</li><li class="chip warn">13 couchages, 15 avec appoints</li></ul>
           <p class="src">Annonce : <a href="https://www.gitedegroupe.fr/gite-groupe-By-a688.html" target="_blank" rel="noopener noreferrer">Gîtedegroupe</a> · <a href="https://www.google.com/maps/search/?api=1&amp;query=Gîte%20de%20la%20Peyre,%20Escazeaux,%20Tarn-et-Garonne" target="_blank" rel="noopener noreferrer">carte</a></p>
         </li>
         <li id="ggitedesthermesfeneyrol" class="row">
@@ -1257,7 +1260,7 @@
           <h3>Gîte des Thermes <span class="cap">18 pl.</span></h3>
           <p class="loc">Féneyrols (82)</p>
           <p>8 chambres à 100 m de l'Aveyron, dans les gorges, avec parc municipal.</p>
-          <ul class="chips"><li class="chip ok">Beaucoup de chambres</li></ul>
+          <ul class="chips"><li class="chip warn">Salle commune non documentée</li><li class="chip ok">Beaucoup de chambres</li></ul>
           <p class="src">Annonce : <a href="https://www.gitedegroupe.fr/gite-groupe-Gi-a2d8.html" target="_blank" rel="noopener noreferrer">Gîtedegroupe</a> · <a href="https://www.google.com/maps/search/?api=1&amp;query=Gîte%20des%20Thermes,%20Féneyrols,%20Tarn-et-Garonne" target="_blank" rel="noopener noreferrer">carte</a></p>
         </li>
         <li id="glepresbytereauvillar" class="row">
@@ -1265,7 +1268,7 @@
           <h3>Le Presbytère <span class="cap">18 pl.</span></h3>
           <p class="loc">Auvillar (82)</p>
           <p>5 chambres dans l'un des plus beaux villages de France, sur la Garonne.</p>
-          <ul class="chips"></ul>
+          <ul class="chips"><li class="chip warn">Salle commune non documentée</li></ul>
           <p class="src">Relevé sur <a href="https://www.gitesxxl.fr/grand-gite-groupe-Tarn-et-Garonne-82" target="_blank" rel="noopener noreferrer">GîtesXXL</a>, qui ne publie pas de page par gîte · <a href="https://www.google.com/maps/search/?api=1&amp;query=Le%20Presbytère,%20Auvillar,%20Tarn-et-Garonne" target="_blank" rel="noopener noreferrer">carte</a></p>
         </li>
         <li id="ggitesgrandpreroquecor" class="row">
@@ -1273,7 +1276,7 @@
           <h3>Gîtes Grand Pré <span class="cap">23 pl.</span></h3>
           <p class="loc">Roquecor (82)</p>
           <p>Quatre gîtes indépendants à la campagne, à 1 h 15 de Toulouse et 1 h de Cahors.</p>
-          <ul class="chips"><li class="chip ok">Logements séparés</li></ul>
+          <ul class="chips"><li class="chip warn">Salle commune non documentée</li><li class="chip ok">Logements séparés</li></ul>
           <p class="src">Annonce : <a href="https://www.gitedegroupe.fr/gite-groupe-Ch-74a3.html" target="_blank" rel="noopener noreferrer">Gîtedegroupe</a> · <a href="https://www.google.com/maps/search/?api=1&amp;query=Gîtes%20Grand%20Pré,%20Roquecor,%20Tarn-et-Garonne" target="_blank" rel="noopener noreferrer">carte</a></p>
         </li>
         <li id="glasrazestouffailles" class="row">
@@ -1289,7 +1292,7 @@
           <h3>Ferme de Camalières <span class="cap">25 pl.</span></h3>
           <p class="loc">Verfeil-sur-Seye (82)</p>
           <p>Ancienne ferme et ses grandes dépendances sur les hauteurs, terrain arboré, à 10 km de Saint-Antonin — grande salle d'activités et de soirées en option.</p>
-          <ul class="chips"></ul>
+          <ul class="chips"><li class="chip ok">Salle commune documentée</li></ul>
           <p class="src">Annonce : <a href="https://www.gitedegroupe.fr/gite-groupe-Au-aeac.html" target="_blank" rel="noopener noreferrer">Gîtedegroupe</a> · <a href="https://www.google.com/maps/search/?api=1&amp;query=Ferme%20de%20Camalières,%20Verfeil-sur-Seye,%20Tarn-et-Garonne" target="_blank" rel="noopener noreferrer">carte</a></p>
         </li>
         <li id="glegrenierdulevantsaint" class="row">
@@ -1297,7 +1300,7 @@
           <h3>Le Grenier du Levant <span class="cap">25 pl.</span></h3>
           <p class="loc">Saint-Vincent-Lespinasse (82)</p>
           <p>Trois gîtes indépendants, entre Moissac et Valence-d'Agen.</p>
-          <ul class="chips"><li class="chip ok">Logements séparés</li></ul>
+          <ul class="chips"><li class="chip warn">Salle commune non documentée</li><li class="chip ok">Logements séparés</li></ul>
           <p class="src">Relevé sur <a href="https://www.gitesxxl.fr/grand-gite-groupe-Tarn-et-Garonne-82" target="_blank" rel="noopener noreferrer">GîtesXXL</a>, qui ne publie pas de page par gîte · <a href="https://www.google.com/maps/search/?api=1&amp;query=Le%20Grenier%20du%20Levant,%20Saint-Vincent-Lespinasse,%20Tarn-et-Garonne" target="_blank" rel="noopener noreferrer">carte</a></p>
         </li>
         <li id="glemasdumidisaintprojet" class="row">
@@ -1305,7 +1308,7 @@
           <h3>Le Mas du Midi <span class="cap">30 pl.</span></h3>
           <p class="loc">Saint-Projet (82)</p>
           <p>Plusieurs gîtes sur 2,5 hectares de verdure, à dix minutes de l'Aveyron.</p>
-          <ul class="chips"><li class="chip ok">Logements séparés</li></ul>
+          <ul class="chips"><li class="chip warn">Salle commune non documentée</li><li class="chip ok">Logements séparés</li></ul>
           <p class="src">Annonce : <a href="https://www.gitedegroupe.fr/gite-groupe-RI-daa1.html" target="_blank" rel="noopener noreferrer">Gîtedegroupe</a> · <a href="https://www.google.com/maps/search/?api=1&amp;query=Le%20Mas%20du%20Midi,%20Saint-Projet,%20Tarn-et-Garonne" target="_blank" rel="noopener noreferrer">carte</a></p>
         </li>
         <li id="gclosdesgarrigueslhonor" class="row">
@@ -1313,7 +1316,7 @@
           <h3>Clos des Garrigues <span class="cap">40 pl.</span></h3>
           <p class="loc">L'Honor-de-Cos (82)</p>
           <p>Lieu éco-responsable sur 3 hectares de forêts et de prairies vallonnées, à 10 minutes au nord de Montauban, couchages répartis.</p>
-          <ul class="chips"><li class="chip ok">Logements séparés</li></ul>
+          <ul class="chips"><li class="chip warn">Salle commune non documentée</li><li class="chip ok">Logements séparés</li></ul>
           <p class="src">Annonce : <a href="https://www.gitedegroupe.fr/gite-groupe-Mi-6a34.html" target="_blank" rel="noopener noreferrer">Gîtedegroupe</a> · <a href="https://www.google.com/maps/search/?api=1&amp;query=Clos%20des%20Garrigues,%20L'Honor-de-Cos,%20Tarn-et-Garonne" target="_blank" rel="noopener noreferrer">carte</a></p>
         </li>
         <li id="glemanoirdeschanterelle" class="row">
@@ -1321,7 +1324,7 @@
           <h3>Le Manoir des Chanterelles <span class="cap">40 pl.</span></h3>
           <p class="loc">Meauzac (82)</p>
           <p>Six chambres et trois chalets dans un parc arboré, à 15 min de Montauban et 60 km de Toulouse.</p>
-          <ul class="chips"><li class="chip ok">Logements séparés</li></ul>
+          <ul class="chips"><li class="chip warn">Salle commune non documentée</li><li class="chip ok">Logements séparés</li></ul>
           <p class="src">Annonce : <a href="https://www.gitedegroupe.fr/gite-groupe-br-ceb1.html" target="_blank" rel="noopener noreferrer">Gîtedegroupe</a> · <a href="https://www.google.com/maps/search/?api=1&amp;query=Le%20Manoir%20des%20Chanterelles,%20Meauzac,%20Tarn-et-Garonne" target="_blank" rel="noopener noreferrer">carte</a></p>
         </li>
         <li id="glescaleguepiennelaguep" class="row">
@@ -1329,7 +1332,7 @@
           <h3>L'Escale Guépienne <span class="cap">48 pl.</span></h3>
           <p class="loc">Laguépie (82)</p>
           <p>14 chambres au bord de l'Aveyron — mais neuf d'entre elles sont à lits superposés.</p>
-          <ul class="chips"></ul>
+          <ul class="chips"><li class="chip warn">Salle commune non documentée</li></ul>
           <p class="src">Annonce : <a href="https://www.gitedegroupe.fr/gite-groupe-FA-4a65.html" target="_blank" rel="noopener noreferrer">Gîtedegroupe</a> · <a href="https://www.google.com/maps/search/?api=1&amp;query=L'Escale%20Guépienne,%20Laguépie,%20Tarn-et-Garonne" target="_blank" rel="noopener noreferrer">carte</a></p>
         </li>
         <li id="gdomainejardindennaouam" class="row">
@@ -1337,7 +1340,7 @@
           <h3>Domaine Jardin d'en Naoua <span class="cap">50 pl.</span></h3>
           <p class="loc">Maubec (82)</p>
           <p>Ancien corps de ferme aux portes du Gers, gîtes et chambres d'hôtes en formules modulables.</p>
-          <ul class="chips"><li class="chip ok">Logements séparés</li></ul>
+          <ul class="chips"><li class="chip warn">Salle commune non documentée</li><li class="chip ok">Logements séparés</li></ul>
           <p class="src">Annonce : <a href="https://www.gitedegroupe.fr/gite-groupe-Za-6dab.html" target="_blank" rel="noopener noreferrer">Gîtedegroupe</a> · <a href="https://www.google.com/maps/search/?api=1&amp;query=Domaine%20Jardin%20d'en%20Naoua,%20Maubec,%20Tarn-et-Garonne" target="_blank" rel="noopener noreferrer">carte</a></p>
         </li>
         <li id="gmoulinderoumegoussaint" class="row">
@@ -1345,7 +1348,7 @@
           <h3>Moulin de Roumégous <span class="cap">61 pl.</span></h3>
           <p class="loc">Saint-Antonin-Noble-Val (82)</p>
           <p>Ancien moulin au cœur des gorges de l'Aveyron, en bordure de rivière, face au Roc d'Anglars.</p>
-          <ul class="chips"></ul>
+          <ul class="chips"><li class="chip warn">Salle commune non documentée</li></ul>
           <p class="src">Annonce : <a href="https://www.gitedegroupe.fr/gite-groupe-TE-ad54.html" target="_blank" rel="noopener noreferrer">Gîtedegroupe</a> · <a href="https://www.google.com/maps/search/?api=1&amp;query=Moulin%20de%20Roumégous,%20Saint-Antonin-Noble-Val,%20Tarn-et-Garonne" target="_blank" rel="noopener noreferrer">carte</a></p>
         </li>
         </ul>
@@ -1359,7 +1362,7 @@
           <h3>Gîte du Chassang <span class="cap">15 pl.</span></h3>
           <p class="loc">Monceaux-sur-Dordogne (19)</p>
           <p>Grande maison typique de la vallée de la Dordogne, rénovée avec soin : 7 chambres, 5 salles de bain, 6 WC. Au calme, au vert.</p>
-          <ul class="chips"><li class="chip ok">Beaucoup de chambres</li></ul>
+          <ul class="chips"><li class="chip warn">Salle commune non documentée</li><li class="chip ok">Beaucoup de chambres</li></ul>
           <p class="src">Annonce : <a href="https://www.gitedegroupe.fr/gite-groupe-LH-7939.html" target="_blank" rel="noopener noreferrer">Gîtedegroupe</a> · <a href="https://www.google.com/maps/search/?api=1&amp;query=Gîte%20du%20Chassang,%20Monceaux-sur-Dordogne,%20Corrèze" target="_blank" rel="noopener noreferrer">carte</a></p>
         </li>
         <li id="ggitedebeauregardpuydar" class="row">
@@ -1367,7 +1370,7 @@
           <h3>Gîte de Beauregard <span class="cap">15 pl.</span></h3>
           <p class="loc">Puy-d'Arnac (19)</p>
           <p>8 chambres et piscine, au-dessus de la vallée de la Dordogne.</p>
-          <ul class="chips"><li class="chip ok">Beaucoup de chambres</li></ul>
+          <ul class="chips"><li class="chip warn">Salle commune non documentée</li><li class="chip ok">Beaucoup de chambres</li></ul>
           <p class="src">Relevé sur <a href="https://www.gitesxxl.fr/grand-gite-groupe-Correze-19" target="_blank" rel="noopener noreferrer">GîtesXXL</a>, qui ne publie pas de page par gîte · <a href="https://www.google.com/maps/search/?api=1&amp;query=Gîte%20de%20Beauregard,%20Puy-d'Arnac,%20Corrèze" target="_blank" rel="noopener noreferrer">carte</a></p>
         </li>
         <li id="gdomainedesavignouxpuyd" class="row">
@@ -1375,7 +1378,7 @@
           <h3>Domaine de Savignoux <span class="cap">15 pl.</span></h3>
           <p class="loc">Puy-d'Arnac (19)</p>
           <p>7 chambres et piscine, même commune que Beauregard.</p>
-          <ul class="chips"><li class="chip ok">Beaucoup de chambres</li></ul>
+          <ul class="chips"><li class="chip warn">Salle commune non documentée</li><li class="chip ok">Beaucoup de chambres</li></ul>
           <p class="src">Relevé sur <a href="https://www.gitesxxl.fr/grand-gite-groupe-Correze-19" target="_blank" rel="noopener noreferrer">GîtesXXL</a>, qui ne publie pas de page par gîte · <a href="https://www.google.com/maps/search/?api=1&amp;query=Domaine%20de%20Savignoux,%20Puy-d'Arnac,%20Corrèze" target="_blank" rel="noopener noreferrer">carte</a></p>
         </li>
         <li id="glapapetiebeaulieusurdo" class="row">
@@ -1383,7 +1386,7 @@
           <h3>La Papetie <span class="cap">15 pl.</span></h3>
           <p class="loc">Beaulieu-sur-Dordogne (19)</p>
           <p>6 chambres à Beaulieu-sur-Dordogne, l'un des plus beaux villages de France.</p>
-          <ul class="chips"></ul>
+          <ul class="chips"><li class="chip warn">Salle commune non documentée</li></ul>
           <p class="src">Relevé sur <a href="https://www.gitesxxl.fr/grand-gite-groupe-Correze-19" target="_blank" rel="noopener noreferrer">GîtesXXL</a>, qui ne publie pas de page par gîte · <a href="https://www.google.com/maps/search/?api=1&amp;query=La%20Papetie,%20Beaulieu-sur-Dordogne,%20Corrèze" target="_blank" rel="noopener noreferrer">carte</a></p>
         </li>
         <li id="gfermeequestredemialare" class="row">
@@ -1391,7 +1394,7 @@
           <h3>Ferme équestre de Mialaret <span class="cap">20 pl.</span></h3>
           <p class="loc">Camps-Saint-Mathurin-Léobazel (19)</p>
           <p>Ferme équestre en pierres et toit d'ardoises, dans le calme et la verdure aux portes du Lot et du Cantal : grande salle à cheminée et cuisine bien équipée.</p>
-          <ul class="chips"></ul>
+          <ul class="chips"><li class="chip ok">Salle commune documentée</li></ul>
           <p class="src">Annonce : <a href="https://www.gitedegroupe.fr/gite-groupe-SE-5bef.html" target="_blank" rel="noopener noreferrer">Gîtedegroupe</a> · <a href="https://www.google.com/maps/search/?api=1&amp;query=Ferme%20équestre%20de%20Mialaret,%20Camps-Saint-Mathurin-Léobazel,%20Corrèze" target="_blank" rel="noopener noreferrer">carte</a></p>
         </li>
         <li id="ggitedetapecommunalsain" class="row">
@@ -1399,7 +1402,7 @@
           <h3>Gîte d'étape communal <span class="cap">20 pl.</span></h3>
           <p class="loc">Saint-Merd-de-Lapleau (19)</p>
           <p>6 chambres en Haute-Corrèze, au-dessus des gorges de la Dordogne.</p>
-          <ul class="chips"></ul>
+          <ul class="chips"><li class="chip warn">Salle commune non documentée</li></ul>
           <p class="src">Relevé sur <a href="https://www.gitesxxl.fr/grand-gite-groupe-Correze-19" target="_blank" rel="noopener noreferrer">GîtesXXL</a>, qui ne publie pas de page par gîte · <a href="https://www.google.com/maps/search/?api=1&amp;query=Gîte%20d'étape%20communal,%20Saint-Merd-de-Lapleau,%20Corrèze" target="_blank" rel="noopener noreferrer">carte</a></p>
         </li>
         <li id="glafermedelabitarelleca" class="row">
@@ -1407,7 +1410,7 @@
           <h3>La Ferme de la Bitarelle <span class="cap">25 pl.</span></h3>
           <p class="loc">Camps-Saint-Mathurin-Léobazel (19)</p>
           <p>Ferme typique du sud de la Corrèze dans un environnement préservé, entre maisons de granit et bâtiments de bois, à deux pas des gorges de la Cère.</p>
-          <ul class="chips"></ul>
+          <ul class="chips"><li class="chip warn">Salle commune non documentée</li></ul>
           <p class="src">Annonce : <a href="https://www.gitedegroupe.fr/gite-groupe-mo-6fad.html" target="_blank" rel="noopener noreferrer">Gîtedegroupe</a> · <a href="https://www.google.com/maps/search/?api=1&amp;query=La%20Ferme%20de%20la%20Bitarelle,%20Camps-Saint-Mathurin-Léobazel,%20Corrèze" target="_blank" rel="noopener noreferrer">carte</a></p>
         </li>
         <li id="gleclosdespommierslasca" class="row">
@@ -1415,7 +1418,7 @@
           <h3>Le Clos des Pommiers <span class="cap">26 pl.</span></h3>
           <p class="loc">Lascaux (19)</p>
           <p>Domaine de cinq gîtes — deux en pierre pour 6, deux chalets pour 4, un pour 2 — avec salle de réception et piscine.</p>
-          <ul class="chips"><li class="chip ok">Logements séparés</li></ul>
+          <ul class="chips"><li class="chip ok">Salle commune documentée</li><li class="chip ok">Logements séparés</li></ul>
           <p class="src">Annonce : <a href="https://www.gitedegroupe.fr/gite-groupe-ST-312e.html" target="_blank" rel="noopener noreferrer">Gîtedegroupe</a> · <a href="https://www.google.com/maps/search/?api=1&amp;query=Le%20Clos%20des%20Pommiers,%20Lascaux,%20Corrèze" target="_blank" rel="noopener noreferrer">carte</a></p>
         </li>
         <li id="glesperancesioniac" class="row">
@@ -1423,7 +1426,7 @@
           <h3>L'Espérance <span class="cap">27 pl.</span></h3>
           <p class="loc">Sioniac (19)</p>
           <p>Gîte en gestion libre uniquement : 11 chambres de 2 à 4 lits sur deux étages, grande salle commune avec coin bar. Près de Beaulieu-sur-Dordogne.</p>
-          <ul class="chips"><li class="chip ok">Beaucoup de chambres</li></ul>
+          <ul class="chips"><li class="chip ok">Salle commune documentée</li><li class="chip ok">Beaucoup de chambres</li></ul>
           <p class="src">Annonce : <a href="https://www.gitedegroupe.fr/gite-groupe-LO-e919.html" target="_blank" rel="noopener noreferrer">Gîtedegroupe</a> · <a href="https://www.google.com/maps/search/?api=1&amp;query=L'Espérance,%20Sioniac,%20Corrèze" target="_blank" rel="noopener noreferrer">carte</a></p>
         </li>
         <li id="glesmaisonsdecolinesera" class="row">
@@ -1431,7 +1434,7 @@
           <h3>Les Maisons de Coline <span class="cap">30 pl.</span></h3>
           <p class="loc">Sérandon (19)</p>
           <p>Entre campagne et forêt corrézienne, à deux pas des gorges sauvages de la Dordogne.</p>
-          <ul class="chips"><li class="chip ok">Logements séparés</li></ul>
+          <ul class="chips"><li class="chip warn">Salle commune non documentée</li><li class="chip ok">Logements séparés</li></ul>
           <p class="src">Annonce : <a href="https://www.gitedegroupe.fr/gite-groupe-CO-2ead.html" target="_blank" rel="noopener noreferrer">Gîtedegroupe</a> · <a href="https://www.google.com/maps/search/?api=1&amp;query=Les%20Maisons%20de%20Coline,%20Sérandon,%20Corrèze" target="_blank" rel="noopener noreferrer">carte</a></p>
         </li>
         <li id="gdomaineleyvinieperpeza" class="row">
@@ -1439,7 +1442,7 @@
           <h3>Domaine Leyvinie <span class="cap">31 pl.</span></h3>
           <p class="loc">Perpezac-le-Blanc (19)</p>
           <p>En pleine nature sur une colline, vue à 360° sur prairies et forêts : la maison des propriétaires et six gîtes. À 20 min de l'autoroute.</p>
-          <ul class="chips"><li class="chip ok">Logements séparés</li></ul>
+          <ul class="chips"><li class="chip warn">Salle commune non documentée</li><li class="chip ok">Logements séparés</li></ul>
           <p class="src">Annonce : <a href="https://www.gitedegroupe.fr/gite-groupe-vi-692c.html" target="_blank" rel="noopener noreferrer">Gîtedegroupe</a> · <a href="https://www.google.com/maps/search/?api=1&amp;query=Domaine%20Leyvinie,%20Perpezac-le-Blanc,%20Corrèze" target="_blank" rel="noopener noreferrer">carte</a></p>
         </li>
         <li id="gledomainedelaleulubers" class="row">
@@ -1447,7 +1450,7 @@
           <h3>Le Domaine de Laleu <span class="cap">35 pl.</span></h3>
           <p class="loc">Lubersac (19)</p>
           <p>Ancien corps de ferme entouré de nature, tout proche de Pompadour, cité du cheval.</p>
-          <ul class="chips"></ul>
+          <ul class="chips"><li class="chip warn">Salle commune non documentée</li></ul>
           <p class="src">Annonce : <a href="https://www.gitedegroupe.fr/gite-groupe-SU-0e46.html" target="_blank" rel="noopener noreferrer">Gîtedegroupe</a> · <a href="https://www.google.com/maps/search/?api=1&amp;query=Le%20Domaine%20de%20Laleu,%20Lubersac,%20Corrèze" target="_blank" rel="noopener noreferrer">carte</a></p>
         </li>
         <li id="gdomainedugrandbrugeron" class="row">
@@ -1455,7 +1458,7 @@
           <h3>Domaine du Grand Brugeron <span class="cap">39 pl.</span></h3>
           <p class="loc">Vigeois (19)</p>
           <p>Longère entièrement restaurée avec spa et piscine, dont l'atout est une pièce à vivre de 150 m² aménageable.</p>
-          <ul class="chips"></ul>
+          <ul class="chips"><li class="chip ok">Salle commune documentée</li></ul>
           <p class="src">Annonce : <a href="https://www.gitedegroupe.fr/gite-groupe-By-8de0.html" target="_blank" rel="noopener noreferrer">Gîtedegroupe</a> · <a href="https://www.google.com/maps/search/?api=1&amp;query=Domaine%20du%20Grand%20Brugeron,%20Vigeois,%20Corrèze" target="_blank" rel="noopener noreferrer">carte</a></p>
         </li>
         <li id="ggitedesaintpriestdegim" class="row">
@@ -1463,7 +1466,7 @@
           <h3>Gîte de Saint-Priest-de-Gimel <span class="cap">68 pl.</span></h3>
           <p class="loc">Saint-Priest-de-Gimel (19)</p>
           <p>12 chambres, salle de réception, cuisine de collectivité — et son annonce écrit en capitales qu'il peut être loué sur la période de Noël ou du jour de l'an.</p>
-          <ul class="chips"></ul>
+          <ul class="chips"><li class="chip ok">Salle commune documentée</li></ul>
           <p class="src">Annonce : <a href="https://www.gitedegroupe.fr/gite-groupe-Ch-535f.html" target="_blank" rel="noopener noreferrer">Gîtedegroupe</a> · <a href="https://www.google.com/maps/search/?api=1&amp;query=Gîte%20de%20Saint-Priest-de-Gimel,%20Saint-Priest-de-Gimel,%20Corrèze" target="_blank" rel="noopener noreferrer">carte</a></p>
         </li>
         </ul>
@@ -1477,7 +1480,7 @@
           <h3>Le Perron de Saint Cirq <span class="cap">15 pl.</span></h3>
           <p class="loc">Tour-de-Faure (46)</p>
           <p>8 chambres et piscine, au pied de Saint-Cirq-Lapopie.</p>
-          <ul class="chips"><li class="chip ok">Beaucoup de chambres</li></ul>
+          <ul class="chips"><li class="chip warn">Salle commune non documentée</li><li class="chip ok">Beaucoup de chambres</li></ul>
           <p class="src">Relevé sur <a href="https://www.gitesxxl.fr/grand-gite-groupe-Lot-46" target="_blank" rel="noopener noreferrer">GîtesXXL</a>, qui ne publie pas de page par gîte · <a href="https://www.google.com/maps/search/?api=1&amp;query=Le%20Perron%20de%20Saint%20Cirq,%20Tour-de-Faure,%20Lot" target="_blank" rel="noopener noreferrer">carte</a></p>
         </li>
         <li id="glerenaissancelatouille" class="row">
@@ -1485,7 +1488,7 @@
           <h3>Le Renaissance <span class="cap">15 pl.</span></h3>
           <p class="loc">Latouille-Lentillac (46)</p>
           <p>7 chambres dans la vallée du Bave, près de Saint-Céré.</p>
-          <ul class="chips"><li class="chip ok">Beaucoup de chambres</li></ul>
+          <ul class="chips"><li class="chip warn">Salle commune non documentée</li><li class="chip ok">Beaucoup de chambres</li></ul>
           <p class="src">Relevé sur <a href="https://www.gitesxxl.fr/grand-gite-groupe-Lot-46" target="_blank" rel="noopener noreferrer">GîtesXXL</a>, qui ne publie pas de page par gîte · <a href="https://www.google.com/maps/search/?api=1&amp;query=Le%20Renaissance,%20Latouille-Lentillac,%20Lot" target="_blank" rel="noopener noreferrer">carte</a></p>
         </li>
         <li id="gecogiteletheronfontain" class="row">
@@ -1493,7 +1496,7 @@
           <h3>Éco Gîte le Théron Fontaine <span class="cap">20 pl.</span></h3>
           <p class="loc">Montcuq-en-Quercy-Blanc (46)</p>
           <p>Grande maison de caractère entièrement rénovée, 7 chambres, à 10 minutes de Montcuq.</p>
-          <ul class="chips"><li class="chip ok">Beaucoup de chambres</li></ul>
+          <ul class="chips"><li class="chip warn">Salle commune non documentée</li><li class="chip ok">Beaucoup de chambres</li></ul>
           <p class="src">Annonce : <a href="https://www.gitedegroupe.fr/gite-groupe-LA-b7ec.html" target="_blank" rel="noopener noreferrer">Gîtedegroupe</a> · <a href="https://www.google.com/maps/search/?api=1&amp;query=Éco%20Gîte%20le%20Théron%20Fontaine,%20Montcuq-en-Quercy-Blanc,%20Lot" target="_blank" rel="noopener noreferrer">carte</a></p>
         </li>
         <li id="gdomainedejanisetspalev" class="row">
@@ -1501,7 +1504,7 @@
           <h3>Domaine de Janis et Spa <span class="cap">18 pl.</span></h3>
           <p class="loc">Le Vigan (46)</p>
           <p>9 chambres, piscine et spa — et Gourdon, gare de la ligne Paris-Toulouse, tout près.</p>
-          <ul class="chips"><li class="chip ok">Beaucoup de chambres</li></ul>
+          <ul class="chips"><li class="chip warn">Salle commune non documentée</li><li class="chip ok">Beaucoup de chambres</li></ul>
           <p class="src">Relevé sur <a href="https://www.gitesxxl.fr/grand-gite-groupe-Lot-46" target="_blank" rel="noopener noreferrer">GîtesXXL</a>, qui ne publie pas de page par gîte · <a href="https://www.google.com/maps/search/?api=1&amp;query=Domaine%20de%20Janis%20et%20Spa,%20Le%20Vigan,%20Lot" target="_blank" rel="noopener noreferrer">carte</a></p>
         </li>
         <li id="glouparadousenaillaclau" class="row">
@@ -1509,7 +1512,7 @@
           <h3>Lou Paradou <span class="cap">21 pl.</span></h3>
           <p class="loc">Sénaillac-Lauzès (46)</p>
           <p>9 chambres et piscine sur le causse, entre Cahors et Figeac.</p>
-          <ul class="chips"><li class="chip ok">Beaucoup de chambres</li></ul>
+          <ul class="chips"><li class="chip warn">Salle commune non documentée</li><li class="chip ok">Beaucoup de chambres</li></ul>
           <p class="src">Relevé sur <a href="https://www.gitesxxl.fr/grand-gite-groupe-Lot-46" target="_blank" rel="noopener noreferrer">GîtesXXL</a>, qui ne publie pas de page par gîte · <a href="https://www.google.com/maps/search/?api=1&amp;query=Lou%20Paradou,%20Sénaillac-Lauzès,%20Lot" target="_blank" rel="noopener noreferrer">carte</a></p>
         </li>
         <li id="gmaslabrugademontcuqenq" class="row">
@@ -1517,7 +1520,7 @@
           <h3>Mas Labrugade <span class="cap">17 pl.</span></h3>
           <p class="loc">Montcuq-en-Quercy-Blanc (46)</p>
           <p>Organisé en hameau autour d'une grange semi-couverte typique du Quercy Blanc, conçu pour les cousinades.</p>
-          <ul class="chips"><li class="chip ok">Logements séparés</li></ul>
+          <ul class="chips"><li class="chip warn">Salle commune non documentée</li><li class="chip ok">Logements séparés</li></ul>
           <p class="src">Annonce : <a href="https://www.gitedegroupe.fr/gite-groupe-JE-2a70.html" target="_blank" rel="noopener noreferrer">Gîtedegroupe</a> · <a href="https://www.google.com/maps/search/?api=1&amp;query=Mas%20Labrugade,%20Montcuq-en-Quercy-Blanc,%20Lot" target="_blank" rel="noopener noreferrer">carte</a></p>
         </li>
         <li id="glescalechesdepyloubres" class="row">
@@ -1525,7 +1528,7 @@
           <h3>Les calèches de Py <span class="cap">18 pl.</span></h3>
           <p class="loc">Loubressac (46)</p>
           <p>Grange quercynoise dans un hameau de campagne face à la vallée de la Dordogne : 9 chambres et 9 salles de bain, le meilleur ratio sanitaire de la recherche.</p>
-          <ul class="chips"><li class="chip ok">Beaucoup de chambres</li></ul>
+          <ul class="chips"><li class="chip warn">Salle commune non documentée</li><li class="chip ok">Beaucoup de chambres</li></ul>
           <p class="src">Annonce : <a href="https://www.gitedegroupe.fr/gite-groupe-Be-5040.html" target="_blank" rel="noopener noreferrer">Gîtedegroupe</a> · <a href="https://www.google.com/maps/search/?api=1&amp;query=Les%20calèches%20de%20Py,%20Loubressac,%20Lot" target="_blank" rel="noopener noreferrer">carte</a></p>
         </li>
         <li id="ggitedegalancemarcilhac" class="row">
@@ -1533,7 +1536,7 @@
           <h3>Gîte de Galance <span class="cap">20 pl.</span></h3>
           <p class="loc">Marcilhac-sur-Célé (46)</p>
           <p>Ouvert de novembre à fin mars, ce qui est rare — mais dans le village, sur le GR 651.</p>
-          <ul class="chips"></ul>
+          <ul class="chips"><li class="chip warn">Salle commune non documentée</li></ul>
           <p class="src">Annonce : <a href="https://www.gitedegroupe.fr/gite-groupe-Jo-5944.html" target="_blank" rel="noopener noreferrer">Gîtedegroupe</a> · <a href="https://www.google.com/maps/search/?api=1&amp;query=Gîte%20de%20Galance,%20Marcilhac-sur-Célé,%20Lot" target="_blank" rel="noopener noreferrer">carte</a></p>
         </li>
         <li id="glepredefontalzinesespe" class="row">
@@ -1541,7 +1544,7 @@
           <h3>Le Pré de Fontalzines <span class="cap">21 pl.</span></h3>
           <p class="loc">Espeyroux (46)</p>
           <p>Corps de ferme en deux bâtisses : la grange pour 15, la maison pour 6. Campagne, Lacapelle-Marival à 4 km.</p>
-          <ul class="chips"><li class="chip ok">Logements séparés</li><li class="chip ok">Beaucoup de chambres</li></ul>
+          <ul class="chips"><li class="chip warn">Salle commune non documentée</li><li class="chip ok">Logements séparés</li><li class="chip ok">Beaucoup de chambres</li></ul>
           <p class="src">Annonce : <a href="https://www.gitedegroupe.fr/gite-groupe-ja-c5e9.html" target="_blank" rel="noopener noreferrer">Gîtedegroupe</a> · <a href="https://www.google.com/maps/search/?api=1&amp;query=Le%20Pré%20de%20Fontalzines,%20Espeyroux,%20Lot" target="_blank" rel="noopener noreferrer">carte</a></p>
         </li>
         <li id="gmanoirdelacolombierebe" class="row">
@@ -1549,7 +1552,7 @@
           <h3>Manoir de la Colombière <span class="cap">25 pl.</span></h3>
           <p class="loc">Bétaille (46)</p>
           <p>Manoir quercynois de 500 m² en pierres, lucarnes et pigeonnier, vallée de la Dordogne.</p>
-          <ul class="chips"></ul>
+          <ul class="chips"><li class="chip warn">Salle commune non documentée</li></ul>
           <p class="src">Annonce : <a href="https://www.gitedegroupe.fr/gite-groupe-PA-eaab.html" target="_blank" rel="noopener noreferrer">Gîtedegroupe</a> · <a href="https://www.google.com/maps/search/?api=1&amp;query=Manoir%20de%20la%20Colombière,%20Bétaille,%20Lot" target="_blank" rel="noopener noreferrer">carte</a></p>
         </li>
         <li id="gdomainedemontsalvydega" class="row">
@@ -1557,7 +1560,7 @@
           <h3>Domaine de Montsalvy <span class="cap">28 pl.</span></h3>
           <p class="loc">Degagnac (46)</p>
           <p>Cinq gîtes dans la Bouriane, campagne vallonnée — Gourdon et sa gare à une quinzaine de kilomètres.</p>
-          <ul class="chips"><li class="chip ok">Logements séparés</li></ul>
+          <ul class="chips"><li class="chip warn">Salle commune non documentée</li><li class="chip ok">Logements séparés</li></ul>
           <p class="src">Annonce : <a href="https://www.gitedegroupe.fr/gite-groupe-Dr-4ddc.html" target="_blank" rel="noopener noreferrer">Gîtedegroupe</a> · <a href="https://www.google.com/maps/search/?api=1&amp;query=Domaine%20de%20Montsalvy,%20Degagnac,%20Lot" target="_blank" rel="noopener noreferrer">carte</a></p>
         </li>
         <li id="glemasdes3anesblars" class="row">
@@ -1565,7 +1568,7 @@
           <h3>Le Mas des 3 ânes <span class="cap">29 pl.</span></h3>
           <p class="loc">Blars (46)</p>
           <p>Huit hébergements indépendants et une salle de réception avec cuisine adaptée sur 3,5 hectares : la structure du Torgan, en plus grand.</p>
-          <ul class="chips"><li class="chip ok">Logements séparés</li></ul>
+          <ul class="chips"><li class="chip ok">Salle commune documentée</li><li class="chip ok">Logements séparés</li></ul>
           <p class="src">Annonce : <a href="https://www.gitedegroupe.fr/gite-groupe-LA-7728.html" target="_blank" rel="noopener noreferrer">Gîtedegroupe</a> · <a href="https://www.google.com/maps/search/?api=1&amp;query=Le%20Mas%20des%203%20ânes,%20Blars,%20Lot" target="_blank" rel="noopener noreferrer">carte</a></p>
         </li>
         <li id="gleclosdesfiguiersdurav" class="row">
@@ -1573,7 +1576,7 @@
           <h3>Le Clos des Figuiers <span class="cap">30 pl.</span></h3>
           <p class="loc">Duravel (46)</p>
           <p>Trois gîtes avec piscines et sauna au cœur du vignoble de Cahors. C'est le domaine que l'annonce Airbnb de Duravel désignait.</p>
-          <ul class="chips"><li class="chip ok">Logements séparés</li></ul>
+          <ul class="chips"><li class="chip warn">Salle commune non documentée</li><li class="chip ok">Logements séparés</li></ul>
           <p class="src">Annonce : <a href="https://www.gitedegroupe.fr/gite-groupe-GU-629e.html" target="_blank" rel="noopener noreferrer">Gîtedegroupe</a> · <a href="https://www.google.com/maps/search/?api=1&amp;query=Le%20Clos%20des%20Figuiers,%20Duravel,%20Lot" target="_blank" rel="noopener noreferrer">carte</a></p>
         </li>
         <li id="gecoasisgrealou" class="row">
@@ -1581,7 +1584,7 @@
           <h3>Ecoasis <span class="cap">30 pl.</span></h3>
           <p class="loc">Gréalou (46)</p>
           <p>Gîte de groupe éco-conçu entre Figeac et Cajarc, dans le parc des Causses du Quercy, avec sauna et bain nordique chauffés au bois.</p>
-          <ul class="chips"></ul>
+          <ul class="chips"><li class="chip warn">Salle commune non documentée</li></ul>
           <p class="src">Annonce : <a href="https://www.gitedegroupe.fr/gite-groupe-SA-cda4.html" target="_blank" rel="noopener noreferrer">Gîtedegroupe</a> · <a href="https://www.google.com/maps/search/?api=1&amp;query=Ecoasis,%20Gréalou,%20Lot" target="_blank" rel="noopener noreferrer">carte</a></p>
         </li>
         <li id="glesfiguiersdelounasain" class="row">
@@ -1589,7 +1592,7 @@
           <h3>Les Figuiers de Louna <span class="cap">30 pl.</span></h3>
           <p class="loc">Saint-Géry-Vers (46)</p>
           <p>5 000 m² de terrain dans la vallée du Lot, tout près de Saint-Cirq-Lapopie.</p>
-          <ul class="chips"></ul>
+          <ul class="chips"><li class="chip warn">Salle commune non documentée</li></ul>
           <p class="src">Annonce : <a href="https://www.gitedegroupe.fr/gite-groupe-Lc-4f6f.html" target="_blank" rel="noopener noreferrer">Gîtedegroupe</a> · <a href="https://www.google.com/maps/search/?api=1&amp;query=Les%20Figuiers%20de%20Louna,%20Saint-Géry-Vers,%20Lot" target="_blank" rel="noopener noreferrer">carte</a></p>
         </li>
         <li id="glehameaudessaveursmaxo" class="row">
@@ -1597,7 +1600,7 @@
           <h3>Le Hameau des Saveurs <span class="cap">30 pl.</span></h3>
           <p class="loc">Maxou (46)</p>
           <p>Deux authentiques corps de ferme, la Métairie Haute et la Métairie Basse, restaurés dans la tradition quercynoise.</p>
-          <ul class="chips"><li class="chip ok">Logements séparés</li></ul>
+          <ul class="chips"><li class="chip warn">Salle commune non documentée</li><li class="chip ok">Logements séparés</li></ul>
           <p class="src">Annonce : <a href="https://www.gitedegroupe.fr/gite-groupe-mc-2398.html" target="_blank" rel="noopener noreferrer">Gîtedegroupe</a> · <a href="https://www.google.com/maps/search/?api=1&amp;query=Le%20Hameau%20des%20Saveurs,%20Maxou,%20Lot" target="_blank" rel="noopener noreferrer">carte</a></p>
         </li>
         <li id="gmanoirdefoussacfloirac" class="row">
@@ -1605,7 +1608,7 @@
           <h3>Manoir de Foussac <span class="cap">30 pl.</span></h3>
           <p class="loc">Floirac (46)</p>
           <p>Hospitalet bâti sur les bases d'un château templier du XIIe, vallée de la Dordogne, vue sur le cirque de Floirac.</p>
-          <ul class="chips"></ul>
+          <ul class="chips"><li class="chip warn">Salle commune non documentée</li></ul>
           <p class="src">Annonce : <a href="https://www.gitedegroupe.fr/gite-groupe-Go-7058.html" target="_blank" rel="noopener noreferrer">Gîtedegroupe</a> · <a href="https://www.google.com/maps/search/?api=1&amp;query=Manoir%20de%20Foussac,%20Floirac,%20Lot" target="_blank" rel="noopener noreferrer">carte</a></p>
         </li>
         <li id="ggitedepoudallylalbenqu" class="row">
@@ -1613,7 +1616,7 @@
           <h3>Gîte de Poudally <span class="cap">32 pl.</span></h3>
           <p class="loc">Lalbenque (46)</p>
           <p>Ancienne ferme isolée restaurée en gîte d'étape et de groupe, entre Cahors et Saint-Cirq-Lapopie.</p>
-          <ul class="chips"></ul>
+          <ul class="chips"><li class="chip warn">Salle commune non documentée</li></ul>
           <p class="src">Annonce : <a href="https://www.gitedegroupe.fr/gite-groupe-De-44b5.html" target="_blank" rel="noopener noreferrer">Gîtedegroupe</a> · <a href="https://www.google.com/maps/search/?api=1&amp;query=Gîte%20de%20Poudally,%20Lalbenque,%20Lot" target="_blank" rel="noopener noreferrer">carte</a></p>
         </li>
         <li id="gdomainelesmoustanssain" class="row">
@@ -1621,7 +1624,7 @@
           <h3>Domaine les Moustans <span class="cap">39 pl.</span></h3>
           <p class="loc">Saint-Matré (46)</p>
           <p>Huit gîtes de 4 à 6 personnes dans les vignobles du Lot — et son annonce cite explicitement les fêtes de fin d'année.</p>
-          <ul class="chips"><li class="chip ok">Logements séparés</li></ul>
+          <ul class="chips"><li class="chip warn">Salle commune non documentée</li><li class="chip ok">Logements séparés</li></ul>
           <p class="src">Annonce : <a href="https://www.gitedegroupe.fr/gite-groupe-DA-bee4.html" target="_blank" rel="noopener noreferrer">Gîtedegroupe</a> · <a href="https://www.google.com/maps/search/?api=1&amp;query=Domaine%20les%20Moustans,%20Saint-Matré,%20Lot" target="_blank" rel="noopener noreferrer">carte</a></p>
         </li>
         <li id="gpagelcatus" class="row">
@@ -1629,7 +1632,7 @@
           <h3>Pagel <span class="cap">40 pl.</span></h3>
           <p class="loc">Catus (46)</p>
           <p>Domaine de gîtes en pleine campagne lotoise, cadre naturel préservé.</p>
-          <ul class="chips"><li class="chip ok">Logements séparés</li></ul>
+          <ul class="chips"><li class="chip warn">Salle commune non documentée</li><li class="chip ok">Logements séparés</li></ul>
           <p class="src">Annonce : <a href="https://www.gitedegroupe.fr/gite-groupe-Cc-e67e.html" target="_blank" rel="noopener noreferrer">Gîtedegroupe</a> · <a href="https://www.google.com/maps/search/?api=1&amp;query=Pagel,%20Catus,%20Lot" target="_blank" rel="noopener noreferrer">carte</a></p>
         </li>
         <li id="gchateaudetermesmartel" class="row">
@@ -1637,7 +1640,7 @@
           <h3>Château de Termes <span class="cap">70 pl.</span></h3>
           <p class="loc">Martel (46)</p>
           <p>Village de gîtes sur un piton rocheux aux portes de la cité médiévale de Martel.</p>
-          <ul class="chips"><li class="chip ok">Logements séparés</li></ul>
+          <ul class="chips"><li class="chip warn">Salle commune non documentée</li><li class="chip ok">Logements séparés</li></ul>
           <p class="src">Relevé sur <a href="https://www.gitesxxl.fr/grand-gite-groupe-Lot-46" target="_blank" rel="noopener noreferrer">GîtesXXL</a>, qui ne publie pas de page par gîte · <a href="https://www.google.com/maps/search/?api=1&amp;query=Château%20de%20Termes,%20Martel,%20Lot" target="_blank" rel="noopener noreferrer">carte</a></p>
         </li>
         <li id="glessentiersducausselen" class="row">
@@ -1645,7 +1648,7 @@
           <h3>Les Sentiers du Causse <span class="cap">78 pl.</span></h3>
           <p class="loc">Lentillac-du-Causse (46)</p>
           <p>Village de gîtes familial au centre du parc naturel des Causses du Quercy.</p>
-          <ul class="chips"><li class="chip ok">Logements séparés</li></ul>
+          <ul class="chips"><li class="chip warn">Salle commune non documentée</li><li class="chip ok">Logements séparés</li></ul>
           <p class="src">Relevé sur <a href="https://www.gitesxxl.fr/grand-gite-groupe-Lot-46" target="_blank" rel="noopener noreferrer">GîtesXXL</a>, qui ne publie pas de page par gîte · <a href="https://www.google.com/maps/search/?api=1&amp;query=Les%20Sentiers%20du%20Causse,%20Lentillac-du-Causse,%20Lot" target="_blank" rel="noopener noreferrer">carte</a></p>
         </li>
         </ul>
@@ -1659,7 +1662,7 @@
           <h3>La Genivrière <span class="cap">15 pl.</span></h3>
           <p class="loc">Bugarach (11)</p>
           <p>7 chambres pour 15 personnes au pied du Pech de Bugarach, dans les Hautes-Corbières.</p>
-          <ul class="chips"><li class="chip ok">Beaucoup de chambres</li><li class="chip ok">Altitude</li></ul>
+          <ul class="chips"><li class="chip warn">Salle commune non documentée</li><li class="chip ok">Beaucoup de chambres</li><li class="chip ok">Altitude</li></ul>
           <p class="src">Relevé sur <a href="https://www.gitesxxl.fr/grand-gite-groupe-Aude-11" target="_blank" rel="noopener noreferrer">GîtesXXL</a>, qui ne publie pas de page par gîte · <a href="https://www.google.com/maps/search/?api=1&amp;query=La%20Genivrière,%20Bugarach,%20Aude" target="_blank" rel="noopener noreferrer">carte</a></p>
         </li>
         <li id="glagrangedebambycamurac" class="row">
@@ -1667,7 +1670,7 @@
           <h3>La Grange de Bamby <span class="cap">15 pl.</span></h3>
           <p class="loc">Camurac (11)</p>
           <p>5 chambres dans la station de Camurac, à 1 200 m sur le plateau de Sault.</p>
-          <ul class="chips"><li class="chip ok">Altitude</li></ul>
+          <ul class="chips"><li class="chip warn">Salle commune non documentée</li><li class="chip ok">Altitude</li></ul>
           <p class="src">Relevé sur <a href="https://www.gitesxxl.fr/grand-gite-groupe-Aude-11" target="_blank" rel="noopener noreferrer">GîtesXXL</a>, qui ne publie pas de page par gîte · <a href="https://www.google.com/maps/search/?api=1&amp;query=La%20Grange%20de%20Bamby,%20Camurac,%20Aude" target="_blank" rel="noopener noreferrer">carte</a></p>
         </li>
         <li id="gdomainedesegonnemontre" class="row">
@@ -1675,7 +1678,7 @@
           <h3>Domaine de Segonne <span class="cap">22 pl.</span></h3>
           <p class="loc">Montréal (11)</p>
           <p>11 chambres en Lauragais audois, à l'ouest de Carcassonne.</p>
-          <ul class="chips"><li class="chip ok">Beaucoup de chambres</li></ul>
+          <ul class="chips"><li class="chip warn">Salle commune non documentée</li><li class="chip ok">Beaucoup de chambres</li></ul>
           <p class="src">Relevé sur <a href="https://www.gitesxxl.fr/grand-gite-groupe-Aude-11" target="_blank" rel="noopener noreferrer">GîtesXXL</a>, qui ne publie pas de page par gîte · <a href="https://www.google.com/maps/search/?api=1&amp;query=Domaine%20de%20Segonne,%20Montréal,%20Aude" target="_blank" rel="noopener noreferrer">carte</a></p>
         </li>
         <li id="gdomainelagrangettevill" class="row">
@@ -1683,7 +1686,7 @@
           <h3>Domaine La Grangette <span class="cap">24 pl.</span></h3>
           <p class="loc">Villasavary (11)</p>
           <p>10 chambres entre Castelnaudary et Mirepoix.</p>
-          <ul class="chips"><li class="chip ok">Beaucoup de chambres</li></ul>
+          <ul class="chips"><li class="chip warn">Salle commune non documentée</li><li class="chip ok">Beaucoup de chambres</li></ul>
           <p class="src">Relevé sur <a href="https://www.gitesxxl.fr/grand-gite-groupe-Aude-11" target="_blank" rel="noopener noreferrer">GîtesXXL</a>, qui ne publie pas de page par gîte · <a href="https://www.google.com/maps/search/?api=1&amp;query=Domaine%20La%20Grangette,%20Villasavary,%20Aude" target="_blank" rel="noopener noreferrer">carte</a></p>
         </li>
         </ul>
@@ -1697,7 +1700,7 @@
           <h3>Ostal Cassinia <span class="cap">24 pl.</span></h3>
           <p class="loc">Cassagne (31)</p>
           <p>Deux gîtes et 10 chambres en Comminges, au pied des Pyrénées.</p>
-          <ul class="chips"><li class="chip ok">Logements séparés</li><li class="chip ok">Beaucoup de chambres</li></ul>
+          <ul class="chips"><li class="chip warn">Salle commune non documentée</li><li class="chip ok">Logements séparés</li><li class="chip ok">Beaucoup de chambres</li></ul>
           <p class="src">Relevé sur <a href="https://www.gitesxxl.fr/grand-gite-groupe-Haute-Garonne-31" target="_blank" rel="noopener noreferrer">GîtesXXL</a>, qui ne publie pas de page par gîte · <a href="https://www.google.com/maps/search/?api=1&amp;query=Ostal%20Cassinia,%20Cassagne,%20Haute-Garonne" target="_blank" rel="noopener noreferrer">carte</a></p>
         </li>
         <li id="glarivierelisleendodon" class="row">
@@ -1705,7 +1708,7 @@
           <h3>La Rivière <span class="cap">23 pl.</span></h3>
           <p class="loc">L'Isle-en-Dodon (31)</p>
           <p>10 chambres en Savès, à l'ouest de Toulouse.</p>
-          <ul class="chips"><li class="chip ok">Beaucoup de chambres</li></ul>
+          <ul class="chips"><li class="chip warn">Salle commune non documentée</li><li class="chip ok">Beaucoup de chambres</li></ul>
           <p class="src">Relevé sur <a href="https://www.gitesxxl.fr/grand-gite-groupe-Haute-Garonne-31" target="_blank" rel="noopener noreferrer">GîtesXXL</a>, qui ne publie pas de page par gîte · <a href="https://www.google.com/maps/search/?api=1&amp;query=La%20Rivière,%20L'Isle-en-Dodon,%20Haute-Garonne" target="_blank" rel="noopener noreferrer">carte</a></p>
         </li>
         <li id="glegrandesquilataignes" class="row">
@@ -1713,7 +1716,7 @@
           <h3>Le Grand Esquilat <span class="cap">20 pl.</span></h3>
           <p class="loc">Aignes (31)</p>
           <p>4 chambres et 2 suites en Lauragais, à 40 minutes de Toulouse.</p>
-          <ul class="chips"></ul>
+          <ul class="chips"><li class="chip warn">Salle commune non documentée</li></ul>
           <p class="src">Relevé sur <a href="https://www.gitesxxl.fr/grand-gite-groupe-Haute-Garonne-31" target="_blank" rel="noopener noreferrer">GîtesXXL</a>, qui ne publie pas de page par gîte · <a href="https://www.google.com/maps/search/?api=1&amp;query=Le%20Grand%20Esquilat,%20Aignes,%20Haute-Garonne" target="_blank" rel="noopener noreferrer">carte</a></p>
         </li>
         <li id="gdomainedesairsdetoscan" class="row">
@@ -1721,7 +1724,7 @@
           <h3>Domaine des Airs de Toscane <span class="cap">15 pl.</span></h3>
           <p class="loc">Cazères (31)</p>
           <p>6 chambres sur la Garonne, à une heure de Toulouse.</p>
-          <ul class="chips"></ul>
+          <ul class="chips"><li class="chip warn">Salle commune non documentée</li></ul>
           <p class="src">Relevé sur <a href="https://www.gitesxxl.fr/grand-gite-groupe-Haute-Garonne-31" target="_blank" rel="noopener noreferrer">GîtesXXL</a>, qui ne publie pas de page par gîte · <a href="https://www.google.com/maps/search/?api=1&amp;query=Domaine%20des%20Airs%20de%20Toscane,%20Cazères,%20Haute-Garonne" target="_blank" rel="noopener noreferrer">carte</a></p>
         </li>
         <li id="glamaisondelalionnebagn" class="row">
@@ -1729,7 +1732,7 @@
           <h3>La Maison de la Lionne <span class="cap">15 pl.</span></h3>
           <p class="loc">Bagnères-de-Luchon (31)</p>
           <p>4 chambres et 2 dortoirs dans la station de Luchon.</p>
-          <ul class="chips"><li class="chip ok">Altitude</li></ul>
+          <ul class="chips"><li class="chip warn">Salle commune non documentée</li><li class="chip ok">Altitude</li></ul>
           <p class="src">Relevé sur <a href="https://www.gitesxxl.fr/grand-gite-groupe-Haute-Garonne-31" target="_blank" rel="noopener noreferrer">GîtesXXL</a>, qui ne publie pas de page par gîte · <a href="https://www.google.com/maps/search/?api=1&amp;query=La%20Maison%20de%20la%20Lionne,%20Bagnères-de-Luchon,%20Haute-Garonne" target="_blank" rel="noopener noreferrer">carte</a></p>
         </li>
         <li id="gtiliahuos" class="row">
@@ -1737,7 +1740,7 @@
           <h3>Tilia <span class="cap">15 pl.</span></h3>
           <p class="loc">Huos (31)</p>
           <p>Une chambre et un dortoir en Comminges : la structure ne convient pas, mais l'adresse est notée.</p>
-          <ul class="chips"></ul>
+          <ul class="chips"><li class="chip warn">Salle commune non documentée</li></ul>
           <p class="src">Relevé sur <a href="https://www.gitesxxl.fr/grand-gite-groupe-Haute-Garonne-31" target="_blank" rel="noopener noreferrer">GîtesXXL</a>, qui ne publie pas de page par gîte · <a href="https://www.google.com/maps/search/?api=1&amp;query=Tilia,%20Huos,%20Haute-Garonne" target="_blank" rel="noopener noreferrer">carte</a></p>
         </li>
         </ul>
@@ -1751,7 +1754,7 @@
           <h3>Les Gîtes d'Eylie <span class="cap">22 pl.</span></h3>
           <p class="loc">Sentein (09)</p>
           <p>Deux gîtes et un gîte d'étape en haute vallée du Biros, au fond du Couserans : l'altitude que vous préférez.</p>
-          <ul class="chips"><li class="chip ok">Logements séparés</li><li class="chip ok">Altitude</li></ul>
+          <ul class="chips"><li class="chip warn">Salle commune non documentée</li><li class="chip ok">Logements séparés</li><li class="chip ok">Altitude</li></ul>
           <p class="src">Relevé sur <a href="https://www.gitesxxl.fr/grand-gite-groupe-Ariege-09" target="_blank" rel="noopener noreferrer">GîtesXXL</a>, qui ne publie pas de page par gîte · <a href="https://www.google.com/maps/search/?api=1&amp;query=Les%20Gîtes%20d'Eylie,%20Sentein,%20Ariège" target="_blank" rel="noopener noreferrer">carte</a></p>
         </li>
         <li id="glagrandemaisonmazeres" class="row">
@@ -1759,7 +1762,7 @@
           <h3>La Grande Maison <span class="cap">25 pl.</span></h3>
           <p class="loc">Mazères (09)</p>
           <p>Quatre gîtes en Ariège du nord, à 45 minutes de Toulouse.</p>
-          <ul class="chips"><li class="chip ok">Logements séparés</li></ul>
+          <ul class="chips"><li class="chip warn">Salle commune non documentée</li><li class="chip ok">Logements séparés</li></ul>
           <p class="src">Relevé sur <a href="https://www.gitesxxl.fr/grand-gite-groupe-Ariege-09" target="_blank" rel="noopener noreferrer">GîtesXXL</a>, qui ne publie pas de page par gîte · <a href="https://www.google.com/maps/search/?api=1&amp;query=La%20Grande%20Maison,%20Mazères,%20Ariège" target="_blank" rel="noopener noreferrer">carte</a></p>
         </li>
         <li id="glegrandmoulinetleran" class="row">
@@ -1767,7 +1770,7 @@
           <h3>Le Grand Moulinet <span class="cap">21 pl.</span></h3>
           <p class="loc">Léran (09)</p>
           <p>8 chambres au piémont, près du lac de Montbel.</p>
-          <ul class="chips"><li class="chip ok">Beaucoup de chambres</li></ul>
+          <ul class="chips"><li class="chip warn">Salle commune non documentée</li><li class="chip ok">Beaucoup de chambres</li></ul>
           <p class="src">Relevé sur <a href="https://www.gitesxxl.fr/grand-gite-groupe-Ariege-09" target="_blank" rel="noopener noreferrer">GîtesXXL</a>, qui ne publie pas de page par gîte · <a href="https://www.google.com/maps/search/?api=1&amp;query=Le%20Grand%20Moulinet,%20Léran,%20Ariège" target="_blank" rel="noopener noreferrer">carte</a></p>
         </li>
         <li id="glemarboiscontrazy" class="row">
@@ -1775,7 +1778,7 @@
           <h3>Le Marbois <span class="cap">15 pl.</span></h3>
           <p class="loc">Contrazy (09)</p>
           <p>6 chambres en Couserans.</p>
-          <ul class="chips"></ul>
+          <ul class="chips"><li class="chip warn">Salle commune non documentée</li></ul>
           <p class="src">Relevé sur <a href="https://www.gitesxxl.fr/grand-gite-groupe-Ariege-09" target="_blank" rel="noopener noreferrer">GîtesXXL</a>, qui ne publie pas de page par gîte · <a href="https://www.google.com/maps/search/?api=1&amp;query=Le%20Marbois,%20Contrazy,%20Ariège" target="_blank" rel="noopener noreferrer">carte</a></p>
         </li>
         <li id="glecarmilesplasdeserou" class="row">
@@ -1783,7 +1786,7 @@
           <h3>Le Carmil <span class="cap">15 pl.</span></h3>
           <p class="loc">Esplas-de-Sérou (09)</p>
           <p>6 chambres au pied du massif de l'Arize.</p>
-          <ul class="chips"></ul>
+          <ul class="chips"><li class="chip warn">Salle commune non documentée</li></ul>
           <p class="src">Relevé sur <a href="https://www.gitesxxl.fr/grand-gite-groupe-Ariege-09" target="_blank" rel="noopener noreferrer">GîtesXXL</a>, qui ne publie pas de page par gîte · <a href="https://www.google.com/maps/search/?api=1&amp;query=Le%20Carmil,%20Esplas-de-Sérou,%20Ariège" target="_blank" rel="noopener noreferrer">carte</a></p>
         </li>
         <li id="glabourdettesaverdun" class="row">
@@ -1791,7 +1794,7 @@
           <h3>La Bourdette <span class="cap">15 pl.</span></h3>
           <p class="loc">Saverdun (09)</p>
           <p>5 chambres en plaine ariégeoise, à 40 minutes de Toulouse.</p>
-          <ul class="chips"></ul>
+          <ul class="chips"><li class="chip warn">Salle commune non documentée</li></ul>
           <p class="src">Relevé sur <a href="https://www.gitesxxl.fr/grand-gite-groupe-Ariege-09" target="_blank" rel="noopener noreferrer">GîtesXXL</a>, qui ne publie pas de page par gîte · <a href="https://www.google.com/maps/search/?api=1&amp;query=La%20Bourdette,%20Saverdun,%20Ariège" target="_blank" rel="noopener noreferrer">carte</a></p>
         </li>
         <li id="gmaisoncoumanismontjoie" class="row">
@@ -1799,7 +1802,7 @@
           <h3>Maison Coumanis <span class="cap">24 pl.</span></h3>
           <p class="loc">Montjoie-en-Couserans (09)</p>
           <p>5 chambres et un dortoir, près de Saint-Girons.</p>
-          <ul class="chips"></ul>
+          <ul class="chips"><li class="chip warn">Salle commune non documentée</li></ul>
           <p class="src">Relevé sur <a href="https://www.gitesxxl.fr/grand-gite-groupe-Ariege-09" target="_blank" rel="noopener noreferrer">GîtesXXL</a>, qui ne publie pas de page par gîte · <a href="https://www.google.com/maps/search/?api=1&amp;query=Maison%20Coumanis,%20Montjoie-en-Couserans,%20Ariège" target="_blank" rel="noopener noreferrer">carte</a></p>
         </li>
         </ul>
@@ -1813,7 +1816,7 @@
           <h3>Le gîte de groupe de Combes <span class="cap">23 pl.</span></h3>
           <p class="loc">Saint-Côme-d'Olt (12)</p>
           <p>7 chambres dans la vallée du Lot aveyronnais, à l'entrée de l'Aubrac.</p>
-          <ul class="chips"><li class="chip ok">Beaucoup de chambres</li><li class="chip ok">Altitude</li></ul>
+          <ul class="chips"><li class="chip warn">Salle commune non documentée</li><li class="chip ok">Beaucoup de chambres</li><li class="chip ok">Altitude</li></ul>
           <p class="src">Relevé sur <a href="https://www.gitesxxl.fr/grand-gite-groupe-Aveyron-12" target="_blank" rel="noopener noreferrer">GîtesXXL</a>, qui ne publie pas de page par gîte · <a href="https://www.google.com/maps/search/?api=1&amp;query=Le%20gîte%20de%20groupe%20de%20Combes,%20Saint-Côme-d'Olt,%20Aveyron" target="_blank" rel="noopener noreferrer">carte</a></p>
         </li>
         <li id="glegitedelabresselaroqu" class="row">
@@ -1821,7 +1824,7 @@
           <h3>Le Gîte de La Bresse <span class="cap">20 pl.</span></h3>
           <p class="loc">La Roque-Sainte-Marguerite (12)</p>
           <p>Trois chambres, un dortoir et un gîte séparé, au pied du Larzac dans les gorges de la Dourbie.</p>
-          <ul class="chips"><li class="chip ok">Logements séparés</li><li class="chip ok">Altitude</li></ul>
+          <ul class="chips"><li class="chip warn">Salle commune non documentée</li><li class="chip ok">Logements séparés</li><li class="chip ok">Altitude</li></ul>
           <p class="src">Relevé sur <a href="https://www.gitesxxl.fr/grand-gite-groupe-Aveyron-12" target="_blank" rel="noopener noreferrer">GîtesXXL</a>, qui ne publie pas de page par gîte · <a href="https://www.google.com/maps/search/?api=1&amp;query=Le%20Gîte%20de%20La%20Bresse,%20La%20Roque-Sainte-Marguerite,%20Aveyron" target="_blank" rel="noopener noreferrer">carte</a></p>
         </li>
         <li id="gdomainedesoussuejoulss" class="row">
@@ -1829,7 +1832,7 @@
           <h3>Domaine de Soussuéjouls <span class="cap">19 pl.</span></h3>
           <p class="loc">Sévérac-d'Aveyron (12)</p>
           <p>6 chambres sur le causse de Sévérac.</p>
-          <ul class="chips"></ul>
+          <ul class="chips"><li class="chip warn">Salle commune non documentée</li></ul>
           <p class="src">Relevé sur <a href="https://www.gitesxxl.fr/grand-gite-groupe-Aveyron-12" target="_blank" rel="noopener noreferrer">GîtesXXL</a>, qui ne publie pas de page par gîte · <a href="https://www.google.com/maps/search/?api=1&amp;query=Domaine%20de%20Soussuéjouls,%20Sévérac-d'Aveyron,%20Aveyron" target="_blank" rel="noopener noreferrer">carte</a></p>
         </li>
         <li id="ggitedelestradeenaubrac" class="row">
@@ -1837,7 +1840,7 @@
           <h3>Gîte de Lestrade en Aubrac <span class="cap">17 pl.</span></h3>
           <p class="loc">Castelnau-de-Mandailles (12)</p>
           <p>6 chambres sur le plateau de l'Aubrac.</p>
-          <ul class="chips"><li class="chip ok">Altitude</li></ul>
+          <ul class="chips"><li class="chip warn">Salle commune non documentée</li><li class="chip ok">Altitude</li></ul>
           <p class="src">Relevé sur <a href="https://www.gitesxxl.fr/grand-gite-groupe-Aveyron-12" target="_blank" rel="noopener noreferrer">GîtesXXL</a>, qui ne publie pas de page par gîte · <a href="https://www.google.com/maps/search/?api=1&amp;query=Gîte%20de%20Lestrade%20en%20Aubrac,%20Castelnau-de-Mandailles,%20Aveyron" target="_blank" rel="noopener noreferrer">carte</a></p>
         </li>
         <li id="glegitedecabrierescompe" class="row">
@@ -1845,7 +1848,7 @@
           <h3>Le Gîte de Cabrières <span class="cap">23 pl.</span></h3>
           <p class="loc">Compeyre (12)</p>
           <p>6 chambres et une caravane, vallée du Tarn près de Millau.</p>
-          <ul class="chips"></ul>
+          <ul class="chips"><li class="chip warn">Salle commune non documentée</li></ul>
           <p class="src">Relevé sur <a href="https://www.gitesxxl.fr/grand-gite-groupe-Aveyron-12" target="_blank" rel="noopener noreferrer">GîtesXXL</a>, qui ne publie pas de page par gîte · <a href="https://www.google.com/maps/search/?api=1&amp;query=Le%20Gîte%20de%20Cabrières,%20Compeyre,%20Aveyron" target="_blank" rel="noopener noreferrer">carte</a></p>
         </li>
         <li id="ggitecommunaldestainges" class="row">
@@ -1853,7 +1856,7 @@
           <h3>Gîte communal d'Estaing <span class="cap">20 pl.</span></h3>
           <p class="loc">Estaing (12)</p>
           <p>5 chambres dans l'un des plus beaux villages de France, vallée du Lot.</p>
-          <ul class="chips"><li class="chip ok">Altitude</li></ul>
+          <ul class="chips"><li class="chip warn">Salle commune non documentée</li><li class="chip ok">Altitude</li></ul>
           <p class="src">Relevé sur <a href="https://www.gitesxxl.fr/grand-gite-groupe-Aveyron-12" target="_blank" rel="noopener noreferrer">GîtesXXL</a>, qui ne publie pas de page par gîte · <a href="https://www.google.com/maps/search/?api=1&amp;query=Gîte%20communal%20d'Estaing,%20Estaing,%20Aveyron" target="_blank" rel="noopener noreferrer">carte</a></p>
         </li>
         <li id="ggitedemontredondularza" class="row">
@@ -1861,7 +1864,7 @@
           <h3>Gîte de Montredon du Larzac <span class="cap">15 pl.</span></h3>
           <p class="loc">La Roque-Sainte-Marguerite (12)</p>
           <p>5 chambres sur le Larzac, gorges de la Dourbie.</p>
-          <ul class="chips"><li class="chip ok">Altitude</li></ul>
+          <ul class="chips"><li class="chip warn">Salle commune non documentée</li><li class="chip ok">Altitude</li></ul>
           <p class="src">Relevé sur <a href="https://www.gitesxxl.fr/grand-gite-groupe-Aveyron-12" target="_blank" rel="noopener noreferrer">GîtesXXL</a>, qui ne publie pas de page par gîte · <a href="https://www.google.com/maps/search/?api=1&amp;query=Gîte%20de%20Montredon%20du%20Larzac,%20La%20Roque-Sainte-Marguerite,%20Aveyron" target="_blank" rel="noopener noreferrer">carte</a></p>
         </li>
         </ul>
@@ -1875,7 +1878,7 @@
           <h3>Gîte Ma Vie Là <span class="cap">15 pl.</span></h3>
           <p class="loc">Gaillac (81)</p>
           <p>6 chambres haut de gamme dans le Gaillacois.</p>
-          <ul class="chips"></ul>
+          <ul class="chips"><li class="chip warn">Salle commune non documentée</li></ul>
           <p class="src">Relevé sur <a href="https://www.gitesxxl.fr/grand-gite-groupe-Tarn-81" target="_blank" rel="noopener noreferrer">GîtesXXL</a>, qui ne publie pas de page par gîte · <a href="https://www.google.com/maps/search/?api=1&amp;query=Gîte%20Ma%20Vie%20Là,%20Gaillac,%20Tarn" target="_blank" rel="noopener noreferrer">carte</a></p>
         </li>
         <li id="ggitecampagnejacuzzisau" class="row">
@@ -1883,7 +1886,7 @@
           <h3>Gîte Campagne Jacuzzi Sauna <span class="cap">15 pl.</span></h3>
           <p class="loc">Grazac (81)</p>
           <p>5 chambres à la campagne, entre Gaillac et Lavaur.</p>
-          <ul class="chips"></ul>
+          <ul class="chips"><li class="chip warn">Salle commune non documentée</li></ul>
           <p class="src">Relevé sur <a href="https://www.gitesxxl.fr/grand-gite-groupe-Tarn-81" target="_blank" rel="noopener noreferrer">GîtesXXL</a>, qui ne publie pas de page par gîte · <a href="https://www.google.com/maps/search/?api=1&amp;query=Gîte%20Campagne%20Jacuzzi%20Sauna,%20Grazac,%20Tarn" target="_blank" rel="noopener noreferrer">carte</a></p>
         </li>
         <li id="gleshangarsdepiolcadale" class="row">
@@ -1891,12 +1894,25 @@
           <h3>Les Hangars de Piol <span class="cap">20 pl.</span></h3>
           <p class="loc">Cadalen (81)</p>
           <p>20 places mais seulement 3 chambres : la structure ne convient pas.</p>
-          <ul class="chips"></ul>
+          <ul class="chips"><li class="chip warn">Salle commune non documentée</li></ul>
           <p class="src">Relevé sur <a href="https://www.gitesxxl.fr/grand-gite-groupe-Tarn-81" target="_blank" rel="noopener noreferrer">GîtesXXL</a>, qui ne publie pas de page par gîte · <a href="https://www.google.com/maps/search/?api=1&amp;query=Les%20Hangars%20de%20Piol,%20Cadalen,%20Tarn" target="_blank" rel="noopener noreferrer">carte</a></p>
         </li>
         </ul>
       </div>
-      <p class="flag"><b>Par quoi commencer — et une leçon.</b> J'avais d'abord mis le <b>Domaine de la Fage</b> dans mes priorités sur la seule foi de l'annuaire. Son site officiel en fait un <b>lieu de mariage avec une salle de réception de 240 personnes</b>, un traiteur, l'hébergement en second rôle et 14 places en gîtes, dans le village : il est passé aux écartés. <b>La conclusion vaut pour tout ce qui suit</b> — les lignes ci-dessus sont des <em>déclarations d'annuaire</em>, pas des faits vérifiés, et je les vérifie une par une sur les sites officiels. <b>Trois le sont déjà, et le classement en est bouleversé :</b> <a href="#glasrazestouffailles">Las Razes</a> à Touffailles arrive premier avec un <b>séjour de 150 m² pour 28 convives, une cuisine de 40 m²</b> et une Grange de 15 places à 7 chambres et 6 salles de bain — reste à connaître le tarif d'un 4 étoiles ; le <a href="#ggitedelapeyreescazeaux">Gîte de la Peyre</a> à Escazeaux garde ses <b>deux séjours à cheminées et ses deux cuisines</b> mais ne compte que 13 vrais couchages ; <a href="#gautrucmontaigudequercy">Au Truc</a> à Montaigu-de-Quercy offre 7 chambres et une grange aménagée dans 6 hectares, <b>mais deux salles de bain pour quinze</b>. Le <b>Tarn-et-Garonne</b> reste le département à travailler en premier : il règle l'accès depuis Caen, et c'est là que sont ces trois-là.</p>
+      <p class="flag"><b>Par quoi commencer : la salle commune, et rien d'autre.</b> Vous l'avez rappelé et c'est non négociable, donc c'est le seul tri qui vaille. Sur ces 81 gîtes, <b>dix seulement documentent une salle commune avec cuisine</b>, et tous sont dans le nord du corridor — ce qui règle du même coup la question de Caen. Dans l'ordre où je les appellerais :</p>
+      <ol class="prio">
+        <li><a href="#glasrazestouffailles">Las Razes</a> — Touffailles (82) · <b>séjour de 150 m² à 28 places assises et cuisine de 40 m²</b>, la Grange de 15 places à elle seule a 7 chambres et 6 salles de bain, et ils ne louent qu'à un groupe à la fois. Le seul point d'interrogation est le tarif d'un 4 étoiles.</li>
+        <li><a href="#ggitedelapeyreescazeaux">Gîte de la Peyre</a> — Escazeaux (82) · <b>deux vastes séjours à cheminées et deux cuisines entièrement équipées</b>, sans voisinage immédiat. Mais 13 vrais couchages : deux des vôtres sur un lit d'appoint.</li>
+        <li><a href="#gautrucmontaigudequercy">Au Truc</a> — Montaigu-de-Quercy (82) · <b>deux séjours, une cuisine intérieure et une extérieure, plus une grange aménagée</b>, 7 chambres dans 6 hectares. Le défaut est net : deux salles de bain.</li>
+        <li><a href="#glesperancesioniac">L'Espérance</a> — Sioniac (19) · <b>grande salle commune</b>, gestion libre exclusivement, 11 chambres de 2 à 4 lits. Beaulieu-sur-Dordogne tout près.</li>
+        <li><a href="#gdomainedugrandbrugeron">Domaine du Grand Brugeron</a> — Vigeois (19) · <b>pièce à vivre de 150 m²</b> aménageable, longère restaurée.</li>
+        <li><a href="#gfermeequestredemialare">Ferme équestre de Mialaret</a> — Camps-Saint-Mathurin (19) · <b>grande salle à cheminée et cuisine bien équipée</b>, aux portes du Lot.</li>
+        <li><a href="#glemasdes3anesblars">Le Mas des 3 ânes</a> — Blars (46) · <b>salle de réception avec cuisine adaptée</b> et 8 hébergements indépendants : la structure du Torgan, en plus grand.</li>
+        <li><a href="#gleclosdespommierslasca">Le Clos des Pommiers</a> — Lascaux (19) · <b>salle de réception</b> et cinq gîtes.</li>
+        <li><a href="#gfermedecamalieresverfe">Ferme de Camalières</a> — Verfeil-sur-Seye (82) · grande salle de soirées, <b>mais en option</b> — donc à chiffrer.</li>
+        <li><a href="#ggitedesaintpriestdegim">Saint-Priest-de-Gimel</a> — (19) · <b>cuisine de collectivité et salle de réception</b>, et son annonce écrit qu'il loue à Noël et au jour de l'an. Mais 68 places : surdimensionné.</li>
+      </ol>
+      <p class="flag"><b>Et ce que cette liste dit des soixante-et-onze autres.</b> Leur salle commune n'est pas absente, elle est <b>non vérifiée</b> — les annuaires décrivent les chambres et la piscine, presque jamais la pièce où l'on mange à quinze. C'est précisément pourquoi le <b>Gîte du Fer à cheval</b>, que j'aurais mis en avant pour ses huit chambres, n'est pas dans cette liste : huit chambres ne disent rien de la table. La question à poser en premier, à chacun, est donc toujours la même — <b>« quelle est la surface de la pièce commune, et combien de personnes peuvent y manger ensemble ? »</b></p>
     </section>
 
     <section id="horsbudget">
@@ -2059,7 +2075,7 @@
         <h2>Treize points à verrouiller au téléphone</h2>
       </div>
       <ul class="notes">
-        <li><b>Deux gîtes peuvent porter le même nom</b><span>Il y a <strong>deux « La Bourdette »</strong> dans cette recherche, et ce ne sont pas les mêmes : celle de <strong>Belflou (11)</strong>, au bord du lac de la Ganguise, libre mais à 3 192 €, et celle de <strong>Saverdun (09)</strong>, 15 places en 5 chambres, jamais appelée. Le piège avait déjà frappé avec « Au bout du Monde », dont le site le plus visible est un gîte de la Drôme. <strong>Toujours vérifier la commune avant de composer le numéro.</strong></span></li>
+        <li><b>Deux gîtes peuvent porter le même nom</b><span>Il y a <strong>deux « La Bourdette »</strong> dans cette recherche, et ce ne sont pas les mêmes : celle de <strong>Belflou (11)</strong>, au bord du lac de la Ganguise, libre mais à 3 192 €, et celle de <strong>Saverdun (09)</strong>, 15 places en 5 chambres, jamais appelée. Et « <strong>Le Fer à cheval</strong> » est encore pire : il y en a au moins cinq en France — le vôtre à <strong>Lapenche (82)</strong>, plus un dans le <strong>Jura</strong> (39G2584), un à <strong>Paulinet</strong> dans le Tarn (81G5023), un à <strong>Ygrande</strong> dans l'Allier (03G231832) et un à <strong>Mazières-en-Gâtine</strong> dans les Deux-Sèvres (79G605). Le piège avait déjà frappé avec « Au bout du Monde », dont le site le plus visible est un gîte de la Drôme. <strong>Le code du département dans la référence Gîtes de France est le contrôle le plus rapide</strong> : 39G, 81G, 03G, 79G — aucun n'est un 82. <strong>Toujours vérifier la commune avant de composer le numéro.</strong></span></li>
         <li><b>Le tarif de l'annuaire n'est pas le tarif du propriétaire</b><span>Toujours ouvrir <strong>la page « tarifs » du site officiel</strong>, et pas seulement son accueil : c'est là qu'est le découpage des saisons. Le Domaine des Figuiers était annoncé à 1 625-1 925 € sur sa fiche Gîtes de France ; sa propre grille classe le <strong>19 décembre au 3 janvier en haute saison, à 2 200 €</strong>. La règle vaut au-delà du prix : Les Casèlas comptait quatre gîtes sur son site contre trois sur son annonce Airbnb, et cette quatrième maison changeait tout le calcul. <strong>Une semaine de réveillon tombe presque toujours en haute saison, même quand décembre est annoncé en basse saison.</strong></span></li>
         <li><b>Demander sur quelles dates exactement</b><span>Un gîte « pris » ne l'est pas forcément sur toute la période. Le planning des Gîtes du Quié montre deux réservations distinctes, du 24 au 26 puis du 29 au 31 décembre, qui ne laissent que le 27 libre — là le refus est net. Mais un autre pourrait n'être occupé que quelques jours, et laisser passer le 27 → 3, votre créneau idéal d'origine, ou le 28 → 4. La question coûte une phrase.</span></li>
         <li><b>Le 26 → 2 est un samedi → samedi</b><span>C'est le créneau de location standard, donc à privilégier. Le 27 → 3 (dimanche → dimanche) tombe à cheval sur deux semaines commerciales et sera souvent refusé, ou facturé huit nuits.</span></li>
