@@ -100,6 +100,19 @@
   .fiche{background:var(--surface); border:1px solid var(--line-soft); border-radius:3px;
     box-shadow:var(--shadow); overflow:hidden; display:grid; grid-template-columns:13.5rem 1fr}
   .fiche.pick{border-color:var(--accent)}
+  .fiche{position:relative}
+  .ruban{position:absolute; top:0; right:0; width:8.5rem; height:8.5rem; overflow:hidden;
+    pointer-events:none; z-index:3}
+  .ruban span{position:absolute; display:block; width:12.5rem; right:-3.2rem; top:1.95rem;
+    padding:.3rem 0; text-align:center; transform:rotate(45deg);
+    font-family:"Fiche",ui-monospace,monospace; font-size:.62rem; font-weight:700;
+    text-transform:uppercase; letter-spacing:.13em;
+    box-shadow:0 1px 4px rgba(0,0,0,.25)}
+  .ruban.confirme span{background:var(--accent); color:var(--surface)}
+  .ruban.libre span{background:#7CC9B1; color:#0F3D33}
+  .ruban.contacte span{background:#1E6F9F; color:#ffffff}
+  .ruban.inconnu span{background:var(--surface-2); color:var(--ink-2)}
+  .ruban.pris span{background:var(--stop); color:#ffffff}
   .rail{background:var(--sunk); border-right:1px solid var(--line-soft);
     padding:1.15rem 1.15rem 1.25rem; display:flex; flex-direction:column; gap:.5rem}
   .price{font-family:"Fiche",ui-monospace,monospace; font-variant-numeric:tabular-nums;
@@ -246,7 +259,10 @@
   /* ---------- lists ---------- */
   .stack{list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:.7rem}
   .row{background:var(--surface); border:1px solid var(--line-soft); border-radius:3px;
-    padding:.85rem 1.05rem; display:flex; flex-direction:column; gap:.4rem}
+    padding:.85rem 1.05rem; display:flex; flex-direction:column; gap:.4rem;
+    position:relative; overflow:hidden}
+  .row .ruban{width:7rem; height:7rem}
+  .row .ruban span{width:10.5rem; right:-2.8rem; top:1.6rem; font-size:.58rem}
   .row.dim{background:transparent; border-style:dashed; color:var(--ink-2)}
   .row h3{font-size:var(--step-0)}
   .row p{font-size:var(--step--1); color:var(--ink-2)}
@@ -353,6 +369,7 @@
       <ol class="fiches">
 
         <li id="boutdumonde" class="fiche pick">
+          <div class="ruban libre"><span>Libre</span></div>
           <div class="rail">
             <p class="eyebrow">Séjour</p>
             <p class="price">2 499 €</p>
@@ -382,6 +399,7 @@
         </li>
 
         <li id="vizols" class="fiche pick">
+          <div class="ruban confirme"><span>Confirmé</span></div>
           <div class="rail">
             <p class="eyebrow">Séjour</p>
             <p class="price">2 800 €</p>
@@ -410,6 +428,7 @@
         </li>
 
         <li id="rive" class="fiche pick">
+          <div class="ruban confirme"><span>Confirmé</span></div>
           <div class="rail">
             <p class="eyebrow">Séjour</p>
             <p class="price">2 612 €</p>
@@ -437,6 +456,7 @@
         </li>
 
         <li id="gougnet" class="fiche pick">
+          <div class="ruban inconnu"><span>À appeler</span></div>
           <div class="rail">
             <p class="eyebrow">Estimation</p>
             <p class="price">≈ 1 820 €</p>
@@ -463,6 +483,7 @@
         </li>
 
         <li id="quercynoi" class="fiche pick">
+          <div class="ruban inconnu"><span>À appeler</span></div>
           <div class="rail">
             <p class="eyebrow">Estimation</p>
             <p class="price">1 850 €</p>
@@ -489,6 +510,7 @@
         </li>
 
         <li id="quie" class="fiche pick">
+          <div class="ruban inconnu"><span>À appeler</span></div>
           <div class="rail">
             <p class="eyebrow">Estimation</p>
             <p class="price">≈ 2 500 €</p>
@@ -515,6 +537,7 @@
         </li>
 
         <li id="bastide" class="fiche pick">
+          <div class="ruban inconnu"><span>À appeler</span></div>
           <div class="rail">
             <p class="eyebrow">Estimation</p>
             <p class="price">≈ 2 060 €</p>
@@ -542,6 +565,7 @@
         </li>
 
         <li id="sabatarie" class="fiche pick">
+          <div class="ruban contacte"><span>Contacté</span></div>
           <div class="rail">
             <p class="eyebrow">Tarif</p>
             <p class="price">sur devis</p>
@@ -567,6 +591,7 @@
         </li>
 
         <li id="condomines" class="fiche pick">
+          <div class="ruban inconnu"><span>À appeler</span></div>
           <div class="rail">
             <p class="eyebrow">Estimation</p>
             <p class="price">1 700 – 2 800 €</p>
@@ -592,6 +617,7 @@
         </li>
 
         <li id="calmels" class="fiche pick">
+          <div class="ruban inconnu"><span>À appeler</span></div>
           <div class="rail">
             <p class="eyebrow">Estimation</p>
             <p class="price">≈ 2 625 €</p>
@@ -617,6 +643,7 @@
         </li>
 
         <li id="paguere" class="fiche pick">
+          <div class="ruban inconnu"><span>À appeler</span></div>
           <div class="rail">
             <p class="eyebrow">Estimation</p>
             <p class="price">2 070 – 3 200 €</p>
@@ -641,6 +668,7 @@
         </li>
 
         <li id="montluzia" class="fiche pick">
+          <div class="ruban inconnu"><span>À appeler</span></div>
           <div class="rail">
             <p class="eyebrow">Estimation</p>
             <p class="price">2 470 €</p>
@@ -665,6 +693,7 @@
         </li>
 
         <li id="garrigue" class="fiche">
+          <div class="ruban libre"><span>Libre</span></div>
           <div class="rail">
             <p class="eyebrow">Séjour</p>
             <p class="price">≈ 3 117 €</p>
@@ -691,6 +720,7 @@
         </li>
 
         <li id="moulinet" class="fiche">
+          <div class="ruban inconnu"><span>À appeler</span></div>
           <div class="rail">
             <p class="eyebrow">Tarif publié</p>
             <p class="price">3 000 €</p>
@@ -715,6 +745,7 @@
         </li>
 
         <li id="escolan" class="fiche pick">
+          <div class="ruban inconnu"><span>À appeler</span></div>
           <div class="rail">
             <p class="eyebrow">Estimation</p>
             <p class="price">≈ 2 300 €</p>
@@ -743,6 +774,7 @@
         </li>
 
         <li id="granquie" class="fiche pick">
+          <div class="ruban inconnu"><span>À appeler</span></div>
           <div class="rail">
             <p class="eyebrow">Estimation</p>
             <p class="price">≈ 2 200 €</p>
@@ -770,6 +802,7 @@
         </li>
 
         <li id="scouts" class="fiche pick">
+          <div class="ruban inconnu"><span>À appeler</span></div>
           <div class="rail">
             <p class="eyebrow">Estimation</p>
             <p class="price">1 100 – 1 600 €</p>
@@ -1070,35 +1103,43 @@
         <p>Ceux-là ne sont pas éliminés sur le fond : ils correspondent à ce que vous cherchez, et <strong>vous avez obtenu leur refus</strong> — ce sont les seuls que je retire de la liste, sur votre parole et jamais sur ma seule lecture d'un planning. Leurs caractéristiques sont conservées ici pour une autre année — la leçon étant qu'à quatre mois et demi du réveillon, il est déjà tard. Viser le printemps la prochaine fois.</p>
       </div>
       <ul class="stack">
-        <li id="prisbarthas" class="row"><h3>Moulin du Barthas — Montredon-Labessonnié (81) · ≈ 1 h 30</h3>
+        <li id="prisbarthas" class="row">
+          <div class="ruban pris"><span>Pris</span></div><h3>Moulin du Barthas — Montredon-Labessonnié (81) · ≈ 1 h 30</h3>
           <p>Confirmé pris, comme l'annonçait leur planning en ligne — occupé du 27 au 31 décembre pour les deux gîtes. C'était le meilleur rapport critères/prix de la recherche : <strong>isolé à la ferme</strong> avec vue sur les prairies, exactement <strong>15 places</strong>, une pièce à vivre de 60 m² et une seconde de 36 m², au nord-est — et un <strong>forfait Noël affiché à 1 237 €</strong>, soit 83 € par tête, le tarif le plus bas de toute la page. Réserve à connaître pour une autre année : 6 chambres seulement, et le groupe réparti sur deux bâtiments distants de 100 m. Leur planning est public, donc vérifiable sans appeler.</p>
           <ul class="chips"><li class="chip stop">Occupé 27-31 déc.</li><li class="chip ok">Isolé à la ferme</li><li class="chip ok">15 places pile</li><li class="chip ok">Forfait Noël 1 237 €</li></ul>
           <p class="meta"><span class="tel">05 63 75 18 81</span> <span>Isabelle et Daniel Debrus</span> <a href="https://www.gites-a-la-ferme-tarn.com/reservation.html" target="_blank" rel="noopener noreferrer">planning en ligne</a> <a href="https://www.google.com/maps/search/?api=1&query=2251%20chemin%20du%20Moulin%20du%20Barthas%2C%2081360%20Montredon-Labessonni%C3%A9" target="_blank" rel="noopener noreferrer">carte</a></p></li>
-        <li id="prisrenard" class="row"><h3>Gîte du Renard Désargenté — Lairière (11) · ≈ 1 h 50</h3>
+        <li id="prisrenard" class="row">
+          <div class="ruban pris"><span>Pris</span></div><h3>Gîte du Renard Désargenté — Lairière (11) · ≈ 1 h 50</h3>
           <p>L'un des deux <strong>isolements attestés</strong> de la recherche, avec Granquié : bâti sur un piton rocheux dans une forêt de chênes verts et de châtaigniers, vue dégagée, à une vingtaine de kilomètres du Torgan. <strong>12 chambres</strong> pour 30 couchages, une <strong>salle de 110 m²</strong> avec tables et chaises pour 40, et une grande cuisine équipée — piano cinq feux, four de 90 cm, lave-vaisselle professionnel, trois réfrigérateurs. Piscine couverte, gestion libre, ouvert toute l'année. Repris en juillet 2025, tarif jamais publié.</p>
           <ul class="chips"><li class="chip stop">Indisponible</li><li class="chip ok">Isolé, piton en forêt</li><li class="chip ok">12 chambres</li><li class="chip ok">Salle 110 m², cuisine pro</li></ul>
           <p class="meta"><span class="tel">06 10 42 51 33</span> <span>Isabelle Thibaut</span> <a href="https://www.gitedegroupe.fr/gite-groupe-Be-5103.html" target="_blank" rel="noopener noreferrer">voir l'annonce</a> <a href="https://www.google.com/maps/search/?api=1&query=Les%20Jourdets%2C%2011330%20Lairi%C3%A8re" target="_blank" rel="noopener noreferrer">carte</a></p></li>
-        <li id="priscambayrac" class="row"><h3>Maison de vacances de Cambayrac — Castanet (82) · ≈ 1 h 30</h3>
+        <li id="priscambayrac" class="row">
+          <div class="ruban pris"><span>Pris</span></div><h3>Maison de vacances de Cambayrac — Castanet (82) · ≈ 1 h 30</h3>
           <p>Indisponible, réponse reçue par SMS. C'était <strong>le meilleur profil de toute la recherche</strong> : un <strong>séjour de 100 m² à cuisine attenante</strong> avec coin repas et salon à cheminée, <strong>8 chambres dont 7 lits doubles</strong> — donc 14 personnes en vrais lits, aucun dortoir —, <strong>6 salles d'eau pour 7 WC</strong>, dans un hameau calme du Causse près des gorges de l'Aveyron, ouvert toute l'année, à <strong>1 400 € la semaine en basse saison</strong>, soit 93 € par tête. À rappeler en priorité l'an prochain, et bien plus tôt.</p>
           <ul class="chips"><li class="chip stop">Indisponible</li><li class="chip ok">Séjour-cuisine 100 m²</li><li class="chip ok">8 ch., 7 lits doubles</li><li class="chip ok">6 salles d'eau</li><li class="chip ok">1 400 €, 93 €/pers.</li></ul>
           <p class="meta"><span class="tel">06 61 17 36 89</span> <span>Daniel Vidal</span> <a href="https://maisondevacances-cambayrac.com" target="_blank" rel="noopener noreferrer">maisondevacances-cambayrac.com</a> <a href="https://www.google.com/maps/search/?api=1&query=Cambayrac%2C%2082160%20Castanet" target="_blank" rel="noopener noreferrer">carte</a></p></li>
-        <li id="prisfreychede" class="row"><h3>Centre La Freychède — Montferrier (09) · ≈ 1 h 20</h3>
+        <li id="prisfreychede" class="row">
+          <div class="ruban pris"><span>Pris</span></div><h3>Centre La Freychède — Montferrier (09) · ≈ 1 h 20</h3>
           <p>Réponse d'Alain Feliu : <strong>indisponible</strong>. Un grand gîte rustique de 56 places en <strong>15 chambres</strong>, avec une <strong>salle à manger de 75 m²</strong>, une cuisine entièrement équipée, une salle TV et une salle d'activité, au pied de Montségur — le profil du Torgan en version Ariège, ouvert toute l'année. Réserve qui valait de toute façon d'être connue : il impose un <strong>minimum de 20 à 25 personnes</strong>, ce qui à 15 aurait signifié payer le plancher. Tarif semaine jamais communiqué.</p>
           <ul class="chips"><li class="chip stop">Indisponible</li><li class="chip ok">15 chambres</li><li class="chip ok">Salle à manger 75 m²</li><li class="chip stop">Minimum 20 à 25 personnes</li></ul>
           <p class="meta"><span class="tel">07 68 39 18 49</span> <span>Alain Feliu</span> <a href="https://freychede.fr" target="_blank" rel="noopener noreferrer">freychede.fr</a> <a href="https://www.google.com/maps/search/?api=1&query=Rue%20de%20la%20Freych%C3%A8de%2C%2009300%20Montferrier" target="_blank" rel="noopener noreferrer">carte</a></p></li>
-        <li id="pristorgan" class="row"><h3>Les Gîtes du Torgan — Massac (11) · l'étalon</h3>
+        <li id="pristorgan" class="row">
+          <div class="ruban pris"><span>Pris</span></div><h3>Les Gîtes du Torgan — Massac (11) · l'étalon</h3>
           <p>Le lieu de référence du groupe, deux séjours au compteur : 8 gîtes modulables de 2 à 11 places, salle commune avec cuisine collective facturée à part, gestion libre, ouvert toute l'année. <strong>2 900 € payés à 17 personnes, chauffage compris, sur un tarif négocié</strong> — soit 171 € par tête. Seul inconvénient relevé : le supermarché est loin.</p>
           <ul class="chips"><li class="chip stop">Complet</li><li class="chip ok">Prix réel connu</li><li class="chip ok">Modulable 15 à 45</li><li class="chip warn">Salle commune en supplément</li></ul>
           <p class="meta"><span class="tel">06 65 36 07 41</span> <a href="mailto:gitesdutorgan@gmail.com">gitesdutorgan@gmail.com</a> <a href="https://www.lesgitesdutorgan.com/" target="_blank" rel="noopener noreferrer">lesgitesdutorgan.com</a> <a href="https://www.google.com/maps/search/?api=1&query=La%20Coumo%2C%20Route%20de%20Dernacueillette%2C%2011330%20Massac" target="_blank" rel="noopener noreferrer">carte</a></p></li>
-        <li id="prissoula" class="row"><h3>Gîtes du Soula — Mérens-les-Vals (09) · ≈ 1 h 55</h3>
+        <li id="prissoula" class="row">
+          <div class="ruban pris"><span>Pris</span></div><h3>Gîtes du Soula — Mérens-les-Vals (09) · ≈ 1 h 55</h3>
           <p>Le meilleur compromis montagne de la page : haute vallée de l'Ariège au croisement du GR 10, <strong>Ax-les-Thermes à 15 min</strong>, 34 places en <strong>9 chambres</strong> sur trois gîtes modulables, deux salles à manger, poêles à bois, local à ski. Et une <strong>halte SNCF au village</strong>, desservie depuis Toulouse et par l'Intercités de nuit de Paris. Loue du samedi au samedi, ce qui colle au créneau. 980 à 2 604 € la semaine.</p>
           <ul class="chips"><li class="chip stop">Indisponible</li><li class="chip ok">Ski à 15 min</li><li class="chip ok">Gare au village</li><li class="chip ok">9 chambres</li></ul>
           <p class="meta"><span class="tel">07 86 28 88 12</span> <a href="https://www.gitesdusoula.com" target="_blank" rel="noopener noreferrer">gitesdusoula.com</a> <a href="https://www.google.com/maps/search/?api=1&query=195%20Le%20Soula%2C%2009110%20M%C3%A9rens-les-Vals" target="_blank" rel="noopener noreferrer">carte</a></p></li>
-        <li id="prisbouriotte" class="row"><h3>La Bouriotte — Labastide-Rouairoux (81) · ≈ 1 h 40</h3>
+        <li id="prisbouriotte" class="row">
+          <div class="ruban pris"><span>Pris</span></div><h3>La Bouriotte — Labastide-Rouairoux (81) · ≈ 1 h 40</h3>
           <p>Le candidat le plus sûr côté budget : 1 080 à 2 600 € la semaine <strong>chauffage compris</strong>, bois et solaire — une rareté fin décembre. 19 places en <strong>9 chambres</strong> réparties en 4 gîtes, salle multi-activités de 90 m², salon de 35 m², dans le parc du Haut-Languedoc. Ni calendrier en ligne ni plateforme : seul l'appel pouvait répondre.</p>
           <ul class="chips"><li class="chip stop">Indisponible</li><li class="chip ok">Chauffage inclus</li><li class="chip ok">9 chambres</li><li class="chip">Montagne Noire</li></ul>
           <p class="meta"><span class="tel">06 76 88 26 29</span> <span>Bénédicte</span> <a href="mailto:contact@labouriotte.com">contact@labouriotte.com</a> <a href="https://www.labouriotte.com" target="_blank" rel="noopener noreferrer">labouriotte.com</a> <a href="https://www.google.com/maps/search/?api=1&query=6%20route%20de%20la%20Bouriotte%2C%2081270%20Labastide-Rouairoux" target="_blank" rel="noopener noreferrer">carte</a></p></li>
-        <li id="prislutin" class="row"><h3>Gîte le Lutin — Bagnères-de-Luchon (31) · ≈ 2 h</h3>
+        <li id="prislutin" class="row">
+          <div class="ruban pris"><span>Pris</span></div><h3>Gîte le Lutin — Bagnères-de-Luchon (31) · ≈ 2 h</h3>
           <p>Le seul gîte accessible en train, depuis la réouverture de la ligne Montréjeau-Luchon en juin 2025 : 9 chambres, cuisine professionnelle de 33 m², commerces et thermes à pied, ≈ 2 400 € chauffage compris. Il achoppait de toute façon sur le cadre — au 36 avenue Jean Jaurès, en plein centre-ville, sans terrain autour —, donc à ne retenir une autre année que si le critère d'isolement s'assouplit.</p>
           <ul class="chips"><li class="chip stop">Indisponible</li><li class="chip stop">En centre-ville</li><li class="chip ok">Accessible en train</li><li class="chip ok">9 chambres</li></ul>
           <p class="meta"><span class="tel">05 61 89 70 86</span> <a href="https://www.gite-luchon-pyrenees.fr" target="_blank" rel="noopener noreferrer">gite-luchon-pyrenees.fr</a> <a href="https://www.google.com/maps/search/?api=1&query=36%20Avenue%20Jean%20Jaur%C3%A8s%2C%2031110%20Bagn%C3%A8res-de-Luchon" target="_blank" rel="noopener noreferrer">carte</a></p></li>
