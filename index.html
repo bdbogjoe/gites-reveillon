@@ -259,9 +259,11 @@
   .pastille.vu{background:#E3B23C}
   .pastille.contacte{background:#1E6F9F}
   .leaflet-popup-content{margin:.7rem .85rem; font-family:"Courant",system-ui,sans-serif}
-  .leaflet-popup-content-wrapper{background:var(--surface); color:var(--ink);
+  .leaflet-popup-content-wrapper,.leaflet-tooltip{background:var(--surface); color:var(--ink);
     border:1px solid var(--line); box-shadow:var(--shadow); border-radius:3px}
   .leaflet-popup-tip{background:var(--surface); border:1px solid var(--line)}
+  .leaflet-tooltip{font-family:"Fiche",ui-monospace,monospace; font-size:.72rem; letter-spacing:.04em}
+  .leaflet-tooltip-top:before{border-top-color:var(--line)}
   .leaflet-container .leaflet-control-zoom a{background:var(--surface); color:var(--ink);
     border-bottom-color:var(--line)}
   .leaflet-container .leaflet-control-zoom a:hover{background:var(--surface-2)}
@@ -2332,9 +2334,6 @@ Merci d'avance,
     pts.push([g.lat, g.lon]);
   });
   map.fitBounds(L.latLngBounds(pts), { padding: [36, 36] });
-  map.once('click', function () { map.scrollWheelZoom.enable(); });
-})();
-
   (function () {
     var etoileSeule = false, actifs = {};
     Object.keys(COUCHES).forEach(function (k) { actifs[k] = true; });
@@ -2358,6 +2357,10 @@ Merci d'avance,
       });
     });
   })();
+
+  map.once('click', function () { map.scrollWheelZoom.enable(); });
+})();
+
 </script>
 </body>
 </html>
