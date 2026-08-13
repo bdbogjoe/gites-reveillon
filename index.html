@@ -246,7 +246,6 @@
     line-height:1; width:auto; height:auto; border:0}
   .pastille.vu{background:#E3B23C}
   .pastille.contacte{background:#1E6F9F}
-  .pastille.anneau{background:none; border:2px solid var(--warn); box-sizing:border-box; width:.85rem; height:.85rem}
   .leaflet-popup-content{margin:.7rem .85rem; font-family:"Courant",system-ui,sans-serif}
   .leaflet-popup-content-wrapper,.leaflet-tooltip{background:var(--surface); color:var(--ink);
     border:1px solid var(--line); box-shadow:var(--shadow); border-radius:3px}
@@ -443,7 +442,7 @@
     <section id="carte">
       <div class="sec-head">
         <h2>Où c'est</h2>
-        <p><strong>La couleur du point donne l'avancement</strong> : blanc tant que personne ne l'a regardé, <strong>jaune</strong> quand vous l'avez examiné et qu'il tient la route sans être encore contacté, <strong>bleu</strong> quand le contact est pris et la réponse attendue, <strong>vert clair</strong> quand un site le donne libre sans que vous l'ayez confirmé, vert franc lorsque vous l'avez obtenu de vive voix, rouge si c'est pris. Un <strong>anneau ocre</strong> signale l'altitude. À ce stade, sur <strong>97 points</strong> : <strong>7 verts francs</strong> que vous avez confirmés vous-même, <strong>2 verts clairs</strong> donnés libres par un site, <strong>5 bleus</strong> contactés sans réponse, <strong>3 jaunes</strong> regardés — dont un sans enthousiasme — <strong>13 rouges</strong> pris, et <strong>67 blancs</strong> jamais regardés. <strong>11 portent l'anneau ocre de l'altitude.</strong> Les cercles tracés autour de Toulouse ne donnent qu'un ordre de grandeur — un cercle sur une carte ignore les routes. <strong>Le vrai temps de trajet est sur chaque fiche</strong>, calculé par routage routier. <strong>Les gîtes écartés n'y figurent pas</strong> — ni Les Casèlas, faute de salle commune, ni Les Chalets du Bord du Lac, où le groupe est déjà allé. <strong>Une étoile jaune dans le point signale que sa salle commune est établie</strong> — le critère non négociable — quel que soit son statut par ailleurs. <strong>Cliquez un point pour ouvrir la fiche correspondante.</strong></p>
+        <p><strong>La couleur du point donne l'avancement</strong> : blanc tant que personne ne l'a regardé, <strong>jaune</strong> quand vous l'avez examiné et qu'il tient la route sans être encore contacté, <strong>bleu</strong> quand le contact est pris et la réponse attendue, <strong>vert clair</strong> quand un site le donne libre sans que vous l'ayez confirmé, vert franc lorsque vous l'avez obtenu de vive voix, rouge si c'est pris. À ce stade, sur <strong>97 points</strong> : <strong>7 verts francs</strong> que vous avez confirmés vous-même, <strong>2 verts clairs</strong> donnés libres par un site, <strong>5 bleus</strong> contactés sans réponse, <strong>3 jaunes</strong> regardés — dont un sans enthousiasme — <strong>13 rouges</strong> pris, et <strong>67 blancs</strong> jamais regardés. Les cercles tracés autour de Toulouse ne donnent qu'un ordre de grandeur — un cercle sur une carte ignore les routes. <strong>Le vrai temps de trajet est sur chaque fiche</strong>, calculé par routage routier. <strong>Les gîtes écartés n'y figurent pas</strong> — ni Les Casèlas, faute de salle commune, ni Les Chalets du Bord du Lac, où le groupe est déjà allé. <strong>Une étoile jaune dans le point signale que sa salle commune est établie</strong> — le critère non négociable — quel que soit son statut par ailleurs. <strong>Cliquez un point pour ouvrir la fiche correspondante.</strong></p>
       </div>
       <figure class="carte-box">
         <div class="fonds" role="group" aria-label="Fond de carte">
@@ -463,7 +462,6 @@
             <li><span class="pastille contacte"></span>Contacté, réponse attendue</li>
             <li><span class="pastille libre"></span>Vert pâle : libre selon le site</li>
             <li><span class="pastille confirme"></span>Vert foncé : confirmé par vous</li>
-            <li><span class="pastille anneau"></span>Anneau : en montagne ou en altitude</li>
           </ul>
           <p>Trois fonds au choix au-dessus de la carte : <strong>Routes</strong> pour la hiérarchie routière, <strong>Relief</strong> pour les courbes de niveau et les altitudes, <strong>Sombre</strong> si la page vous éblouit. Molette désactivée jusqu'au premier clic pour ne pas gêner la lecture.</p>
         </figcaption>
@@ -2319,10 +2317,6 @@ Merci d'avance,
   var pts = [];
   G.forEach(function (g) {
     var s = STYLE[g.d] || STYLE.inconnu;
-    if (g.m) {
-      L.circleMarker([g.lat, g.lon], { radius: RAYON + 5, fill: false, color: '#8A6218',
-                                       weight: 2, opacity: 0.95, interactive: false }).addTo(map);
-    }
     var mk = L.circleMarker([g.lat, g.lon], {
       radius: RAYON, fillColor: s.fillColor, fillOpacity: 1,
       stroke: s.stroke, color: s.color, weight: s.weight || 0
