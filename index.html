@@ -414,13 +414,13 @@
   <nav class="somm" aria-label="Sommaire">
     <p>Sommaire</p>
     <ol>
+      <li><a href="#carte">Carte</a></li>
       <li><a href="#etalon">L'étalon du Torgan</a></li>
       <li><a href="#selection">Les candidats</a> <b>16</b></li>
       <li><a href="#comparatif">Comparatif</a></li>
       <li><a href="#airbnb">Libres sur Airbnb</a> <b>109</b></li>
       <li><a href="#gisement">Toutes les pistes</a> <b>89</b></li>
       <li><a href="#horsbudget">Hors budget</a> <b>48 · replié</b></li>
-      <li><a href="#carte">Carte</a></li>
       <li><a href="#pris">Déjà pris</a> <b>12 · replié</b></li>
       <li><a href="#ecartes">Écartés</a> <b>21 · replié</b></li>
       <li><a href="#pieges">Pièges</a></li>
@@ -430,6 +430,34 @@
   </nav>
 
   <main>
+
+    <section id="carte">
+      <div class="sec-head">
+        <h2>Où c'est</h2>
+        <p><strong>La couleur du point donne l'avancement</strong> : blanc tant que personne n'a appelé, <strong>bleu</strong> quand le contact est pris et la réponse attendue, <strong>vert clair</strong> quand un site le donne libre sans que vous l'ayez confirmé, vert franc lorsque vous l'avez obtenu de vive voix, rouge si c'est pris. Un <strong>anneau ocre</strong> signale l'altitude. À ce stade, sur <strong>116 points</strong> : <strong>6 verts francs</strong> que vous avez confirmés vous-même, <strong>2 verts clairs</strong> donnés libres par un site, <strong>3 bleus</strong> contactés sans réponse, <strong>11 rouges</strong> pris, et <strong>94 blancs</strong> — l'inventaire des annuaires, que personne n'a encore appelés. <strong>16 portent l'anneau ocre de l'altitude.</strong> Les cercles tracés autour de Toulouse ne donnent qu'un ordre de grandeur — un cercle sur une carte ignore les routes. <strong>Le vrai temps de trajet est sur chaque fiche</strong>, calculé par routage routier. <strong>Les gîtes écartés n'y figurent pas</strong> — ni Les Casèlas, faute de salle commune, ni Les Chalets du Bord du Lac, où le groupe est déjà allé. <strong>Cliquez un point pour ouvrir la fiche correspondante.</strong></p>
+      </div>
+      <figure class="carte-box">
+        <div class="fonds" role="group" aria-label="Fond de carte">
+          <span class="fonds-lab">Fond</span>
+          <button type="button" class="fond-btn" data-fond="Routes" aria-pressed="true">Routes</button>
+          <button type="button" class="fond-btn" data-fond="Relief" aria-pressed="false">Relief</button>
+          <button type="button" class="fond-btn" data-fond="Sombre" aria-pressed="false">Sombre</button>
+        </div>
+        <div id="map" class="carte"></div>
+        <noscript><p class="flag">La carte a besoin de JavaScript. Le comparatif ci-dessous donne les mêmes informations, avec un lien de carte par gîte.</p></noscript>
+        <figcaption>
+          <ul class="legende">
+            <li><span class="pastille inconnu"></span>Disponibilité inconnue, à appeler</li>
+            <li><span class="pastille pris"></span>Pris cette année, gardé en mémoire</li>
+            <li><span class="pastille contacte"></span>Contacté, réponse attendue</li>
+            <li><span class="pastille libre"></span>Vert pâle : libre selon le site</li>
+            <li><span class="pastille confirme"></span>Vert foncé : confirmé par vous</li>
+            <li><span class="pastille anneau"></span>Anneau : en montagne ou en altitude</li>
+          </ul>
+          <p>Trois fonds au choix au-dessus de la carte : <strong>Routes</strong> pour la hiérarchie routière, <strong>Relief</strong> pour les courbes de niveau et les altitudes, <strong>Sombre</strong> si la page vous éblouit. Molette désactivée jusqu'au premier clic pour ne pas gêner la lecture.</p>
+        </figcaption>
+      </figure>
+    </section>
 
     <section id="etalon">
       <div class="sec-head">
@@ -2204,34 +2232,6 @@
         </li>
       </ul>
       </details>
-    </section>
-
-    <section id="carte">
-      <div class="sec-head">
-        <h2>Où c'est</h2>
-        <p><strong>La couleur du point donne l'avancement</strong> : blanc tant que personne n'a appelé, <strong>bleu</strong> quand le contact est pris et la réponse attendue, <strong>vert clair</strong> quand un site le donne libre sans que vous l'ayez confirmé, vert franc lorsque vous l'avez obtenu de vive voix, rouge si c'est pris. Un <strong>anneau ocre</strong> signale l'altitude. À ce stade, sur <strong>116 points</strong> : <strong>6 verts francs</strong> que vous avez confirmés vous-même, <strong>2 verts clairs</strong> donnés libres par un site, <strong>3 bleus</strong> contactés sans réponse, <strong>11 rouges</strong> pris, et <strong>94 blancs</strong> — l'inventaire des annuaires, que personne n'a encore appelés. <strong>16 portent l'anneau ocre de l'altitude.</strong> Les cercles tracés autour de Toulouse ne donnent qu'un ordre de grandeur — un cercle sur une carte ignore les routes. <strong>Le vrai temps de trajet est sur chaque fiche</strong>, calculé par routage routier. <strong>Les gîtes écartés n'y figurent pas</strong> — ni Les Casèlas, faute de salle commune, ni Les Chalets du Bord du Lac, où le groupe est déjà allé. <strong>Cliquez un point pour ouvrir la fiche correspondante.</strong></p>
-      </div>
-      <figure class="carte-box">
-        <div class="fonds" role="group" aria-label="Fond de carte">
-          <span class="fonds-lab">Fond</span>
-          <button type="button" class="fond-btn" data-fond="Routes" aria-pressed="true">Routes</button>
-          <button type="button" class="fond-btn" data-fond="Relief" aria-pressed="false">Relief</button>
-          <button type="button" class="fond-btn" data-fond="Sombre" aria-pressed="false">Sombre</button>
-        </div>
-        <div id="map" class="carte"></div>
-        <noscript><p class="flag">La carte a besoin de JavaScript. Le comparatif ci-dessous donne les mêmes informations, avec un lien de carte par gîte.</p></noscript>
-        <figcaption>
-          <ul class="legende">
-            <li><span class="pastille inconnu"></span>Disponibilité inconnue, à appeler</li>
-            <li><span class="pastille pris"></span>Pris cette année, gardé en mémoire</li>
-            <li><span class="pastille contacte"></span>Contacté, réponse attendue</li>
-            <li><span class="pastille libre"></span>Vert pâle : libre selon le site</li>
-            <li><span class="pastille confirme"></span>Vert foncé : confirmé par vous</li>
-            <li><span class="pastille anneau"></span>Anneau : en montagne ou en altitude</li>
-          </ul>
-          <p>Trois fonds au choix au-dessus de la carte : <strong>Routes</strong> pour la hiérarchie routière, <strong>Relief</strong> pour les courbes de niveau et les altitudes, <strong>Sombre</strong> si la page vous éblouit. Molette désactivée jusqu'au premier clic pour ne pas gêner la lecture.</p>
-        </figcaption>
-      </figure>
     </section>
 
     <section id="pris">
