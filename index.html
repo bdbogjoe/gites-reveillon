@@ -217,6 +217,18 @@
   .carte-box{margin:0; background:var(--surface); border:1px solid var(--line-soft);
     border-radius:3px; padding:1.1rem 1.2rem 1.25rem; display:flex; flex-direction:column; gap:1rem}
   .carte{width:100%; height:clamp(22rem,58vh,34rem); border-radius:2px; background:var(--surface-2)}
+  .filtres{margin-top:.45rem}
+  .stat-btn::before{content:""; display:inline-block; width:.6rem; height:.6rem; border-radius:50%;
+    margin-right:.35rem; vertical-align:-.02rem; border:1px solid var(--line)}
+  .stat-btn.confirme::before{background:#0E6B4F; border-color:#0E6B4F}
+  .stat-btn.libre::before{background:#9BE0C4; border-color:#9BE0C4}
+  .stat-btn.contacte::before{background:#1E6F9F; border-color:#1E6F9F}
+  .stat-btn.vu::before{background:#E3B23C; border-color:#E3B23C}
+  .stat-btn.inconnu::before{background:#ffffff}
+  .stat-btn.pris::before{background:#B23A2B; border-color:#B23A2B}
+  .etoile-btn{color:#8A6218}
+  .fond-btn[aria-pressed="false"]{opacity:.45}
+  .fond-btn b{font-weight:400; font-variant-numeric:tabular-nums; opacity:.7}
   .fonds{display:flex; flex-wrap:wrap; align-items:center; gap:.4rem}
   .fonds-lab{font-family:"Fiche",ui-monospace,monospace; font-size:.68rem; text-transform:uppercase;
     letter-spacing:.11em; color:var(--ink-3); margin-right:.2rem}
@@ -442,7 +454,7 @@
     <section id="carte">
       <div class="sec-head">
         <h2>Où c'est</h2>
-        <p><strong>La couleur du point donne l'avancement</strong> : blanc tant que personne ne l'a regardé, <strong>jaune</strong> quand vous l'avez examiné et qu'il tient la route sans être encore contacté, <strong>bleu</strong> quand le contact est pris et la réponse attendue, <strong>vert clair</strong> quand un site le donne libre sans que vous l'ayez confirmé, vert franc lorsque vous l'avez obtenu de vive voix, rouge si c'est pris. À ce stade, sur <strong>94 points</strong> : <strong>8 verts francs</strong> que vous avez confirmés vous-même, <strong>2 verts clairs</strong> donnés libres par un site, <strong>5 bleus</strong> contactés sans réponse, <strong>3 jaunes</strong> regardés — dont un sans enthousiasme — <strong>13 rouges</strong> pris, et <strong>63 blancs</strong> jamais regardés. Les cercles tracés autour de Toulouse ne donnent qu'un ordre de grandeur — un cercle sur une carte ignore les routes. <strong>Le vrai temps de trajet est sur chaque fiche</strong>, calculé par routage routier. <strong>Les gîtes écartés n'y figurent pas</strong> — ni Les Casèlas, faute de salle commune, ni Les Chalets du Bord du Lac, où le groupe est déjà allé. <strong>Une étoile jaune dans le point signale que sa salle commune est établie</strong> — le critère non négociable — quel que soit son statut par ailleurs. <strong>Cliquez un point pour ouvrir la fiche correspondante.</strong></p>
+        <p><strong>La couleur du point donne l'avancement</strong> : blanc tant que personne ne l'a regardé, <strong>jaune</strong> quand vous l'avez examiné et qu'il tient la route sans être encore contacté, <strong>bleu</strong> quand le contact est pris et la réponse attendue, <strong>vert clair</strong> quand un site le donne libre sans que vous l'ayez confirmé, vert franc lorsque vous l'avez obtenu de vive voix, rouge si c'est pris. À ce stade, sur <strong>94 points</strong> : <strong>8 verts francs</strong> que vous avez confirmés vous-même, <strong>2 verts clairs</strong> donnés libres par un site, <strong>5 bleus</strong> contactés sans réponse, <strong>3 jaunes</strong> regardés — dont un sans enthousiasme — <strong>13 rouges</strong> pris, et <strong>63 blancs</strong> jamais regardés. Les cercles tracés autour de Toulouse ne donnent qu'un ordre de grandeur — un cercle sur une carte ignore les routes. <strong>Le vrai temps de trajet est sur chaque fiche</strong>, calculé par routage routier. <strong>Les gîtes écartés n'y figurent pas</strong> — ni Les Casèlas, faute de salle commune, ni Les Chalets du Bord du Lac, où le groupe est déjà allé. <strong>Une étoile jaune dans le point signale que sa salle commune est établie</strong> — le critère non négociable — quel que soit son statut par ailleurs. <strong>Les boutons « Statut » au-dessus de la carte filtrent les points</strong> : cliquez une couleur pour la masquer, ou <strong>★ Salle commune</strong> pour ne garder que ceux dont la pièce commune est établie. <strong>Cliquez un point pour ouvrir la fiche correspondante.</strong></p>
       </div>
       <figure class="carte-box">
         <div class="fonds" role="group" aria-label="Fond de carte">
@@ -450,6 +462,16 @@
           <button type="button" class="fond-btn" data-fond="Routes" aria-pressed="true">Routes</button>
           <button type="button" class="fond-btn" data-fond="Relief" aria-pressed="false">Relief</button>
           <button type="button" class="fond-btn" data-fond="Sombre" aria-pressed="false">Sombre</button>
+        </div>
+        <div class="fonds filtres" role="group" aria-label="Filtrer par statut">
+          <span class="fonds-lab">Statut</span>
+          <button type="button" class="fond-btn stat-btn confirme" data-stat="confirme" aria-pressed="true">Confirmés <b>8</b></button>
+          <button type="button" class="fond-btn stat-btn libre" data-stat="libre" aria-pressed="true">Libres <b>2</b></button>
+          <button type="button" class="fond-btn stat-btn contacte" data-stat="contacte" aria-pressed="true">Contactés <b>5</b></button>
+          <button type="button" class="fond-btn stat-btn vu" data-stat="vu" aria-pressed="true">Vus <b>3</b></button>
+          <button type="button" class="fond-btn stat-btn inconnu" data-stat="inconnu" aria-pressed="true">À appeler <b>63</b></button>
+          <button type="button" class="fond-btn stat-btn pris" data-stat="pris" aria-pressed="true">Pris <b>13</b></button>
+          <button type="button" class="fond-btn etoile-btn" data-stat="__etoile" aria-pressed="false">★ Salle commune <b>33</b></button>
         </div>
         <div id="map" class="carte"></div>
         <noscript><p class="flag">La carte a besoin de JavaScript. Le comparatif ci-dessous donne les mêmes informations, avec un lien de carte par gîte.</p></noscript>
@@ -2288,17 +2310,21 @@ Merci d'avance,
    .bindTooltip('Toulouse', { permanent: true, direction: 'top', offset: [0, -8] });
 
   var pts = [];
+  var COUCHES = {};
   G.forEach(function (g) {
     var s = STYLE[g.d] || STYLE.inconnu;
+    if (!COUCHES[g.d]) COUCHES[g.d] = [];
     var mk = L.circleMarker([g.lat, g.lon], {
       radius: RAYON, fillColor: s.fillColor, fillOpacity: 1,
       stroke: s.stroke, color: s.color, weight: s.weight || 0
     }).addTo(map);
+    var et = null;
     if (g.i) {
-      L.marker([g.lat, g.lon], { interactive: false, keyboard: false, zIndexOffset: 400,
+      et = L.marker([g.lat, g.lon], { interactive: false, keyboard: false, zIndexOffset: 400,
         icon: L.divIcon({ className: 'etoile', html: '\u2605', iconSize: [16, 16], iconAnchor: [8, 8] })
       }).addTo(map);
     }
+    COUCHES[g.d].push({ mk: mk, et: et, i: !!g.i });
     mk.bindPopup(
       '<span class="pop-nom">' + g.n + '</span>' +
       '<span class="pop-lieu">' + g.c + '</span>' +
@@ -2311,6 +2337,30 @@ Merci d'avance,
   map.fitBounds(L.latLngBounds(pts), { padding: [36, 36] });
   map.once('click', function () { map.scrollWheelZoom.enable(); });
 })();
+
+  (function () {
+    var etoileSeule = false, actifs = {};
+    Object.keys(COUCHES).forEach(function (k) { actifs[k] = true; });
+    function rafraichir() {
+      Object.keys(COUCHES).forEach(function (k) {
+        COUCHES[k].forEach(function (o) {
+          var visible = actifs[k] && (!etoileSeule || o.i);
+          if (visible) { if (!map.hasLayer(o.mk)) o.mk.addTo(map);
+                         if (o.et && !map.hasLayer(o.et)) o.et.addTo(map); }
+          else { if (map.hasLayer(o.mk)) map.removeLayer(o.mk);
+                 if (o.et && map.hasLayer(o.et)) map.removeLayer(o.et); }
+        });
+      });
+    }
+    document.querySelectorAll('.stat-btn, .etoile-btn').forEach(function (b) {
+      b.addEventListener('click', function () {
+        var k = b.getAttribute('data-stat');
+        if (k === '__etoile') { etoileSeule = !etoileSeule; b.setAttribute('aria-pressed', etoileSeule); }
+        else { actifs[k] = !actifs[k]; b.setAttribute('aria-pressed', actifs[k]); }
+        rafraichir();
+      });
+    });
+  })();
 </script>
 </body>
 </html>
