@@ -151,6 +151,31 @@ def _carte_tourne(doc):
     return True
 
 
+def _renvois_morts(doc):
+    """Aucun lien du gisement ne doit pointer vers une fiche rangée ailleurs.
+
+    Quand un gîte passe en hors budget ou aux écartés, sa fiche part mais les
+    listes récapitulatives du gisement gardent parfois leur entrée — c'est arrivé
+    à Ventaujols puis au Grand Brugeron. Le contrôle des doublons ne le voyait
+    pas : il ne compare que les fiches entre elles, pas les liens.
+    """
+    ranges = set()
+    for sid in ("horsbudget", "pris", "ecartes"):
+        m = re.search(r'<section id="%s">.*?</section>' % sid, doc, re.S)
+        if m:
+            ranges |= set(re.findall(r'<li id="([^"]+)"', m.group(0)))
+    m = re.search(r'<section id="gisement">.*?</section>', doc, re.S)
+    if not m:
+        return True
+    gis = m.group(0)
+    vises = set(re.findall(r'href="#([^"]+)"', gis))
+    propres = set(re.findall(r'<li id="([^"]+)"', gis))
+    morts = (vises & ranges) - propres
+    if morts:
+        print("      liens du gisement vers des fiches rangées ailleurs : " + ", ".join(sorted(morts)))
+    return not morts
+
+
 def verifier(doc):
     svg_pts = doc.count('class="pt-')
     ctrl = {
@@ -178,6 +203,7 @@ def verifier(doc):
             _entrees(doc, "gisement")
             & (_entrees(doc, "horsbudget") | _entrees(doc, "pris") | _entrees(doc, "ecartes"))),
         "filtres de carte : les boutons masquent et rétablissent": _carte_tourne(doc),
+        "aucun renvoi du gisement vers une fiche rangée ailleurs": _renvois_morts(doc),
         "attribution OpenStreetMap": "OpenStreetMap" in doc,
         "repli sans JavaScript": "<noscript>" in doc,
     }
