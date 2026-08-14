@@ -176,6 +176,43 @@ def _renvois_morts(doc):
     return not morts
 
 
+def _tels_en_double(doc):
+    """Aucun numéro ne doit s'afficher deux fois dans la même fiche.
+
+    Trois fois le même défaut : La Ferme des Pierres, le Grand Brugeron, puis Le
+    Clos des Pommiers. À chaque fois j'ajoute un numéro relevé sur une source sans
+    voir qu'il était déjà dans la ligne de sources de la fiche.
+
+    On ne compte que ce qui est visible : les blocs <details> reproduisent
+    l'annonce mot pour mot et un numéro y figure légitimement, même s'il est aussi
+    dans la ligne de sources. Les sections d'analyse, où je commente sciemment
+    quel numéro appeler, sont écartées aussi.
+    """
+    hors = ("pieges", "sources", "mail")
+    zones = {}
+    for sid in re.findall(r'<section id="([^"]+)"', doc):
+        m = re.search(r'<section id="%s">.*?</section>' % sid, doc, re.S)
+        if m and sid not in hors:
+            zones[sid] = m.group(0)
+    fautives = []
+    for sid, sec in zones.items():
+        bornes = [m.start() for m in re.finditer(r'<li id="[^"]+"', sec)] + [len(sec)]
+        for i in range(len(bornes) - 1):
+            bloc = sec[bornes[i]:bornes[i + 1]]
+            a = re.match(r'<li id="([^"]+)"', bloc).group(1)
+            # on écarte les citations verbatim et mes propres paragraphes d'analyse,
+            # où nommer un numéro déjà listé est délibéré (« appelez celui-ci, pas la centrale »)
+            visible = re.sub(r"<details.*?</details>", " ", bloc, flags=re.S)
+            visible = re.sub(r'<p class="(?:flag|cite)">.*?</p>', " ", visible, flags=re.S)
+            tels = [re.sub(r"\D", "", t) for t in re.findall(r"0[1-9](?:[ .]?\d{2}){4}", visible)]
+            for t in set(tels):
+                if tels.count(t) > 1:
+                    fautives.append("%s (%s × %d)" % (a, t, tels.count(t)))
+    if fautives:
+        print("      numéros affichés deux fois dans une même fiche : " + ", ".join(sorted(set(fautives))[:8]))
+    return not fautives
+
+
 def verifier(doc):
     svg_pts = doc.count('class="pt-')
     ctrl = {
@@ -204,6 +241,7 @@ def verifier(doc):
             & (_entrees(doc, "horsbudget") | _entrees(doc, "pris") | _entrees(doc, "ecartes"))),
         "filtres de carte : les boutons masquent et rétablissent": _carte_tourne(doc),
         "aucun renvoi du gisement vers une fiche rangée ailleurs": _renvois_morts(doc),
+        "aucun téléphone répété dans une même fiche": _tels_en_double(doc),
         "attribution OpenStreetMap": "OpenStreetMap" in doc,
         "repli sans JavaScript": "<noscript>" in doc,
     }
